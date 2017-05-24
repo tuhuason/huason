@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title><block name="title">Huason博客</block></title>
+    <link rel="shortcut icon" href="__IMG__/logo_60_60.png">
+    <link rel="stylesheet" href="__STATIC__/layui/css/layui.css">
+    <link rel="stylesheet" href="__CSS__/global.css" media="all">
+    <block name="stylesheets">
+    </block>
+</head>
+<body>
+    <div class="layui-header header" id="header">
+        <div class="layui-main">
+            <a class="logo" href="/" title="Huason"><img src="__IMG__/logo.png"></a>    
+            <ul class="layui-nav" lay-filter="top_nav">
+                <foreach name="menu_list" key="menu_identifier" item="menu">
+                <if condition="empty($menu['children'])">
+                <li class="layui-nav-item">
+                <a href="{$menu.url}">{$menu.name}</a>
+                </li>
+                <else/>
+                <li class="layui-nav-item">
+                    <a href="{$menu.url}">{$menu.name}</a>
+                    <dl class="layui-nav-child">
+                        <foreach name="menu.children" key="childrenmenu_identifier" item="childmenu">
+                        <dd><a href="{$childmenu.url}">{$childmenu.name}</a></dd>
+                        </foreach>
+                    </dl>
+                  </li>
+                </if>
+                </foreach>
+            </ul>
+            <div class="search">
+                <form class="layui-form" action="{:U('/search')}" method="GET">
+                <input type="text" class="search_input layui-input" id="search_val" name="param" placeholder="搜文章">
+                <button type="submit" class="search_btn layui-btn-normal"><i class="layui-icon" id="search">&#xe615;</i></button>
+                </form>
+            </div>
+            <div class="login">
+                <if condition="!isset($_COOKIE['openID']) || !isset($_COOKIE['openID'])">
+                    <a title="qq登录"><i class="iconfont qqlogin">&#xe631;</i></a>
+                <else/>
+                    <a></a>
+                </if>
+            </div>
+        </div>
+    </div>
+    <div class="site-tree layui-side layui-bg-black">
+        <div class="layui-side-scroll" lay-filter="side">
+            <ul class="layui-nav layui-nav-tree">
+                <foreach name="menu_list" key="menu_identifier" item="menu">
+                <if condition="empty($menu['children'])">
+                <li class="layui-nav-item">
+                <a href="{$menu.url}">{$menu.name}</a>
+                </li>
+                <else/>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">{$menu.name}</a>
+                    <dl class="layui-nav-child">
+                        <foreach name="menu.children" key="childrenmenu_identifier" item="childmenu">
+                        <dd><a href="{$childmenu.url}" style="margin-left: 10px;">{$childmenu.name}</a></dd>
+                        </foreach>
+                    </dl>
+                  </li>
+                </if>
+                </foreach>
+            </ul>
+        </div>
+    </div>
+    <div class="layui-main layui-clear main">
+        <block name="content"></block>
+    </div>
+    
+    <div class="footer">
+        <p>Huason © <a class="site_url" href="###"></a></p>
+    </div>
+
+    <div class="layui-fixbar" id="gotop" style="display:none;right:20px;">
+        <li class="layui-icon layui-fixbar-top" style="display: list-item;background-color:rgba(0, 0, 0, 0.48);">&#xe604;</li>
+    </div>
+    <div class="site-tree-mobile layui-hide">
+        <i class="layui-icon">&#xe602;</i>
+    </div>
+    <div class="site-mobile-shade"></div>
+    {/*脚本*/}
+    <script src="__JS__/jquery-1.10.2.min.js"></script>
+    <script src="__STATIC__/layui/layui.js"></script>
+    <script src="__JS__/calendar.js"></script>
+    <script src="__JS__/base.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(e) {
+        Base.initialize();
+        Base.urls = {<block name="urls"></block>};
+
+        CalendarHandler.initialize();
+    });
+        layui.use(['form','element'], function(){
+            var form = layui.form(),
+            element = layui.element(),
+            $ = layui.jquery;
+
+            //gotop
+            $(window).scroll(function(){ 
+                var scrH = document.documentElement.scrollTop + document.body.scrollTop; 
+                if(scrH > 60){
+                    $('#header').addClass('header_fixed').fadeIn();
+                }else{
+                    $('#header').removeClass('header_fixed');
+                }
+
+                if(scrH > 150){ 
+                    $('#gotop').fadeIn(400); 
+                }else{ 
+                    $('#gotop').stop().fadeOut(400); 
+                } 
+            });
+
+            $("#gotop").click(function(e) {
+                e.preventDefault();
+                $("html,body").animate({scrollTop:0},80);
+            });
+
+            //移动设备
+            var treeMobile = $('.site-tree-mobile'),
+                shadeMobile = $('.site-mobile-shade');
+            treeMobile.on('click', function() {
+                $('body').addClass('site-mobile');
+            });
+            shadeMobile.on('click', function() {
+                $('body').removeClass('site-mobile');
+            });
+        });
+
+    </script>
+    <block name="javascript"></block>
+    
+</body>
+</html>

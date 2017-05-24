@@ -1,0 +1,22 @@
+<div class="blog-tag shadow" id="article_hot_list">
+    <h2>热门文章</h2>
+    <ul>
+        <foreach name="hot" item="art" key="k">
+        <li>
+            <span class="num">{$k+1|zero_num}</span><a title="{$art.title}" href="{:U('/article/'.$art['id'])}">{$art.title}</a>
+            <span class="info" title="浏览次数"><i class="iconfont" style="font-size: 16px;">&#xe71a;</i> {$art['hit']}</span>
+        </li>
+        </foreach>
+    </ul>
+</div>
+<div class="blog-tag shadow">
+    <h2>近期热议</h2>
+    <ul>
+        <foreach name="new" item="art" key="k">
+        <li>
+            <span class="num">{$k+1|zero_num}</span><a title="{$art.title}" href="{:U('/article/'.$art['id'])}">{$art.title}</a>
+            <span class="info" title="评论次数"><i class="iconfont" style="font-size: 15px;">&#xe6ad;</i> {$art['comment']}</span>
+        </li>
+        </foreach>
+    </ul>
+</div>

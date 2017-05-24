@@ -1,0 +1,10 @@
+<div class="blog-tag shadow">
+    <h2>分类</h2>
+    <div class="category">
+        <ol>
+            <foreach name="category" item="cate">
+            <li><a href="{:U('article/'.$cate['description'])}" class="layui-btn layui-btn-primary">{$cate.name}({$cate.count})</a></li>
+            </foreach>
+        </ol>
+    </div>
+</div>

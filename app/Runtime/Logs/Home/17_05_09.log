@@ -1,0 +1,2553 @@
+[ 2017-05-09T11:11:13+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002930s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006836s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0488s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='%d' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0205s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='%d' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='%d' ) ORDER BY uptime desc,tag desc LIMIT 10   [ RunTime:0.0537s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.129883s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.131836s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2017-05-09T11:11:16+08:00 ] 127.0.0.1 /search.html?param=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='%d' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='%d' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( `title` LIKE '%%' OR `content` LIKE '%%' ) AND `auditing` = 1 AND `admin_id` = null  [ RunTime:0.0479s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.082031s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.082031s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2017-05-09T11:13:32+08:00 ] 127.0.0.1 /search.html?param=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='%d' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='%d' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( `title` LIKE '%%' OR `content` LIKE '%%' ) AND `auditing` = 1 AND `admin_id` = null  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039063s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039063s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2017-05-09T11:13:36+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='%d' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='%d' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='%d' ) ORDER BY uptime desc,tag desc LIMIT 10   [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030273s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030273s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2017-05-09T11:13:37+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='%d' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='%d' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='%d' ) ORDER BY uptime desc,tag desc LIMIT 10   [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027343s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027343s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2017-05-09T11:14:50+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0176s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='%s' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='%d' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='%d' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='%d' ) ORDER BY uptime desc,tag desc LIMIT 10   [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033203s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033203s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2017-05-09T11:33:30+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001954s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='4' ) ORDER BY uptime desc,tag desc LIMIT 10   [ RunTime:0.0039s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001953s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 83 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 83 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 83 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 83 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 83 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042968s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043945s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2017-05-09T11:33:47+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='4' ) ORDER BY uptime desc,tag desc LIMIT 10   [ RunTime:0.0049s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 83 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 83 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 83 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 83 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 83 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034180s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034180s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2017-05-09T13:43:03+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='4' ) ORDER BY uptime desc,tag desc LIMIT 10   [ RunTime:0.0059s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 83 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 83 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 83 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 83 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 83 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037110s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037110s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2017-05-09T13:44:43+08:00 ] 127.0.0.1 /diary.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `diary` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `diary` WHERE ( admin_id='4' ) ORDER BY addtime desc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034179s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034179s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2017-05-09T13:44:47+08:00 ] 127.0.0.1 /article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002930s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040039s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040039s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2017-05-09T13:44:47+08:00 ] 127.0.0.1 /article/page.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( auditing=1 and admin_id='4' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing=1 and admin_id='4' ) ORDER BY addtime desc,tag desc LIMIT 0,4   [ RunTime:0.0049s ]
+
+[ 2017-05-09T13:44:49+08:00 ] 127.0.0.1 /article/php.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = 'PHP' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0039s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042969s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042969s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2017-05-09T13:44:50+08:00 ] 127.0.0.1 /article/webfrontend.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = '前端' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0049s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039063s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039063s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2017-05-09T13:44:51+08:00 ] 127.0.0.1 /article/talk.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003906s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002929s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009766s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = '杂谈' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041016s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041016s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2017-05-09T13:44:53+08:00 ] 127.0.0.1 /article/life.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = '生活百科' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0049s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\c8a09095859a54bb2e5b468b330aba8d.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038086s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038086s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2017-05-09T13:44:54+08:00 ] 127.0.0.1 /article/webfrontend.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002930s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = '前端' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0049s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037110s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039062s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2017-05-09T13:45:24+08:00 ] 127.0.0.1 /article/webfrontend.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = '前端' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0039s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041992s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042969s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2017-05-09T13:45:28+08:00 ] 127.0.0.1 /article/life.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = '生活百科' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\c8a09095859a54bb2e5b468b330aba8d.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037109s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037109s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2017-05-09T13:45:29+08:00 ] 127.0.0.1 /article/php.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003906s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = 'PHP' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0059s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038086s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038086s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2017-05-09T13:45:39+08:00 ] 127.0.0.1 /article/24.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: UPDATE `article` SET `hit`=hit+1 WHERE ( id='24' ) [ RunTime:0.0283s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( id='24' and admin_id='4' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\06a6e34307243ee0fcba2cbae043d078.php on line 63 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: URL C:\Program\www\thinkphp\app\Runtime\Cache\Home\06a6e34307243ee0fcba2cbae043d078.php 第 72 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034180s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034180s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2017-05-09T13:52:07+08:00 ] 127.0.0.1 /article/24.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002930s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: UPDATE `article` SET `hit`=hit+1 WHERE ( id='24' ) [ RunTime:0.0029s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( id='24' and admin_id='4' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\06a6e34307243ee0fcba2cbae043d078.php on line 63 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: URL C:\Program\www\thinkphp\app\Runtime\Cache\Home\06a6e34307243ee0fcba2cbae043d078.php 第 72 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027344s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027344s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2017-05-09T13:53:30+08:00 ] 127.0.0.1 /article/24.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: UPDATE `article` SET `hit`=hit+1 WHERE ( id='24' ) [ RunTime:0.0020s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( id='24' and admin_id='4' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\06a6e34307243ee0fcba2cbae043d078.php on line 63 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: URL C:\Program\www\thinkphp\app\Runtime\Cache\Home\06a6e34307243ee0fcba2cbae043d078.php 第 72 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029296s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029296s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2017-05-09T13:53:53+08:00 ] 127.0.0.1 /article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000976s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002930s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036132s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037109s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005860s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005860s ]
+
+[ 2017-05-09T13:53:53+08:00 ] 127.0.0.1 /article/page.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( auditing=1 and admin_id='4' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing=1 and admin_id='4' ) ORDER BY addtime desc,tag desc LIMIT 0,4   [ RunTime:0.0039s ]
+
+[ 2017-05-09T13:54:00+08:00 ] 127.0.0.1 /article/26
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002930s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: UPDATE `article` SET `hit`=hit+1 WHERE ( id='26' ) [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( id='26' and admin_id='4' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0029s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\06a6e34307243ee0fcba2cbae043d078.php on line 63 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: URL C:\Program\www\thinkphp\app\Runtime\Cache\Home\06a6e34307243ee0fcba2cbae043d078.php 第 72 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026367s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027344s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2017-05-09T14:07:22+08:00 ] 127.0.0.1 /article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002930s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036132s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036132s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2017-05-09T14:07:22+08:00 ] 127.0.0.1 /article/page.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002930s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( auditing=1 and admin_id='4' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing=1 and admin_id='4' ) ORDER BY addtime desc,tag desc LIMIT 0,4   [ RunTime:0.0059s ]
+
+[ 2017-05-09T14:07:24+08:00 ] 127.0.0.1 /article/php.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = 'PHP' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0039s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044921s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044921s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006835s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006835s ]
+
+[ 2017-05-09T14:27:21+08:00 ] 127.0.0.1 /article/php.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = 'PHP' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0039s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043945s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043945s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001954s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2017-05-09T14:28:33+08:00 ] 127.0.0.1 /article/php.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = 'PHP' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0049s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048829s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049805s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2017-05-09T14:29:14+08:00 ] 127.0.0.1 /article/php.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = 'PHP' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0049s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001953s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053711s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053711s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2017-05-09T14:29:30+08:00 ] 127.0.0.1 /article/php.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002929s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003906s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = 'PHP' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0059s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051758s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051758s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2017-05-09T14:29:44+08:00 ] 127.0.0.1 /article/php.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002930s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = 'PHP' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0039s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041015s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041015s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006836s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006836s ]
+
+[ 2017-05-09T14:29:45+08:00 ] 127.0.0.1 /article/webfrontend.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002930s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = '前端' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0039s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046875s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046875s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005860s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006836s ]
+
+[ 2017-05-09T14:29:49+08:00 ] 127.0.0.1 /article/life.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0029s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = '生活百科' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\c8a09095859a54bb2e5b468b330aba8d.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040039s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040039s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003906s ]
+
+[ 2017-05-09T14:29:50+08:00 ] 127.0.0.1 /article/talk.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = '杂谈' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040039s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040039s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004883s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005860s ]
+
+[ 2017-05-09T14:29:54+08:00 ] 127.0.0.1 /article/webfrontend.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = '前端' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039063s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041015s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2017-05-09T14:30:16+08:00 ] 127.0.0.1 /article/webfrontend.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002929s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = '前端' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0039s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049805s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049805s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2017-05-09T14:30:18+08:00 ] 127.0.0.1 /article/webfrontend.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = '前端' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0039s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043946s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043946s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006836s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006836s ]
+
+[ 2017-05-09T14:30:19+08:00 ] 127.0.0.1 /article/php.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = 'PHP' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0039s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036133s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037109s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2017-05-09T14:30:20+08:00 ] 127.0.0.1 /article/life.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = '生活百科' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\c8a09095859a54bb2e5b468b330aba8d.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036133s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036133s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2017-05-09T14:30:21+08:00 ] 127.0.0.1 /article/php.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001954s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = 'PHP' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0039s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036133s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036133s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2017-05-09T14:30:23+08:00 ] 127.0.0.1 /article/life.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001954s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = '生活百科' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0049s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\c8a09095859a54bb2e5b468b330aba8d.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035157s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036133s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2017-05-09T14:30:25+08:00 ] 127.0.0.1 /article/webfrontend.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = '前端' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0059s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.076172s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.076172s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005860s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006836s ]
+
+[ 2017-05-09T14:30:37+08:00 ] 127.0.0.1 /article/webfrontend.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = '前端' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036132s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037109s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2017-05-09T14:30:38+08:00 ] 127.0.0.1 /article/talk.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001954s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = '杂谈' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040039s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040039s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004882s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004882s ]
+
+[ 2017-05-09T14:30:40+08:00 ] 127.0.0.1 /article/php.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002929s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = 'PHP' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0049s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045899s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045899s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2017-05-09T14:30:41+08:00 ] 127.0.0.1 /article/life.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = '生活百科' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\c8a09095859a54bb2e5b468b330aba8d.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041015s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041015s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002930s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002930s ]
+
+[ 2017-05-09T14:30:48+08:00 ] 127.0.0.1 /article/talk.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = '杂谈' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0039s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041992s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041992s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001954s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001954s ]
+
+[ 2017-05-09T14:32:44+08:00 ] 127.0.0.1 /article/talk.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007812s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007812s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004883s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012695s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = '杂谈' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0078s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004883s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php 第 80 行.
+NOTIC: [8] Undefined index: ['id'] C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php 第 80 行.
+NOTIC: [8] Undefined index: ['id'] C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php 第 80 行.
+NOTIC: [8] Undefined index: ['id'] C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php 第 80 行.
+NOTIC: [8] Undefined index: ['id'] C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php 第 80 行.
+NOTIC: [8] Undefined index: ['id'] C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.086914s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.086914s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2017-05-09T14:32:46+08:00 ] 127.0.0.1 /article/php.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = 'PHP' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0088s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047851s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047851s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.022461s ]
+INFO: [ app_end ] --END-- [ RunTime:0.022461s ]
+
+[ 2017-05-09T14:32:48+08:00 ] 127.0.0.1 /article/webfrontend.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000977s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005860s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0029s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = '前端' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0049s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [8] Undefined index: ['id'] C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [8] Undefined index: ['id'] C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [8] Undefined index: ['id'] C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [8] Undefined index: ['id'] C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [8] Undefined index: ['id'] C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041993s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041993s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2017-05-09T14:32:49+08:00 ] 127.0.0.1 /article/php.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = 'PHP' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0068s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045898s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045898s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005860s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005860s ]
+
+[ 2017-05-09T14:32:58+08:00 ] 127.0.0.1 /article/webfrontend.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = '前端' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [8] Undefined index: ['id'] C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [8] Undefined index: ['id'] C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [8] Undefined index: ['id'] C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [8] Undefined index: ['id'] C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [8] Undefined index: ['id'] C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041015s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041992s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2017-05-09T14:33:31+08:00 ] 127.0.0.1 /article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001954s ]
+
+[ 2017-05-09T14:33:31+08:00 ] 127.0.0.1 /article/page.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( auditing=1 and admin_id='4' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing=1 and admin_id='4' ) ORDER BY addtime desc,tag desc LIMIT 0,4   [ RunTime:0.0068s ]
+
+[ 2017-05-09T14:33:36+08:00 ] 127.0.0.1 /article/php.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = 'PHP' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0039s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039062s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040039s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2017-05-09T14:33:40+08:00 ] 127.0.0.1 /article/webfrontend.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001954s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = '前端' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [8] Undefined index: ['id'] C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [8] Undefined index: ['id'] C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [8] Undefined index: ['id'] C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [8] Undefined index: ['id'] C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [8] Undefined index: ['id'] C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041992s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041992s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2017-05-09T14:34:56+08:00 ] 127.0.0.1 /article/life.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = '生活百科' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0039s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\c8a09095859a54bb2e5b468b330aba8d.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039063s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039063s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2017-05-09T14:35:12+08:00 ] 127.0.0.1 /article/life.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = '生活百科' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0039s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\c8a09095859a54bb2e5b468b330aba8d.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043945s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043945s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2017-05-09T14:41:10+08:00 ] 127.0.0.1 /article/webfrontend.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = '前端' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [8] Undefined index: ['id'] C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [8] Undefined index: ['id'] C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [8] Undefined index: ['id'] C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [8] Undefined index: ['id'] C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: name C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+NOTIC: [8] Undefined index: ['id'] C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040039s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041015s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2017-05-09T14:42:26+08:00 ] 127.0.0.1 /article/webfrontend.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003906s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0059s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = '前端' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0039s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042969s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043945s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2017-05-09T14:42:30+08:00 ] 127.0.0.1 /article/php.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0049s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = 'PHP' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0039s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047851s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047851s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2017-05-09T14:42:31+08:00 ] 127.0.0.1 /article/webfrontend.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0049s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0059s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = '前端' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\defd883ca8bd6c5b3bd1d63ca91e9cd3.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046875s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047851s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003906s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004883s ]
+
+[ 2017-05-09T14:42:32+08:00 ] 127.0.0.1 /article/talk.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001954s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = '杂谈' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\42c1e88c8f9048d988f4910ff344a844.php on line 78 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038086s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038086s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2017-05-09T14:42:33+08:00 ] 127.0.0.1 /article/life.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002930s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0059s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = '生活百科' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\c8a09095859a54bb2e5b468b330aba8d.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041015s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041992s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2017-05-09T14:42:35+08:00 ] 127.0.0.1 /article/php.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = 'PHP' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0039s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037110s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038086s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2017-05-09T14:55:33+08:00 ] 127.0.0.1 /article/php.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0049s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = 'PHP' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0049s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042969s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042969s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.009765s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009765s ]
+
+[ 2017-05-09T15:20:50+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2017-05-09T15:53:39+08:00 ] 127.0.0.1 /article/php.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0059s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = 'PHP' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0059s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039062s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039062s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001954s ]
+
+[ 2017-05-09T16:04:03+08:00 ] 127.0.0.1 /article/php.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0068s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE `auditing` = 1 AND `name` = 'PHP' AND `admin_id` = '4' ORDER BY addtime desc,tag desc  [ RunTime:0.0039s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\2aa92a1edf1fa3631c4805feffff55e7.php on line 100 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041993s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041993s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.023437s ]
+INFO: [ app_end ] --END-- [ RunTime:0.024414s ]
+
+[ 2017-05-09T16:09:31+08:00 ] 127.0.0.1 /article/24.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0049s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0059s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: UPDATE `article` SET `hit`=hit+1 WHERE ( id='24' ) [ RunTime:0.0215s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( id='24' and admin_id='4' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\06a6e34307243ee0fcba2cbae043d078.php on line 63 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: URL C:\Program\www\thinkphp\app\Runtime\Cache\Home\06a6e34307243ee0fcba2cbae043d078.php 第 72 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024414s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024414s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2017-05-09T16:39:04+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003906s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0049s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='4' ) ORDER BY uptime desc,tag desc LIMIT 10   [ RunTime:0.0049s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 83 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 83 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 83 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 83 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 83 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034179s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034179s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2017-05-09T16:39:42+08:00 ] 127.0.0.1 /about.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0049s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0059s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8] Undefined variable: crumbs C:\Program\www\thinkphp\app\Runtime\Cache\Home\e3e445596851f0d181bd65538f582628.php 第 57 行.
+NOTIC: [8] Undefined variable: crumbs C:\Program\www\thinkphp\app\Runtime\Cache\Home\e3e445596851f0d181bd65538f582628.php 第 57 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040039s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040039s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.012695s ]
+INFO: [ app_end ] --END-- [ RunTime:0.013672s ]
+
+[ 2017-05-09T16:39:44+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='4' ) ORDER BY uptime desc,tag desc LIMIT 10   [ RunTime:0.0049s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 83 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 83 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 83 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 83 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 83 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035156s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035156s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2017-05-09T16:39:46+08:00 ] 127.0.0.1 /article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027344s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027344s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2017-05-09T16:39:46+08:00 ] 127.0.0.1 /article/page.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002930s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( auditing=1 and admin_id='4' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing=1 and admin_id='4' ) ORDER BY addtime desc,tag desc LIMIT 0,4   [ RunTime:0.0049s ]
+
+[ 2017-05-09T16:39:49+08:00 ] 127.0.0.1 /diary.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0049s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `diary` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `diary` WHERE ( admin_id='4' ) ORDER BY addtime desc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022461s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023438s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2017-05-09T16:46:47+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000976s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002929s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='4' ) ORDER BY addtime desc LIMIT 10   [ RunTime:0.0059s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='4' ) ORDER BY uptime desc,tag desc LIMIT 10   [ RunTime:0.0059s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 83 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 83 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 83 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 83 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in C:\Program\www\thinkphp\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 83 and defined C:\Program\www\thinkphp\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036133s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036133s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+

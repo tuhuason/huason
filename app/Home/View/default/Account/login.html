@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{:L('management system')} - __COMPANY__</title>
+    <!-- <link rel="shortcut icon" href="__BRAND__/favicon.ico" /> -->
+    <link href="__STATIC__/layui/css/layui.css" rel="stylesheet" />
+    <link href="__CSS__/global.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="mainBody">
+        <div id="cloud1" class="cloud"></div>
+        <div id="cloud2" class="cloud"></div>
+    </div>
+
+    <div class="logintop">
+        <span>{:L('welcome to login in managment system', array('company'=>'__COMPANY__'))}</span>
+    </div>
+
+    <div class="loginbody">
+        <span class="systemlogo"></span>
+        <div class="loginbox">
+            <form action="{:U('Home/Account/login')}" method="POST" autocomplete="off">
+            <ul>
+                <li>
+                    <input type="text" name="username" class="loginuser"
+                           placeholder="{:L('please input a username')}" value="{$username}" />
+                </li>
+                <li>
+                    <input type="password" name="password" class="loginpwd" 
+                    	   placeholder="{:L('please input a password')}" value=""/>
+                </li>
+                <li>
+                    <input type="submit" class="loginbtn" value="{:L('login')}" />
+                    <if condition="(!empty($msg))">
+                    	<a>{$msg}</a>
+                    </if>
+                </li>
+            </ul>
+            </form>
+        </div>
+    </div>
+    <literal>
+    <script src="__JS__/jquery-1.10.2.min.js"></script>
+    <script src="__STATIC__/layui/layui.js"></script>
+    <script src="__JS__/account.js"></script>
+    <script type="text/javascript">
+        $(function(){
+           CyAccount.initialize();
+        });
+    </script>
+    </literal>
+</body>
+</html>

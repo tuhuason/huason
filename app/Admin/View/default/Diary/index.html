@@ -1,0 +1,64 @@
+<extend name="Base/layout" />
+<block name="content">
+<div class="" style="margin-bottom: 10px;">
+<button class="layui-btn layui-btn-normal" id="add-diary">添加日记</button>
+<button class="layui-btn layui-btn-danger" onclick="Diary.delete_diys()"><i class="layui-icon" style="">&#xe640;</i>批量删除</button>
+</div>
+<table class="layui-table layui-form" id="diary">
+    <thead>
+        <tr>
+            <th><input type="checkbox" lay-skin="primary" lay-filter="diary" name="select_all"></th>
+            <th>ID</th>
+            <th>创建时间</th>
+            <!-- <th>更新时间</th> -->
+            <th>文本内容</th>
+            <th>操作</th>
+        </tr> 
+    </thead>
+    <tbody>
+        <foreach name="diary"  item="diy">
+        <tr>
+            <td><input type="checkbox" lay-skin="primary" name="select" value="{$diy.id}"></td>
+            <td>{$diy.id}</td>
+            <td>{$diy.addtime|date='Y-m-d H:i:s',###}</td>
+            <td>{$diy.content|htmlspecialchars_decode}</td>
+            <td>
+                <!-- <a class="layui-btn layui-btn-normal layui-btn-small" onclick="edit_diy('{$diy.id}')">编辑</a> -->
+                <a class="layui-btn layui-btn-danger layui-btn-small delete_art" onclick="Diary.delete_diy('{$diy.id}')">删除</a>
+            </td>
+        </tr>
+        </foreach>
+    </tbody>
+</table>
+<script type="text/template" id="add_diary_container">
+    <div class="template-box">
+        <form class="layui-form layui-form-pane">
+            <div class="layui-form-item">
+                <label class="layui-form-label">内容</label>
+                <div class="layui-input-block">
+                    <textarea class="layui-textarea layui-hide" name="content" lay-verify="content" id="editorDiary" placeholder="请输入日记内容">
+                    </textarea>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button type="button" class="layui-btn" lay-submit="" lay-filter="add-diary">确定</button>
+                    <button type="button" class="layui-btn layui-btn-primary btn-cancel">取消</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</script>
+</block>
+<block name="javascript">
+    <script type="text/javascript" src="__JS__/diary.js"></script>
+    <script type="text/javascript" src="__JS__/jquery.dataTables.min.js"></script>
+    <script type="text/javascript">
+
+        $(function(){
+            Diary.initialize();
+            Base.urls = {diary:"{:U('/Admin/diary/index')}",addDiary:"{:U('Admin/diary/addDiary')}",deleteDiary:"{:U('Admin/diary/deleteDiary')}",findOne:"{:U('Admin/diary/findOne')}",editDiary:"{:U('Admin/diary/editDiary')}",};
+            
+        });
+    </script>
+</block>

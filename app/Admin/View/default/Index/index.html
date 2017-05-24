@@ -1,0 +1,48 @@
+<extend name="Base/layout" />
+<block name="content">
+<div class="layui-tab-item <if condition="'index' == $identifier">layui-show</if>">
+
+    <p style="padding: 10px 15px; margin-bottom: 20px; margin-top: 10px; border:1px solid #ddd;display:inline-block;">
+        <span style="padding-left:1em;">当前用户：{$username}</span>
+        <span style="padding-left:1em;">IP：{$cur_user.lastip}</span>
+        <span style="padding-left:1em;">地点：未知</span>
+        <span style="padding-left:1em;">时间：{$cur_user.lasttime|date='Y-m-d H:i:s',###}</span>
+    </p>
+    <div class="clear"></div>
+    <notempty name="data['user']">
+	<div class="pane-4">
+		<section class="card">
+			<div class="symbol blue">
+                <i class="layui-icon pane-icon">&#xe613;</i>
+            </div>
+			<div class="value">
+                <h1>{$data.user}</h1>
+                <span>用户总量</span>
+            </div>
+		</section>
+	</div>
+    </notempty>
+	<div class="pane-4">
+		<section class="card">
+			<div class="symbol red">
+                <i class="layui-icon pane-icon">&#xe63c;</i>
+            </div>
+            <div class="value">
+                <h1>{$data.article}</h1>
+                <span>文章总数</span>
+            </div>
+		</section>
+	</div>
+	<div class="pane-4">
+		<section class="card">
+			<div class="symbol green">
+                <i class="layui-icon pane-icon">&#xe60e;</i>
+            </div>
+            <div class="value">
+                <h1>{$data.diary}</h1>
+                <span>日记总数</span>
+            </div>
+		</section>
+	</div>
+</div>
+</block>

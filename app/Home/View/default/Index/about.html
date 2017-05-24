@@ -1,0 +1,31 @@
+<extend name="Base/layout" />
+
+<block name="javascript">
+<script src="__JS__/index.js"></script>
+<script type="text/javascript">
+    $(function(){
+        Index.initialize({
+        });
+    });
+</script>
+</block>
+
+
+<block name="content">
+    <include file="Base:breadcrumb" />
+    <div class="wrap">
+        <div class="page-left">
+            <div class="box shadow">
+                <h1>Huason</h1>
+                <div class="content">
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; 大家好，欢迎来到Huason博客！涂华兴，92年，PHP程序员，目前还是码夫。这是Huason的第一个博客，也是自己开发的，谢谢大家的支持和关注。
+                生来倔强，We are young！
+                </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-right topic">
+        <include file="Base:calendar" />
+    </div>
+</block>

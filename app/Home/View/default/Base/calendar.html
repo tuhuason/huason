@@ -1,0 +1,29 @@
+<div class="calendar shadow">
+    <h3>日历</h3>
+    <div id="CalendarMain">
+        <div id="title">
+            <a class="selectBtn month" href="javascript:" onClick="CalendarHandler.CalculateLastMonthDays();"><</a><a class="selectBtn selectYear" href="javascript:" onClick="CalendarHandler.CreateSelectYear(CalendarHandler.showYearStart);"></a><a class="selectBtn selectMonth" onClick="CalendarHandler.CreateSelectMonth()"></a> <a class="selectBtn nextMonth" href="javascript:" onClick="CalendarHandler.CalculateNextMonthDays();">></a><a class="selectBtn currentDay" href="javascript:" onClick="CalendarHandler.CreateCurrentCalendar(0,0,0);">今天</a>
+        </div>
+        <div id="context">
+            <div class="week">
+                <h4> 一 </h4>
+                <h4> 二 </h4>
+                <h4> 三 </h4>
+                <h4> 四 </h4>
+                <h4> 五 </h4>
+                <h4> 六 </h4>
+                <h4> 日 </h4>
+            </div>
+            <div id="center">
+                <div id="centerMain">
+                <div id="selectYearDiv"></div>
+                <div id="centerCalendarMain">
+                <div id="Container"></div>
+                </div>
+                <div id="selectMonthDiv"></div>
+                </div>
+            </div>
+            <div id="foots"><a id="footNow"></a></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<extend name="Base/layout" />
+<block name="urls">
+page:"{:U('article/page')}"
+</block>
+<block name="content">
+<!--     <div class="layui-breadcrumb crumbs shadow" lay-separator="/">         
+        <a href="/">首页</a>
+        <a>文章</a> 
+    </div> -->
+    <div class="page-left">
+        <div id="article_list" data-name="{$username}">
+            <empty name="hot">
+            <div class="blog-box-empty shadow">
+                <div class="l-content">没有文章，请添加文章。</div>
+            </div>
+            </empty>
+        </div>
+    </div>
+    <div class="page-right topic">
+        <include file="Base:category" />
+        <include file="Base:hot_new_list" />
+    </div>
+</block>
+
+<block name="javascript">
+<script src="__JS__/index.js"></script>
+<script type="text/javascript">
+    $(function(){
+        Index.initialize({
+        });
+        Base.url('article_page',"{:U('article/page')}");
+    });
+</script>
+</block>

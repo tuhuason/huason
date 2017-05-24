@@ -1,0 +1,70 @@
+<extend name="Base/layout" />
+
+<block name="content">
+<!--     <div class="layui-breadcrumb crumbs shadow" lay-separator="/">         
+        <a href="/">首页</a>
+        <a>文章</a> 
+    </div> -->
+    <div class="page-left">
+        <empty name="hot">
+            <div class="blog-box-empty shadow">
+                <div class="l-content">没有文章，请添加文章。</div>
+            </div>
+        <else />
+            <empty name="search">
+                <div class="blog-box-empty shadow">
+                    <div class="l-content">未找到‘<em>{$param}</em>’相关的内容，请看下列热门文章</div>
+                </div>
+                <foreach name="hot"  item="art" key="k">
+                    <include file="Base:blog" />
+                </foreach>
+            </empty>
+        </empty>    
+        <foreach name="search" key="k" item="art">
+            <include file="Base:blog" />
+        </foreach>
+    </div>
+    <div class="page-right topic">
+        <include file="Base:category" />
+        <include file="Base:hot_new_list" />
+    </div>
+</block>
+
+<block name="javascript">
+<script src="__JS__/index.js"></script>
+<script type="text/javascript">
+    $(function(){
+        Index.initialize({
+        });
+        // layui.use('laypage', function(){
+        //     var laypage = layui.laypage,
+        //         datas = [],
+        //         nums = 1,
+        //         div = $('#article_list').find('div.blog-box');
+
+        //     div.each(function(){
+        //         var $html = $(this).html();
+        //         datas.push($html);
+        //     });
+        //     //模拟渲染
+        //     var render = function(curr){
+        //         var str = '', last = curr*nums - 1;
+        //         last = last >= datas.length ? (datas.length-1) : last;
+        //         for(var i = (curr*nums - nums); i <= last; i++){
+        //             str += '<div class="blog-box">'+ datas[i] +'</div>';
+        //         }
+        //         return str;
+        //     };
+
+        //     laypage({
+        //         cont: $('#pages')
+        //         ,pages: Math.ceil(div.length/nums)
+        //         ,skip: true
+        //         ,jump: function(obj){
+        //             document.getElementById('article_list').innerHTML = render(obj.curr);
+        //         }
+        //     });
+        // });
+    });
+</script>
+</block>

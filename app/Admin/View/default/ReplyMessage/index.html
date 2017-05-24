@@ -1,0 +1,58 @@
+<extend name="Base/layout" />
+<block name="content">
+<div class="" style="margin-bottom: 10px;">
+<button class="layui-btn" onclick="Reply_message.auditings()"><i class="layui-icon" style="">&#xe605;</i>批量审核</button>
+<button class="layui-btn layui-btn-danger" onclick="Reply_message.delete_messages()"><i class="layui-icon" style="">&#xe640;</i>批量删除</button>
+</div>
+<table class="layui-table layui-form" id="reply_message">
+    <colgroup>
+    <col width="30">
+    </colgroup>
+  	<thead>
+	    <tr>
+            <th><input type="checkbox" lay-skin="primary" lay-filter="reply_message" name="select_all"></th>
+	      	<th>ID</th>
+            <th>回复者</th>
+	      	<th>回复时间</th>
+            <th>被回复人</th>
+            <th>回复标识</th>
+            <th>回复内容</th>
+            <th>点赞次数</th>
+            <th>审核</th>
+            <th>操作</th>
+	    </tr> 
+  	</thead>
+  	<tbody>
+        <foreach name="reply"  item="re">
+    	<tr data-id="{$re.id}" data-content="{$re.content}">
+            <td><input type="checkbox" lay-skin="primary" name="select" value="{$re.id},{$re.identifier}"></td>
+	      	<td>{$re.id}</td>
+	      	<td>{$re.reply_commenter}</td>
+            <td>{$re.addtime|date='Y-m-d H:i:s',###}</td>
+            <td>{$re.reply_master}</td>
+            <td>{$re.identifier}</td>
+            <td><a>查看内容</a></td>
+            <td>{$re.upvote}</td>
+            <td data-id="{$re.id}"><input type="checkbox" name="auditing" lay-filter="auditing" lay-skin="switch" lay-text="是|否" <if condition="$re['auditing']">checked</if>></td>
+            <td>
+                <a class="layui-btn layui-btn-danger layui-btn-small delete_art" onclick="Reply_message.delete_message('{$re.id}','{$re.identifier}')"><i class="layui-icon" style="">&#xe640;</i></a>
+            </td>
+    	</tr>
+        </foreach>
+  	</tbody>
+</table>
+</block>
+<block name="urls">
+    reply_message : "{:U('Admin/ReplyMessage/index')}",
+    delete_reply_message : "{:U('Admin/ReplyMessage/deleteReplyMessage')}",
+    edit_reply_message : "{:U('Admin/ReplyMessage/editReplyMessage')}"
+</block>
+<block name="javascript">
+    <script type="text/javascript" src="__JS__/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="__JS__/reply_message.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        Reply_message.initialize();
+    });
+    </script>
+</block>

@@ -1,0 +1,32 @@
+<if condition="$art['auditing']">
+<div class="blog-box shadow">
+    <div class="l-img"><img src="__IMG__/small/{$k+1}.png"></div>
+    <div class="l-box">
+        <div class="tab">
+            <switch name="art['tag']" >
+                <case value="置顶" break="1">
+                    <span class="stick">置顶</span>
+                </case>
+                <case value="置顶,精贴" break="1">
+                    <span class="fine">精贴</span>
+                    <span class="stick">置顶</span>
+                </case>
+                <case value="精贴" break="1">
+                    <span class="fine">精贴</span>
+                </case>    
+                <default />
+            </switch>
+        </div>
+        <div class="l-title"><a href="{:U('/article/'.$art['id'])}">{$art.title}</a></div>
+        <div class="l-content">{$art.content|htmlspecialchars_decode}</div>
+    </div>
+    <div class="clear"></div>
+    <div class="l-footer">
+        <span title="时间"><i class="iconfont" style="font-size: 17px;">&#xe665;</i>{$art.addtime|format_datetime=2}</span>
+        <span title="作者"><i class="layui-icon">&#xe612;</i>{$username}</span>
+        <span title="标签"><i class="iconfont" style="font-size: 17px;">&#xe690;</i>{$art.name}</span>
+        <span class="info" title="浏览次数"><i class="iconfont" style="font-size: 21px;">&#xe71a;</i>{$art.hit}</span>
+        <span class="info" title="评论数"><i class="iconfont" style="font-size: 17px;">&#xe6ad;</i>{$art.comment}</span>
+    </div>
+</div>
+</if>

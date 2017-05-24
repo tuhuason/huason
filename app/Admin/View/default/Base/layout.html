@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+{/*基础布局 有块名:title/stylesheets/content/hidden_area/urls/javascript/footer*/}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title><block name="title">管理后台-{$webtitle}</block></title>
+    <link rel="shortcut icon" href="__IMG__/favicon.png">
+    <link rel="stylesheet" href="__STATIC__/layui/css/layui.css">
+    <link rel="stylesheet" href="__CSS__/admin.css" media="all">
+    <block name="stylesheets">
+    </block>
+</head>
+<body>
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header header">
+            <a class="logo" href="{:U('/Account/index/')}" title="Huason"><img src="__IMG__/logo.png"></a>
+            <!-- <span class="title">后台管理</span> -->
+            <ul class="layui-nav" lay-filter="top_nav">
+                <li class="layui-nav-item">
+                    <a href="/">前台首页</a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">{$username}</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="{:U('admin/Account/logout')}">退出</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+        <div class="site-tree layui-side layui-bg-black" id="side-menu">
+            <div class="layui-side-scroll">
+                <ul class="layui-nav layui-nav-tree" lay-filter="leftnav">
+                    <foreach name="menu_list" key="menu_identifier" item="menu">
+                    <if condition="empty($menu['children'])">
+                    <li data-id="{$menu.id}" class="layui-nav-item <if condition="$menu_identifier == $identifier">layui-this</if>">
+                    <a href="{$menu.url}" data-url="{$menu.url}" data-id="{$menu.id}"><span style="margin-left: 10px;">{$menu.name}</span></a>
+                    </li>
+                    <else/>
+                    <php> $ident = current(explode('.',$identifier));</php>
+                    <li class="layui-nav-item <if condition="$menu_identifier == $ident">layui-nav-itemed</if>">
+                        <a href="javascript:;">{$menu.name}</a>
+                        <dl class="layui-nav-child">
+                            <foreach name="menu.children" key="childrenmenu_identifier" item="childmenu">
+                            <dd data-id="{$childmenu.id}" <if condition="($menu_identifier.'.'.$childrenmenu_identifier)== $identifier">class="layui-this"</if>><a href="{$childmenu.url}" data-url="{$childmenu.url}" data-id="{$childmenu.id}"><i class="layui-icon">&#xe600;</i><span style="margin-left: 10px;">{$childmenu.name}</span></a></dd>
+                            </foreach>
+                        </dl>
+                      </li>
+                    </if>
+                    </foreach>
+                </ul>
+            </div>
+        </div>
+        <div class="layui-body">
+            <!-- <div style="margin:0;" class="layui-tab layui-tab-brief" lay-filter="tab" lay-allowclose="true">
+                <ul class="layui-tab-title">
+                    <li lay-id="0" <if condition="'index' == $identifier">class="layui-this"</if>>首页</li>
+                </ul> -->
+                <div class="layui-tab-content" style="overflow:auto;">
+                    <block name="content"></block>
+                </div>
+            <!-- </div>  -->
+        </div>
+        <!-- <div class="layui-footer">
+        </div> -->
+        <div class="layui-fixbar" id="gotop" style="display:none;right:20px;">
+            <li class="layui-icon layui-fixbar-top" style="display: list-item;background-color:rgba(0, 0, 0, 0.48);">&#xe604;</li>
+        </div>
+        <div class="site-tree-mobile layui-hide">
+            <i class="layui-icon">&#xe602;</i>
+        </div>
+        <div class="site-mobile-shade"></div>
+    </div>
+    {/*加载框*/}
+    <include file="Base/loading" />
+    {/*隐藏区域*/}
+    <block name="hidden_area"></block>
+    {/*脚本*/}
+    <script src="__JS__/jquery-1.10.2.min.js"></script>
+    <script src="__STATIC__/layui/layui.js"></script>
+    <script type="text/javascript" src="__JS__/base.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            Base.initialize();
+            Base.urls = {<block name="urls"></block>};
+            layui.use(['form','element'], function(){
+                var form = layui.form(),
+                element = layui.element(),
+                $ = layui.jquery;
+            })
+            
+        });
+    </script>
+    <block name="javascript"></block>
+    <block name="footer"></block>
+</body>
+</html>

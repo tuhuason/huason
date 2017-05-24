@@ -1,0 +1,1461 @@
+[ 2017-05-24T10:15:55+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0300s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0840s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-24T10:17:02+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-24T10:18:34+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-24T10:36:59+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-24T10:37:01+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0050s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.008001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-24T10:40:25+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-24T10:43:14+08:00 ] 127.0.0.1 /article/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: UPDATE `article` SET `hit`=hit+1 WHERE ( id='1' ) [ RunTime:0.0700s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( id='1' and admin_id='1' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.1130s ]
+SQL: SELECT * FROM `review` WHERE ( article_id='1' )  [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\06a6e34307243ee0fcba2cbae043d078.php on line 63 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [8] Undefined index: URL E:\xampp\htdocs\think\app\Runtime\Cache\Home\06a6e34307243ee0fcba2cbae043d078.php 第 72 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-24T10:43:15+08:00 ] 127.0.0.1 /review/page.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `reply_review` [ RunTime:0.0490s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( article_id= '1' and auditing=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `review` WHERE ( article_id= '1' ) ORDER BY addtime desc LIMIT 0,4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `reply_review` WHERE ( auditing = 1 and article_id= '1' )  [ RunTime:0.0180s ]
+
+[ 2017-05-24T10:44:40+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0050s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-05-24T10:44:45+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0050s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-05-24T10:44:58+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0050s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-05-24T10:45:05+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 91 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-05-24T10:48:56+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-24T10:49:56+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-05-24T10:50:27+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-24T10:58:52+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-24T11:04:04+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-24T11:08:26+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-24T11:08:57+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-24T11:09:46+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-05-24T11:09:54+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2017-05-24T11:10:20+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-24T11:10:29+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-24T11:10:52+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-24T11:11:49+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 94 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-24T11:18:44+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-24T11:23:34+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2017-05-24T12:02:07+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-24T15:22:45+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-24T15:23:56+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-05-24T15:36:17+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-24T16:00:07+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0330s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-24T16:00:19+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-05-24T16:01:24+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-24T16:02:11+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-24T16:05:08+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2017-05-24T16:24:56+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0250s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-24T16:33:18+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0350s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY hit desc,addtime desc LIMIT 10   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( auditing = 1 and admin_id='1' ) ORDER BY comment desc LIMIT 10   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` INNER JOIN category ON article.catid = category.catid  WHERE ( admin_id='1' ) ORDER BY tag desc,uptime desc LIMIT 10   [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+NOTIC: [2] Missing argument 3 for format_datetime(), called in E:\xampp\htdocs\think\app\Runtime\Cache\Home\0b3445db061f7b092197228f7d7f5bd5.php on line 96 and defined E:\xampp\htdocs\think\app\Home\Common\function.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.009000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009000s ]
+

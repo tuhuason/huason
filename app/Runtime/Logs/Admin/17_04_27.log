@@ -1,0 +1,1500 @@
+[ 2017-04-27T08:41:28+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.039063s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0801s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin` LIMIT 1   [ RunTime:0.0635s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `diary` [ RunTime:0.0146s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `diary` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0586s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./app/Admin/View/default/Base/loading.html): failed to open stream: No such file or directory C:\Program\www\thinkphp\system\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002930s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.145508s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.146484s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003906s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003906s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002929s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003906s ]
+
+[ 2017-04-27T08:41:33+08:00 ] 127.0.0.1 /admin/article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article`  [ RunTime:0.0410s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./app/Admin/View/default/Base/loading.html): failed to open stream: No such file or directory C:\Program\www\thinkphp\system\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024414s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024414s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2017-04-27T08:41:37+08:00 ] 127.0.0.1 /admin/diary/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002930s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003906s ]
+SQL: SHOW COLUMNS FROM `diary` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `diary`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./app/Admin/View/default/Base/loading.html): failed to open stream: No such file or directory C:\Program\www\thinkphp\system\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022461s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022461s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2017-04-27T08:42:53+08:00 ] 127.0.0.1 /admin/article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000976s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002930s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article`  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./app/Admin/View/default/Base/loading.html): failed to open stream: No such file or directory C:\Program\www\thinkphp\system\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024414s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025391s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2017-04-27T16:25:48+08:00 ] 127.0.0.1 /admin/article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003907s ]
+
+[ 2017-04-27T16:25:48+08:00 ] 127.0.0.1 /admin/admin/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013672s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013672s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2017-04-27T16:25:48+08:00 ] 127.0.0.1 /admin/admin/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2017-04-27T16:25:49+08:00 ] 127.0.0.1 /admin/admin/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2017-04-27T16:25:50+08:00 ] 127.0.0.1 /admin/admin/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007812s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-27T16:25:56+08:00 ] 127.0.0.1 /admin/admin/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002930s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' and password='admin1' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: id C:\Program\www\thinkphp\app\Admin\Model\AdminModel.class.php 第 63 行.
+SQL: UPDATE `admin` SET `lastip`='127.0.0.1',`lasttime`='1493281556' WHERE ( adminuser='admin' ) [ RunTime:0.0146s ]
+
+[ 2017-04-27T16:25:57+08:00 ] 127.0.0.1 /admin/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0049s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `diary` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `diary` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./app/Admin/View/default/Base/loading.html): failed to open stream: No such file or directory C:\Program\www\thinkphp\system\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020508s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020508s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2017-04-27T16:25:59+08:00 ] 127.0.0.1 /admin/article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003907s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `article`  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./app/Admin/View/default/Base/loading.html): failed to open stream: No such file or directory C:\Program\www\thinkphp\system\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039063s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040039s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.047852s ]
+INFO: [ app_end ] --END-- [ RunTime:0.048828s ]
+
+[ 2017-04-27T16:28:58+08:00 ] 127.0.0.1 /admin/article/editarticle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000976s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `article` SET `id`='26',`auditing`='1',`uptime`='1493281738',`admin_id`='4' WHERE ( id='26' ) [ RunTime:0.0244s ]
+
+[ 2017-04-27T17:05:08+08:00 ] 127.0.0.1 /admin/article/findone.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002930s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( id='25' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-04-27T17:06:20+08:00 ] 127.0.0.1 /admin/article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000977s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002930s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article`  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./app/Admin/View/default/Base/loading.html): failed to open stream: No such file or directory C:\Program\www\thinkphp\system\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032226s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032226s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.020508s ]
+INFO: [ app_end ] --END-- [ RunTime:0.020508s ]
+
+[ 2017-04-27T17:06:22+08:00 ] 127.0.0.1 /admin/article/findone.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002930s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `article` WHERE ( id='25' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-04-27T17:08:03+08:00 ] 127.0.0.1 /admin/article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002930s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `article`  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./app/Admin/View/default/Base/loading.html): failed to open stream: No such file or directory C:\Program\www\thinkphp\system\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029297s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029297s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2017-04-27T17:08:05+08:00 ] 127.0.0.1 /admin/article/findone.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001954s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `article` WHERE ( id='25' ) LIMIT 1   [ RunTime:0.0020s ]
+
+[ 2017-04-27T17:08:28+08:00 ] 127.0.0.1 /admin/article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article`  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./app/Admin/View/default/Base/loading.html): failed to open stream: No such file or directory C:\Program\www\thinkphp\system\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026367s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026367s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2017-04-27T17:08:29+08:00 ] 127.0.0.1 /admin/article/findone.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `article` WHERE ( id='25' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-04-27T17:27:07+08:00 ] 127.0.0.1 /admin/article/findone.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001954s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002930s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `article` WHERE ( id='25' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-04-27T17:27:10+08:00 ] 127.0.0.1 /admin/article/findone.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003907s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005860s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `article` WHERE ( id='26' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-04-27T17:34:00+08:00 ] 127.0.0.1 /admin/article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002930s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004883s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0107s ]
+SQL: SELECT * FROM `article`  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./app/Admin/View/default/Base/loading.html): failed to open stream: No such file or directory C:\Program\www\thinkphp\system\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029297s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030273s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2017-04-27T17:34:02+08:00 ] 127.0.0.1 /admin/article/findone.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005859s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002930s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008789s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `article` WHERE ( id='25' ) LIMIT 1   [ RunTime:0.0020s ]
+
+[ 2017-04-27T19:35:29+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0690s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `diary` [ RunTime:0.0180s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `diary` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./app/Admin/View/default/Base/loading.html): failed to open stream: No such file or directory E:\xampp\htdocs\think\system\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-04-27T19:35:31+08:00 ] 127.0.0.1 /admin/diary/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `diary` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `diary`  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./app/Admin/View/default/Base/loading.html): failed to open stream: No such file or directory E:\xampp\htdocs\think\system\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-27T19:35:33+08:00 ] 127.0.0.1 /admin/article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./app/Admin/View/default/Base/loading.html): failed to open stream: No such file or directory E:\xampp\htdocs\think\system\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-04-27T19:35:44+08:00 ] 127.0.0.1 /admin/article/findone.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `article` WHERE ( id='5' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-04-27T19:35:50+08:00 ] 127.0.0.1 /admin/article/findone.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` WHERE ( id='2' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-04-27T19:35:56+08:00 ] 127.0.0.1 /admin/article/editarticle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `article` SET `id`='2',`title`='hello world',`parent`='php',`tag`='置顶',`auditing`='1',`content`='&lt;img src=&quot;http://think.dev.com/static/layui/images/face/63.gif&quot; alt=&quot;[给力]&quot;&gt;这是个测试博客。',`uptime`='1493292956',`admin_id`='1' WHERE ( id='2' ) [ RunTime:0.0706s ]
+
+[ 2017-04-27T19:35:58+08:00 ] 127.0.0.1 /admin/article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `article`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./app/Admin/View/default/Base/loading.html): failed to open stream: No such file or directory E:\xampp\htdocs\think\system\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-27T19:43:57+08:00 ] 127.0.0.1 /admin/diary/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `diary` [ RunTime:0.0300s ]
+SQL: SELECT * FROM `diary`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./app/Admin/View/default/Base/loading.html): failed to open stream: No such file or directory E:\xampp\htdocs\think\system\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-27T20:09:52+08:00 ] 127.0.0.1 /admin/article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-27T20:09:52+08:00 ] 127.0.0.1 /admin/admin/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-27T20:09:52+08:00 ] 127.0.0.1 /admin/admin/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-27T20:09:54+08:00 ] 127.0.0.1 /admin/admin/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-27T20:09:59+08:00 ] 127.0.0.1 /admin/admin/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' and password='admin1' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: id E:\xampp\htdocs\think\app\Admin\Model\AdminModel.class.php 第 63 行.
+SQL: UPDATE `admin` SET `lastip`='127.0.0.1',`lasttime`='1493294999' WHERE ( adminuser='admin' ) [ RunTime:0.0780s ]
+
+[ 2017-04-27T20:10:00+08:00 ] 127.0.0.1 /admin/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin` LIMIT 1   [ RunTime:0.0630s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `diary` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `diary` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./app/Admin/View/default/Base/loading.html): failed to open stream: No such file or directory E:\xampp\htdocs\think\system\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-27T20:10:08+08:00 ] 127.0.0.1 /admin/article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article`  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./app/Admin/View/default/Base/loading.html): failed to open stream: No such file or directory E:\xampp\htdocs\think\system\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-27T20:23:18+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `diary` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `diary` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./app/Admin/View/default/Base/loading.html): failed to open stream: No such file or directory E:\xampp\htdocs\think\system\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-27T20:31:49+08:00 ] 127.0.0.1 /admin/article/findone.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` WHERE ( id='5' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-04-27T20:32:36+08:00 ] 127.0.0.1 /admin/article/editarticle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `article` SET `id`='5',`title`='PHP文件锁（flock）用法详解',`parent`='php',`tag`='置顶',`auditing`='1',`content`='&lt;p&gt;bool&amp;nbsp;&lt;a href=&quot;http://www.liqingbo.cn/blog-601.html&quot; target=&quot;_blank&quot; title=&quot;flock&quot;&gt;flock&lt;/a&gt;&amp;nbsp;( int handle, int operation [, int &amp;amp;wouldblock] );&lt;/p&gt;&lt;p&gt;flock() 操作的 handle 必须是一个已经打开的文件指针。operation 可以是以下值之一：&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;要取得共享锁定（读取程序），将 operation 设为 LOCK_SH（PHP 4.0.1 以前的版本设置为 1）&lt;/p&gt;&lt;p&gt;要取得独占锁定（写入程序），将 operation 设为 LOCK_EX（PHP 4.0.1 以前的版本中设置为 2）&lt;/p&gt;&lt;p&gt;要释放锁定（无论共享或独占），将 operation 设为 LOCK_UN（PHP 4.0.1 以前的版本中设置为 3）&lt;/p&gt;&lt;p&gt;如果你不希望 flock() 在锁定时堵塞，则给 operation 加上 LOCK_NB（PHP 4.0.1 以前的版本中设置为 4）&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;建两个文件&lt;/p&gt;&lt;p&gt;&lt;strong&gt;a.php&lt;/strong&gt;&lt;/p&gt;&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;syntaxhighlighter  php layui-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;div class=&quot;line number1 index0 alt2&quot; style=&quot;text-align: right;&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line number2 index1 alt1&quot; style=&quot;text-align: right;&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line number3 index2 alt2&quot; style=&quot;text-align: right;&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line number4 index3 alt1&quot; style=&quot;text-align: right;&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line number5 index4 alt2&quot; style=&quot;text-align: right;&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line number6 index5 alt1&quot; style=&quot;text-align: right;&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line number7 index6 alt2&quot; style=&quot;text-align: right;&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line number8 index7 alt1&quot; style=&quot;text-align: right;&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line number9 index8 alt2&quot; style=&quot;text-align: right;&quot;&gt;9&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;container&quot;&gt;&lt;div class=&quot;line number1 index0 alt2&quot;&gt;&lt;code class=&quot;php variable&quot;&gt;$file&lt;/code&gt;&amp;nbsp;&lt;code class=&quot;php plain&quot;&gt;=&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;php string&quot;&gt;&quot;temp.txt&quot;&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number2 index1 alt1&quot;&gt;&lt;code class=&quot;php variable&quot;&gt;$fp&lt;/code&gt;&amp;nbsp;&lt;code class=&quot;php plain&quot;&gt;=&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;php functions&quot;&gt;fopen&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;(&lt;/code&gt;&lt;code class=&quot;php variable&quot;&gt;$file&lt;/code&gt;&amp;nbsp;&lt;code class=&quot;php plain&quot;&gt;,&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;php string&quot;&gt;\'w\'&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;);&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number3 index2 alt2&quot;&gt;&lt;code class=&quot;php keyword&quot;&gt;if&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;(&lt;/code&gt;&lt;code class=&quot;php functions&quot;&gt;flock&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;(&lt;/code&gt;&lt;code class=&quot;php variable&quot;&gt;$fp&lt;/code&gt;&amp;nbsp;&lt;code class=&quot;php plain&quot;&gt;,&amp;nbsp;LOCK_EX)){&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number4 index3 alt1&quot;&gt;&lt;code class=&quot;php spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;fwrite(&lt;/code&gt;&lt;code class=&quot;php variable&quot;&gt;$fp&lt;/code&gt;&amp;nbsp;&lt;code class=&quot;php plain&quot;&gt;,&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;php string&quot;&gt;&quot;abc\\n&quot;&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;);&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number5 index4 alt2&quot;&gt;&lt;code class=&quot;php spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;sleep(3);&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number6 index5 alt1&quot;&gt;&lt;code class=&quot;php spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;fwrite(&lt;/code&gt;&lt;code class=&quot;php variable&quot;&gt;$fp&lt;/code&gt;&amp;nbsp;&lt;code class=&quot;php plain&quot;&gt;,&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;php string&quot;&gt;&quot;123\\n&quot;&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;);&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number7 index6 alt2&quot;&gt;&lt;code class=&quot;php spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;php functions&quot;&gt;flock&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;(&lt;/code&gt;&lt;code class=&quot;php variable&quot;&gt;$fp&lt;/code&gt;&amp;nbsp;&lt;code class=&quot;php plain&quot;&gt;,&amp;nbsp;LOCK_UN);&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number8 index7 alt1&quot;&gt;&lt;code class=&quot;php plain&quot;&gt;}&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number9 index8 alt2&quot;&gt;&lt;code class=&quot;php plain&quot;&gt;fclose(&lt;/code&gt;&lt;code class=&quot;php variable&quot;&gt;$fp&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;);&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;b.php&lt;/strong&gt;&lt;/p&gt;&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;syntaxhighlighter  php layui-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;div class=&quot;line number1 index0 alt2&quot; style=&quot;text-align: right;&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line number2 index1 alt1&quot; style=&quot;text-align: right;&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line number3 index2 alt2&quot; style=&quot;text-align: right;&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line number4 index3 alt1&quot; style=&quot;text-align: right;&quot;&gt;4&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;container&quot;&gt;&lt;div class=&quot;line number1 index0 alt2&quot;&gt;&lt;code class=&quot;php variable&quot;&gt;$file&lt;/code&gt;&amp;nbsp;&lt;code class=&quot;php plain&quot;&gt;=&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;php string&quot;&gt;&quot;temp.txt&quot;&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number2 index1 alt1&quot;&gt;&lt;code class=&quot;php variable&quot;&gt;$fp&lt;/code&gt;&amp;nbsp;&lt;code class=&quot;php plain&quot;&gt;=&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;php functions&quot;&gt;fopen&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;(&lt;/code&gt;&lt;code class=&quot;php variable&quot;&gt;$file&lt;/code&gt;&amp;nbsp;&lt;code class=&quot;php plain&quot;&gt;,&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;php string&quot;&gt;\'r\'&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;);&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number3 index2 alt2&quot;&gt;&lt;code class=&quot;php functions&quot;&gt;echo&lt;/code&gt;&amp;nbsp;&lt;code class=&quot;php functions&quot;&gt;fread&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;(&lt;/code&gt;&lt;code class=&quot;php variable&quot;&gt;$fp&lt;/code&gt;&amp;nbsp;&lt;code class=&quot;php plain&quot;&gt;,&amp;nbsp;100);&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number4 index3 alt1&quot;&gt;&lt;code class=&quot;php plain&quot;&gt;fclose(&lt;/code&gt;&lt;code class=&quot;php variable&quot;&gt;$fp&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;);&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;运行a.php 后，马上运行 b.php&lt;/p&gt;&lt;p&gt;输出：&lt;span&gt;空白&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;运行a.php 运行完后运行 b.php&amp;nbsp;&lt;/p&gt;&lt;p&gt;输出：&lt;/p&gt;&lt;p&gt;&lt;span&gt;abc&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;123&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;显然，当 a.php 写文件时数据太大，导致时间比较长时，这是b.php文件是读取不到任何数据的。&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;修改&lt;/p&gt;&lt;p&gt;&lt;strong&gt;b.php&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;syntaxhighlighter  php layui-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;div class=&quot;line number1 index0 alt2&quot; style=&quot;text-align: right;&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line number2 index1 alt1&quot; style=&quot;text-align: right;&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line number3 index2 alt2&quot; style=&quot;text-align: right;&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line number4 index3 alt1&quot; style=&quot;text-align: right;&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line number5 index4 alt2&quot; style=&quot;text-align: right;&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line number6 index5 alt1&quot; style=&quot;text-align: right;&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line number7 index6 alt2&quot; style=&quot;text-align: right;&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line number8 index7 alt1&quot; style=&quot;text-align: right;&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line number9 index8 alt2&quot; style=&quot;text-align: right;&quot;&gt;9&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;container&quot;&gt;&lt;div class=&quot;line number1 index0 alt2&quot;&gt;&lt;code class=&quot;php variable&quot;&gt;$file&lt;/code&gt;&amp;nbsp;&lt;code class=&quot;php plain&quot;&gt;=&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;php string&quot;&gt;&quot;temp.txt&quot;&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number2 index1 alt1&quot;&gt;&lt;code class=&quot;php variable&quot;&gt;$fp&lt;/code&gt;&amp;nbsp;&lt;code class=&quot;php plain&quot;&gt;=&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;php functions&quot;&gt;fopen&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;(&lt;/code&gt;&lt;code class=&quot;php variable&quot;&gt;$file&lt;/code&gt;&amp;nbsp;&lt;code class=&quot;php plain&quot;&gt;,&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;php string&quot;&gt;\'r\'&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;);&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number3 index2 alt2&quot;&gt;&lt;code class=&quot;php keyword&quot;&gt;if&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;(&lt;/code&gt;&lt;code class=&quot;php functions&quot;&gt;flock&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;(&lt;/code&gt;&lt;code class=&quot;php variable&quot;&gt;$fp&lt;/code&gt;&amp;nbsp;&lt;code class=&quot;php plain&quot;&gt;,&amp;nbsp;LOCK_EX)){&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number4 index3 alt1&quot;&gt;&lt;code class=&quot;php spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;php functions&quot;&gt;echo&lt;/code&gt;&amp;nbsp;&lt;code class=&quot;php functions&quot;&gt;fread&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;(&lt;/code&gt;&lt;code class=&quot;php variable&quot;&gt;$fp&lt;/code&gt;&amp;nbsp;&lt;code class=&quot;php plain&quot;&gt;,&amp;nbsp;100);&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number5 index4 alt2&quot;&gt;&lt;code class=&quot;php spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;php functions&quot;&gt;flock&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;(&lt;/code&gt;&lt;code class=&quot;php variable&quot;&gt;$fp&lt;/code&gt;&amp;nbsp;&lt;code class=&quot;php plain&quot;&gt;,&amp;nbsp;LOCK_UN);&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number6 index5 alt1&quot;&gt;&lt;code class=&quot;php plain&quot;&gt;}&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;php keyword&quot;&gt;else&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;{&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number7 index6 alt2&quot;&gt;&lt;code class=&quot;php spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;php functions&quot;&gt;echo&lt;/code&gt;&amp;nbsp;&lt;code class=&quot;php string&quot;&gt;&quot;Lock&amp;nbsp;file&amp;nbsp;failed...\\n&quot;&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number8 index7 alt1&quot;&gt;&lt;code class=&quot;php plain&quot;&gt;}&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number9 index8 alt2&quot;&gt;&lt;code class=&quot;php plain&quot;&gt;fclose(&lt;/code&gt;&lt;code class=&quot;php variable&quot;&gt;$fp&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;);&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&amp;nbsp;&lt;br&gt;&lt;/p&gt;&lt;p&gt;运行 a.php 后，马上运行 b.php&lt;/p&gt;&lt;p&gt;b.php 会等到 a.php 运行完成后(即 3 秒后)才显示：&lt;/p&gt;&lt;p&gt;&lt;span&gt;abc&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;123&lt;/span&gt;&lt;/p&gt;&lt;p&gt;读取数据完整，但时间过长，他要等待写锁释放。&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;修改&lt;/p&gt;&lt;p&gt;&lt;strong&gt;b.php&lt;/strong&gt;&lt;/p&gt;&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;syntaxhighlighter  php layui-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;div class=&quot;line number1 index0 alt2&quot; style=&quot;text-align: right;&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line number2 index1 alt1&quot; style=&quot;text-align: right;&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line number3 index2 alt2&quot; style=&quot;text-align: right;&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line number4 index3 alt1&quot; style=&quot;text-align: right;&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line number5 index4 alt2&quot; style=&quot;text-align: right;&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line number6 index5 alt1&quot; style=&quot;text-align: right;&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line number7 index6 alt2&quot; style=&quot;text-align: right;&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line number8 index7 alt1&quot; style=&quot;text-align: right;&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line number9 index8 alt2&quot; style=&quot;text-align: right;&quot;&gt;9&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;container&quot;&gt;&lt;div class=&quot;line number1 index0 alt2&quot;&gt;&lt;code class=&quot;php variable&quot;&gt;$file&lt;/code&gt;&amp;nbsp;&lt;code class=&quot;php plain&quot;&gt;=&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;php string&quot;&gt;&quot;temp.txt&quot;&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number2 index1 alt1&quot;&gt;&lt;code class=&quot;php variable&quot;&gt;$fp&lt;/code&gt;&amp;nbsp;&lt;code class=&quot;php plain&quot;&gt;=&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;php functions&quot;&gt;fopen&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;(&lt;/code&gt;&lt;code class=&quot;php variable&quot;&gt;$file&lt;/code&gt;&amp;nbsp;&lt;code class=&quot;php plain&quot;&gt;,&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;php string&quot;&gt;\'r\'&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;);&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number3 index2 alt2&quot;&gt;&lt;code class=&quot;php keyword&quot;&gt;if&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;(&lt;/code&gt;&lt;code class=&quot;php functions&quot;&gt;flock&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;(&lt;/code&gt;&lt;code class=&quot;php variable&quot;&gt;$fp&lt;/code&gt;&amp;nbsp;&lt;code class=&quot;php plain&quot;&gt;,&amp;nbsp;LOCK_SH&amp;nbsp;|&amp;nbsp;LOCK_NB)){&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number4 index3 alt1&quot;&gt;&lt;code class=&quot;php spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;php functions&quot;&gt;echo&lt;/code&gt;&amp;nbsp;&lt;code class=&quot;php functions&quot;&gt;fread&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;(&lt;/code&gt;&lt;code class=&quot;php variable&quot;&gt;$fp&lt;/code&gt;&amp;nbsp;&lt;code class=&quot;php plain&quot;&gt;,&amp;nbsp;100);&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number5 index4 alt2&quot;&gt;&lt;code class=&quot;php spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;php functions&quot;&gt;flock&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;(&lt;/code&gt;&lt;code class=&quot;php variable&quot;&gt;$fp&lt;/code&gt;&amp;nbsp;&lt;code class=&quot;php plain&quot;&gt;,&amp;nbsp;LOCK_UN);&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number6 index5 alt1&quot;&gt;&lt;code class=&quot;php plain&quot;&gt;}&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;php keyword&quot;&gt;else&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;{&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number7 index6 alt2&quot;&gt;&lt;code class=&quot;php spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;php functions&quot;&gt;echo&lt;/code&gt;&amp;nbsp;&lt;code class=&quot;php string&quot;&gt;&quot;Lock&amp;nbsp;file&amp;nbsp;failed...\\n&quot;&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number8 index7 alt1&quot;&gt;&lt;code class=&quot;php plain&quot;&gt;}&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number9 index8 alt2&quot;&gt;&lt;code class=&quot;php plain&quot;&gt;fclose(&lt;/code&gt;&lt;code class=&quot;php variable&quot;&gt;$fp&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;);&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;运行 a.php 后，马上运行 b.php&lt;/p&gt;&lt;p&gt;输出：&lt;/p&gt;&lt;p&gt;&lt;span&gt;Lock file failed…&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;证明可以返回锁文件失败状态，而不是向上面一样要等很久。&lt;/p&gt;&lt;p&gt;也就是说当访问b.php的时候，直接返回temp.txt文件当前的状态&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;&lt;strong&gt;结论：&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;建议作文件缓存时，选好相关的锁，不然可能导致读取数据不完整，或重复写入数据。&lt;/p&gt;&lt;p&gt;file_get_contents 好像选择不了锁，不知道他默认用的什么锁，反正和不锁得到的输出一样，是不完整的数据。&lt;/p&gt;&lt;p&gt;我是要做文件缓存，所以只需要知道是否有写锁存在即可，有的话就查数据库就可以了。&lt;/p&gt;&lt;p&gt;（笔者）测试环境：Linux(Ubuntu 6) , PHP 5.1.2 , Apache 2&lt;/p&gt;&lt;p&gt;（我的）测试环境：window10, PHP 5.5.2 , Apache 2&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;文件锁有两种：共享锁和排他锁，也就是读锁(&lt;strong&gt;LOCK_SH&lt;/strong&gt;)和写锁(&lt;strong&gt;LOCK_EX&lt;/strong&gt;)&amp;nbsp;&lt;/p&gt;&lt;p&gt;文件的锁一般这么使用：&lt;/p&gt;&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;syntaxhighlighter  php layui-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;div class=&quot;line number1 index0 alt2&quot; style=&quot;text-align: right;&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line number2 index1 alt1&quot; style=&quot;text-align: right;&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line number3 index2 alt2&quot; style=&quot;text-align: right;&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line number4 index3 alt1&quot; style=&quot;text-align: right;&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line number5 index4 alt2&quot; style=&quot;text-align: right;&quot;&gt;5&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;container&quot;&gt;&lt;div class=&quot;line number1 index0 alt2&quot;&gt;&lt;code class=&quot;php variable&quot;&gt;$fp&lt;/code&gt;&amp;nbsp;&lt;code class=&quot;php plain&quot;&gt;=&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;php functions&quot;&gt;fopen&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;(&lt;/code&gt;&lt;code class=&quot;php string&quot;&gt;&quot;filename&quot;&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;,&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;php string&quot;&gt;&quot;a&quot;&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;);&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number2 index1 alt1&quot;&gt;&lt;code class=&quot;php functions&quot;&gt;flock&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;(&lt;/code&gt;&lt;code class=&quot;php variable&quot;&gt;$fp&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;,&amp;nbsp;LOCK_SH)&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;php keyword&quot;&gt;or&lt;/code&gt;&amp;nbsp;&lt;code class=&quot;php keyword&quot;&gt;die&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;(&lt;/code&gt;&lt;code class=&quot;php string&quot;&gt;&quot;lock&amp;nbsp;error&quot;&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;)&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number3 index2 alt2&quot;&gt;&lt;code class=&quot;php variable&quot;&gt;$str&lt;/code&gt;&amp;nbsp;&lt;code class=&quot;php plain&quot;&gt;=&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;php functions&quot;&gt;fread&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;(&lt;/code&gt;&lt;code class=&quot;php variable&quot;&gt;$fp&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;,&amp;nbsp;1024);&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number4 index3 alt1&quot;&gt;&lt;code class=&quot;php functions&quot;&gt;flock&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;(&lt;/code&gt;&lt;code class=&quot;php variable&quot;&gt;$fp&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;,&amp;nbsp;LOCK_UN);&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number5 index4 alt2&quot;&gt;&lt;code class=&quot;php plain&quot;&gt;fclose(&lt;/code&gt;&lt;code class=&quot;php variable&quot;&gt;$fp&lt;/code&gt;&lt;code class=&quot;php plain&quot;&gt;);&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;注意fwrite之后，文件立即就被更新了，而不是等fwrite然后fclose之后文件才会更新，这个可以通过在fwrite之后fclose之前读取这个文件进行检查&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;但是什么时候使用lock_ex什么时候使用lock_sh呢？&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;读的时候：&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;如果不想出现dirty数据，那么最好使用lock_sh共享锁。&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;可以考虑以下三种情况：&amp;nbsp;&lt;/p&gt;&lt;p&gt;1. 如果读的时候&lt;span&gt;没有加&lt;/span&gt;共享锁，那么其他程序要写的话（不管这个写是加锁还是不加锁）都会立即写成功。如果正好读了一半，然后被其他程序给写了，那么读的后一半就有可能跟前一半对不上（前一半是修改前的，后一半是修改后的）&amp;nbsp;&lt;/p&gt;&lt;p&gt;2. 如果读的时候&lt;span&gt;加上了&lt;/span&gt;共享锁（因为只是读，没有必要使用排他锁），这个时候，其他程序开始写，这个写程序没有使用锁，那么写程序会直接修改这个文件，也会导致前面一样的问题&amp;nbsp;&lt;/p&gt;&lt;p&gt;3. 最理想的情况是，读的时候加锁(&lt;span&gt;lock_sh&lt;/span&gt;),写的时候也进行加锁(&lt;span&gt;lock_ex&lt;/span&gt;),这样写程序会等着读程序完成之后才进行操作，而不会出现贸然操作的情况&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;写的时候：&lt;/strong&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;如果多个写程序不加锁同时对文件进行操作，那么最后的数据有可能一部分是a程序写的，一部分是b程序写的&amp;nbsp;&lt;/p&gt;&lt;p&gt;如果写的时候加锁了，这个时候有其他的程序来读，那么他会读到什么东西呢？&amp;nbsp;&lt;/p&gt;&lt;p&gt;1. 如果读程序没有申请共享锁，那么他会读到dirty的数据。比如写程序要写a,b,c三部分，写完a,这时候读读到的是a，继续写b，这时候读读到的是ab，然后写c，这时候读到的是abc.&amp;nbsp;&lt;/p&gt;&lt;p&gt;2. 如果读程序在之前申请了共享锁，那么读程序会等写程序将abc写完并释放锁之后才进行读。&amp;nbsp;&lt;/p&gt;',`uptime`='1493296355',`admin_id`='1' WHERE ( id='5' ) [ RunTime:0.1200s ]
+
+[ 2017-04-27T20:32:37+08:00 ] 127.0.0.1 /admin/article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `article`  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./app/Admin/View/default/Base/loading.html): failed to open stream: No such file or directory E:\xampp\htdocs\think\system\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-27T20:33:50+08:00 ] 127.0.0.1 /admin/article/findone.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` WHERE ( id='6' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-04-27T20:43:07+08:00 ] 127.0.0.1 /admin/article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./app/Admin/View/default/Base/loading.html): failed to open stream: No such file or directory E:\xampp\htdocs\think\system\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-04-27T20:43:37+08:00 ] 127.0.0.1 /admin/article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `article`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./app/Admin/View/default/Base/loading.html): failed to open stream: No such file or directory E:\xampp\htdocs\think\system\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-27T20:44:17+08:00 ] 127.0.0.1 /admin/article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./app/Admin/View/default/Base/loading.html): failed to open stream: No such file or directory E:\xampp\htdocs\think\system\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-27T20:47:04+08:00 ] 127.0.0.1 /admin/article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article`  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./app/Admin/View/default/Base/loading.html): failed to open stream: No such file or directory E:\xampp\htdocs\think\system\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-27T20:47:09+08:00 ] 127.0.0.1 /admin/article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `article`  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./app/Admin/View/default/Base/loading.html): failed to open stream: No such file or directory E:\xampp\htdocs\think\system\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-27T20:47:17+08:00 ] 127.0.0.1 /admin/upload/uploadimg.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\xampp\htdocs\think\system\Library\Think\Upload.class.php 第 170 行.
+NOTIC: [8] Undefined variable: x E:\xampp\htdocs\think\system\Library\Think\Image\Driver\Gd.class.php 第 270 行.
+NOTIC: [8] Undefined variable: y E:\xampp\htdocs\think\system\Library\Think\Image\Driver\Gd.class.php 第 270 行.
+
+[ 2017-04-27T20:50:08+08:00 ] 127.0.0.1 /admin/article/addarticle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `article` (`title`,`parent`,`tag`,`content`,`addtime`,`admin_id`,`uptime`) VALUES ('二维码改色方案','frontend','置顶,精贴','&lt;p&gt;&lt;span&gt;本文章主要讨论的是如何将一个纯色二维码变成彩色的。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;&lt;span&gt;前段时间公司业务上有这么一个需求，客户不喜欢后台生成的纯色二维码，纯蓝，纯紫，纯绿都不行，想要彩色二维码。然后这个任务都落到我头上了，因为是图片处理，那主要思路就是靠canvas，canvas可以进行像素操作，所以我进行了一些尝试，也踩了一点小坑，具体记录如下。&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;h3&gt;&amp;nbsp;&lt;/h3&gt;&lt;h3&gt;&lt;span&gt;前置知识&lt;/span&gt;&lt;/h3&gt;&lt;div&gt;&lt;span&gt;&lt;strong&gt;drawImage&lt;/strong&gt;方法可以把图片画到canvas上，&lt;strong&gt;getImageData&lt;/strong&gt;方法可以获得一个矩形区域所有像素点的信息，返回值的data属性是一个一维数组，储存了所有像素点的信息，一个像素点的信息会占四个元素，分别代表r,g,b和透明度。而像素点在一维数组中的顺序是从左到右，从上到下。最后就是&lt;strong&gt;putImageData&lt;/strong&gt;方法，把更改过的像素信息数组重新扔回画布上。&lt;/span&gt;&lt;h3&gt;&lt;span&gt;一些小坑&lt;/span&gt;&lt;/h3&gt;&lt;p&gt;&lt;span&gt;第一个坑就是canvas用属性去给宽高，别用css; &amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;第二个坑，做图片处理好像得服务器环境，本地是不行的，听说是基于什么安全考虑，最后我是通过搭本地服务器解决了canvas的报错。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;第三个坑，栈溢出，这个目前还没找到原因，后面会详细讲&lt;/span&gt;&lt;/p&gt;&lt;h3&gt;&lt;span&gt;变色的思路&lt;/span&gt;&lt;/h3&gt;&lt;p&gt;&lt;span&gt;主要思路来自于《啊哈！算法！》里面深度优先搜索和广度优先搜索的章节，该章节的最后一部分的“宝岛探险”实现了给不同的区域依次编号，把编号看成染色，其实是一样的。&lt;/span&gt;&lt;/p&gt;&lt;h3&gt;&lt;span&gt;具体实现&lt;/span&gt;&lt;/h3&gt;&lt;p&gt;&lt;span&gt;其实所谓的彩色二维码，不是那种每个像素点颜色随机的二维码。仔细观察二维码就会发现，黑色的部分是一块一块的，他们分布在白色当中，就好像岛屿分布在海里，我们要做的就是把每个黑色块单独染色。黑色块的实质就是一个一个相连的黑色像素点。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;前面也提到，我们使用canvas是因为可以进行像素操作，所以我们的操作其实是给像素点染色，我们显然不希望给背景色染色，所以背景色需要进行一个判断；前面也提到，背景色好像海洋分割了黑色的颜色块，那也就是说我们读一个像素点进行染色之后，不停的判断它右侧的像素点颜色，当出现背景色的时候就说明到达了边界，可以停止右方向的染色，但是每个像素点其实有四个相连接的方向，当一个像素点右边就是背景色，我们应该也去尝试别的方向的可能性，这个就是深度优先搜索，通过递归，不断的验证当前像素点的下一个位置的颜色，是背景色，那就回来，尝试别的方向；不是背景色，那就染色，然后对染色之后的这个像素点进行四个方向的验证。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;&lt;br&gt;有几点提一下，判断是不是背景色，肯定得比对rgba的值，所以颜色参数得做处理，另一个就是像素点信息的数组，每四个元素代表一个像素，所以想要比对正确的像素信息，这部分也要处理。&lt;br&gt;可能说的有点乱，我们看一下代码&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;第一部分，canvas&lt;/span&gt;&lt;/p&gt;&lt;div class=&quot;cnblogs_code&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;span&gt;//&lt;/span&gt;&lt;span&gt; canvas 部分&lt;/span&gt;
+&lt;span&gt;var&lt;/span&gt; canvas = $(&quot;canvas&quot;)[0&lt;span&gt;];
+&lt;/span&gt;&lt;span&gt;var&lt;/span&gt; ctx = canvas.getContext(&quot;2d&quot;&lt;span&gt;);
+
+&lt;/span&gt;&lt;span&gt;var&lt;/span&gt; img = &lt;span&gt;new&lt;/span&gt;&lt;span&gt; Image();
+img.src &lt;/span&gt;= path; &lt;span&gt;//&lt;/span&gt;&lt;span&gt;这里的path就是图片的地址&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;div class=&quot;cnblogs_code_toolbar&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;p&gt;&lt;span&gt;第二部分，颜色的处理&lt;/span&gt;&lt;/p&gt;&lt;div class=&quot;cnblogs_code&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;span&gt;//&lt;/span&gt;&lt;span&gt; 分离颜色参数   返回一个数组&lt;/span&gt;
+&lt;span&gt;var&lt;/span&gt; colorRgb = (&lt;span&gt;function&lt;/span&gt;&lt;span&gt;() {
+    &lt;/span&gt;&lt;span&gt;var&lt;/span&gt; reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/&lt;span&gt;;
+
+    &lt;/span&gt;&lt;span&gt;return&lt;/span&gt; &lt;span&gt;function&lt;/span&gt;&lt;span&gt;(str) {
+        &lt;/span&gt;&lt;span&gt;var&lt;/span&gt; sColor =&lt;span&gt; str.toLowerCase();
+        &lt;/span&gt;&lt;span&gt;if&lt;/span&gt; (sColor &amp;amp;&amp;amp;&lt;span&gt; reg.test(sColor)) {
+            &lt;/span&gt;&lt;span&gt;if&lt;/span&gt; (sColor.length === 4&lt;span&gt;) {
+                &lt;/span&gt;&lt;span&gt;var&lt;/span&gt; sColorNew = &quot;#&quot;&lt;span&gt;;
+                &lt;/span&gt;&lt;span&gt;for&lt;/span&gt; (&lt;span&gt;var&lt;/span&gt; i = 1; i &amp;lt; 4; i += 1&lt;span&gt;) {
+                    sColorNew &lt;/span&gt;+= sColor.slice(i, i + 1).concat(sColor.slice(i, i + 1&lt;span&gt;));
+                }
+                sColor &lt;/span&gt;=&lt;span&gt; sColorNew;
+            }
+            &lt;/span&gt;&lt;span&gt;//&lt;/span&gt;&lt;span&gt;处理六位的颜色值  &lt;/span&gt;
+            &lt;span&gt;var&lt;/span&gt; sColorChange =&lt;span&gt; [];
+            &lt;/span&gt;&lt;span&gt;for&lt;/span&gt; (&lt;span&gt;var&lt;/span&gt; i = 1; i &amp;lt; 7; i += 2&lt;span&gt;) {
+                sColorChange.push(parseInt(&lt;/span&gt;&quot;0x&quot; + sColor.slice(i, i + 2&lt;span&gt;)));
+            }
+            &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; sColorChange;&lt;/span&gt;
+        } &lt;span&gt;else&lt;/span&gt;&lt;span&gt; {
+            &lt;/span&gt;&lt;span&gt;var&lt;/span&gt; sColorChange = sColor.replace(/(rgb\\()|(\\))/g, &quot;&quot;).split(&quot;,&quot;).map(&lt;span&gt;function&lt;/span&gt;&lt;span&gt;(a) {
+                &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; parseInt(a);
+            });
+            &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; sColorChange;
+        }
+    }
+})();&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;span&gt;第三部分，给初始参数&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;为了避免多余的操作，我们用一个标记数组来记录判断过的位置&lt;/span&gt;&lt;/p&gt;&lt;div class=&quot;cnblogs_code&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;span&gt;//&lt;/span&gt;&lt;span&gt; 参数&lt;/span&gt;
+&lt;span&gt;var&lt;/span&gt; bg = colorRgb(&quot;#fff&quot;); &lt;span&gt;//&lt;/span&gt;&lt;span&gt;忽略的背景色&lt;/span&gt;
+&lt;span&gt;var&lt;/span&gt; width = 220&lt;span&gt;;
+&lt;/span&gt;&lt;span&gt;var&lt;/span&gt; height = 220&lt;span&gt;;
+&lt;/span&gt;&lt;span&gt;var&lt;/span&gt; imgD;  &lt;span&gt;//&lt;/span&gt;&lt;span&gt;预留给 像素信息&lt;/span&gt;
+&lt;span&gt;var&lt;/span&gt; colors = [&quot;#368BFF&quot;, &quot;#EF2767&quot;, &quot;#F17900&quot;, &quot;#399690&quot;, &quot;#5aa6f7&quot;, &quot;#fd417e&quot;, &quot;#ffc000&quot;, &quot;#59b6a6&quot;];   &lt;span&gt;//&lt;/span&gt;&lt;span&gt;染色数组&lt;/span&gt;&lt;span&gt;
+//&lt;/span&gt;&lt;span&gt; 随机colors数组的一个序号&lt;/span&gt;
+&lt;span&gt;var&lt;/span&gt; ranNum = (&lt;span&gt;function&lt;/span&gt;&lt;span&gt;() {
+    &lt;/span&gt;&lt;span&gt;var&lt;/span&gt; len =&lt;span&gt; colors.length;
+    &lt;/span&gt;&lt;span&gt;return&lt;/span&gt; &lt;span&gt;function&lt;/span&gt;&lt;span&gt;() {
+        &lt;/span&gt;&lt;span&gt;return&lt;/span&gt; Math.floor(Math.random() *&lt;span&gt; len);
+    }
+})();
+
+&lt;/span&gt;&lt;span&gt;//&lt;/span&gt;&lt;span&gt; 标记数组 &lt;/span&gt;
+&lt;span&gt;var&lt;/span&gt; book = []; &lt;/span&gt;&lt;br&gt;&lt;span&gt;&lt;span&gt;for&lt;/span&gt; (&lt;span&gt;var&lt;/span&gt; i = 0; i &amp;lt; height; i++) { &lt;/span&gt;&lt;br&gt;&lt;span&gt;　　book[i] = []; &lt;/span&gt;&lt;br&gt;&lt;span&gt;　　&lt;span&gt;for&lt;/span&gt; (&lt;span&gt;var&lt;/span&gt; j = 0; j &amp;lt; width; j++) { &lt;/span&gt;&lt;br&gt;&lt;span&gt;　　　　book[i][j] = 0; &lt;/span&gt;&lt;br&gt;&lt;span&gt;　　} &lt;/span&gt;&lt;br&gt;&lt;span&gt;}&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;span&gt;第四部分，获取像素信息，对每个像素点进行遍历处理，最后扔回canvas&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;如果标记过，那就跳过，如果没标记过，那就随机一个颜色，深度优先搜索并染色&lt;/span&gt;&lt;/p&gt;&lt;div class=&quot;cnblogs_code&quot;&gt;&lt;pre&gt;&lt;span&gt;img.onload = &lt;span&gt;function&lt;/span&gt;&lt;span&gt;() {
+    ctx.drawImage(img, &lt;/span&gt;0, 0&lt;span&gt;, width, height);
+    imgD &lt;/span&gt;= ctx.getImageData(0, 0&lt;span&gt;, width, height);
+
+    &lt;/span&gt;&lt;span&gt;for&lt;/span&gt; (&lt;span&gt;var&lt;/span&gt; i = 0; i &amp;lt; height; i++&lt;span&gt;) {
+        &lt;/span&gt;&lt;span&gt;for&lt;/span&gt; (&lt;span&gt;var&lt;/span&gt; j = 0; j &amp;lt; width; j++&lt;span&gt;) {
+            &lt;/span&gt;&lt;span&gt;if&lt;/span&gt; (book[i][j] == 0 &amp;amp;&amp;amp; checkColor(i, j, width, bg)) { &lt;span&gt;//&lt;/span&gt;&lt;span&gt;没标记过 且是非背景色&lt;/span&gt;
+                book[i][j] = 1&lt;span&gt;;
+                &lt;/span&gt;&lt;span&gt;var&lt;/span&gt; color =&lt;span&gt; colorRgb(colors[ranNum()]);
+                dfs(i, j, color);    &lt;/span&gt;&lt;span&gt;//&lt;/span&gt;&lt;span&gt;深度优先搜索&lt;/span&gt;
+&lt;span&gt;            }
+        }
+    }
+
+    ctx.putImageData(imgD, &lt;/span&gt;0, 0&lt;span&gt;);
+}
+
+
+&lt;/span&gt;&lt;span&gt;//&lt;/span&gt;&lt;span&gt; 验证该位置的像素  不是背景色为true&lt;/span&gt;
+&lt;span&gt;function&lt;/span&gt;&lt;span&gt; checkColor(i, j, width, bg) {
+    &lt;/span&gt;&lt;span&gt;var&lt;/span&gt; x =&lt;span&gt; calc(width, i, j);
+
+    &lt;/span&gt;&lt;span&gt;if&lt;/span&gt; (imgD.data[x] != bg[0] &amp;amp;&amp;amp; imgD.data[x + 1] != bg[1] &amp;amp;&amp;amp; imgD.data[x + 2] != bg[2&lt;span&gt;]) {
+        &lt;/span&gt;&lt;span&gt;return&lt;/span&gt; &lt;span&gt;true&lt;/span&gt;&lt;span&gt;;
+    } &lt;/span&gt;&lt;span&gt;else&lt;/span&gt;&lt;span&gt; {
+        &lt;/span&gt;&lt;span&gt;return&lt;/span&gt; &lt;span&gt;false&lt;/span&gt;&lt;span&gt;;
+    }
+}
+
+&lt;/span&gt;&lt;span&gt;//&lt;/span&gt;&lt;span&gt; 改变颜色值&lt;/span&gt;
+&lt;span&gt;function&lt;/span&gt;&lt;span&gt; changeColor(i, j, colorArr) {
+    &lt;/span&gt;&lt;span&gt;var&lt;/span&gt; x =&lt;span&gt; calc(width, i, j);
+    imgD.data[x] &lt;/span&gt;= colorArr[0&lt;span&gt;];
+    imgD.data[x &lt;/span&gt;+ 1] = colorArr[1&lt;span&gt;];
+    imgD.data[x &lt;/span&gt;+ 2] = colorArr[2&lt;span&gt;];
+}
+
+
+&lt;/span&gt;&lt;span&gt;//&lt;/span&gt;&lt;span&gt; 返回对应像素点的序号&lt;/span&gt;
+&lt;span&gt;function&lt;/span&gt;&lt;span&gt; calc(width, i, j) {
+    &lt;/span&gt;&lt;span&gt;if&lt;/span&gt; (j &amp;lt; 0&lt;span&gt;) {
+        j &lt;/span&gt;= 0&lt;span&gt;;
+    }
+    &lt;/span&gt;&lt;span&gt;return&lt;/span&gt; 4 * (i * width +&lt;span&gt; j);
+}
+        &lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;span&gt;&lt;strong&gt;关键代码&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;我们通过一个方向数组，来简化一下操作，我们约定好，尝试的方向为顺时针，从右边开始。&lt;/span&gt;&lt;/p&gt;&lt;div class=&quot;cnblogs_code&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;span&gt;//&lt;/span&gt;&lt;span&gt; 方向数组&lt;/span&gt;
+&lt;span&gt;var&lt;/span&gt; next =&lt;span&gt; [
+    [&lt;/span&gt;0, 1], &lt;span&gt;//&lt;/span&gt;&lt;span&gt;右&lt;/span&gt;
+    [1, 0], &lt;span&gt;//&lt;/span&gt;&lt;span&gt;下&lt;/span&gt;
+    [0, -1], &lt;span&gt;//&lt;/span&gt;&lt;span&gt; 左&lt;/span&gt;
+    [-1, 0] &lt;span&gt;//&lt;/span&gt;&lt;span&gt;上 &lt;/span&gt;
+&lt;span&gt;];
+
+&lt;/span&gt;&lt;span&gt;//&lt;/span&gt;&lt;span&gt; 深度优先搜索 &lt;/span&gt;
+&lt;span&gt;function&lt;/span&gt;&lt;span&gt; dfs(x, y, color) {
+    changeColor(x, y, color);
+    &lt;/span&gt;&lt;span&gt;for&lt;/span&gt; (&lt;span&gt;var&lt;/span&gt; k = 0; k &amp;lt;= 3; k++&lt;span&gt;) {
+        &lt;/span&gt;&lt;span&gt;//&lt;/span&gt;&lt;span&gt; 下一个坐标&lt;/span&gt;
+        &lt;span&gt;var&lt;/span&gt; tx = x + next[k][0&lt;span&gt;];
+        &lt;/span&gt;&lt;span&gt;var&lt;/span&gt; ty = y + next[k][1&lt;span&gt;];
+
+        &lt;/span&gt;&lt;span&gt;//&lt;/span&gt;&lt;span&gt;判断越界&lt;/span&gt;
+        &lt;span&gt;if&lt;/span&gt; (tx &amp;lt; 0 || tx &amp;gt;= height || ty &amp;lt; 0 || ty &amp;gt;=&lt;span&gt; width) {
+            &lt;/span&gt;&lt;span&gt;continue&lt;/span&gt;&lt;span&gt;;
+        }
+
+
+        &lt;/span&gt;&lt;span&gt;if&lt;/span&gt; (book[tx][ty] == 0 &amp;amp;&amp;amp;&lt;span&gt; checkColor(tx, ty, width, bg)) {
+            &lt;/span&gt;&lt;span&gt;//&lt;/span&gt;&lt;span&gt; 判断位置&lt;/span&gt;
+            book[tx][ty] = 1&lt;span&gt;;
+            dfs(tx, ty, color);
+        }
+
+    }
+    &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt;;
+}&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;span&gt;我遇到的最后一个坑就是当长宽大于220时就会栈溢出，但是小于这个值就不会有问题，具体的原因还不清楚，猜测可能是判断那里有问题，导致死循环了。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;全部代码在这里&lt;/span&gt;&lt;/p&gt;&lt;div class=&quot;cnblogs_code&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;span&gt;  1&lt;/span&gt; &lt;span&gt;//&lt;/span&gt;&lt;span&gt; 分离颜色参数   返回一个数组&lt;/span&gt;
+&lt;span&gt;  2&lt;/span&gt; &lt;span&gt;var&lt;/span&gt; colorRgb = (&lt;span&gt;function&lt;/span&gt;&lt;span&gt;() {
+&lt;/span&gt;&lt;span&gt;  3&lt;/span&gt;     &lt;span&gt;var&lt;/span&gt; reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/&lt;span&gt;;
+&lt;/span&gt;&lt;span&gt;  4&lt;/span&gt; 
+&lt;span&gt;  5&lt;/span&gt;     &lt;span&gt;return&lt;/span&gt; &lt;span&gt;function&lt;/span&gt;&lt;span&gt;(str) {
+&lt;/span&gt;&lt;span&gt;  6&lt;/span&gt;         &lt;span&gt;var&lt;/span&gt; sColor =&lt;span&gt; str.toLowerCase();
+&lt;/span&gt;&lt;span&gt;  7&lt;/span&gt;         &lt;span&gt;if&lt;/span&gt; (sColor &amp;amp;&amp;amp;&lt;span&gt; reg.test(sColor)) {
+&lt;/span&gt;&lt;span&gt;  8&lt;/span&gt;             &lt;span&gt;if&lt;/span&gt; (sColor.length === 4&lt;span&gt;) {
+&lt;/span&gt;&lt;span&gt;  9&lt;/span&gt;                 &lt;span&gt;var&lt;/span&gt; sColorNew = &quot;#&quot;&lt;span&gt;;
+&lt;/span&gt;&lt;span&gt; 10&lt;/span&gt;                 &lt;span&gt;for&lt;/span&gt; (&lt;span&gt;var&lt;/span&gt; i = 1; i &amp;lt; 4; i += 1&lt;span&gt;) {
+&lt;/span&gt;&lt;span&gt; 11&lt;/span&gt;                     sColorNew += sColor.slice(i, i + 1).concat(sColor.slice(i, i + 1&lt;span&gt;));
+&lt;/span&gt;&lt;span&gt; 12&lt;/span&gt; &lt;span&gt;                }
+&lt;/span&gt;&lt;span&gt; 13&lt;/span&gt;                 sColor =&lt;span&gt; sColorNew;
+&lt;/span&gt;&lt;span&gt; 14&lt;/span&gt; &lt;span&gt;            }
+&lt;/span&gt;&lt;span&gt; 15&lt;/span&gt;             &lt;span&gt;//&lt;/span&gt;&lt;span&gt;处理六位的颜色值  &lt;/span&gt;
+&lt;span&gt; 16&lt;/span&gt;             &lt;span&gt;var&lt;/span&gt; sColorChange =&lt;span&gt; [];
+&lt;/span&gt;&lt;span&gt; 17&lt;/span&gt;             &lt;span&gt;for&lt;/span&gt; (&lt;span&gt;var&lt;/span&gt; i = 1; i &amp;lt; 7; i += 2&lt;span&gt;) {
+&lt;/span&gt;&lt;span&gt; 18&lt;/span&gt;                 sColorChange.push(parseInt(&quot;0x&quot; + sColor.slice(i, i + 2&lt;span&gt;)));
+&lt;/span&gt;&lt;span&gt; 19&lt;/span&gt; &lt;span&gt;            }
+&lt;/span&gt;&lt;span&gt; 20&lt;/span&gt;             &lt;span&gt;return&lt;/span&gt;&lt;span&gt; sColorChange;
+&lt;/span&gt;&lt;span&gt; 21&lt;/span&gt;         } &lt;span&gt;else&lt;/span&gt;&lt;span&gt; {
+&lt;/span&gt;&lt;span&gt; 22&lt;/span&gt;             &lt;span&gt;var&lt;/span&gt; sColorChange = sColor.replace(/(rgb\\()|(\\))/g, &quot;&quot;).split(&quot;,&quot;).map(&lt;span&gt;function&lt;/span&gt;&lt;span&gt;(a) {
+&lt;/span&gt;&lt;span&gt; 23&lt;/span&gt;                 &lt;span&gt;return&lt;/span&gt;&lt;span&gt; parseInt(a);
+&lt;/span&gt;&lt;span&gt; 24&lt;/span&gt; &lt;span&gt;            });
+&lt;/span&gt;&lt;span&gt; 25&lt;/span&gt;             &lt;span&gt;return&lt;/span&gt;&lt;span&gt; sColorChange;
+&lt;/span&gt;&lt;span&gt; 26&lt;/span&gt; &lt;span&gt;        }
+&lt;/span&gt;&lt;span&gt; 27&lt;/span&gt; &lt;span&gt;    }
+&lt;/span&gt;&lt;span&gt; 28&lt;/span&gt; &lt;span&gt;})();
+&lt;/span&gt;&lt;span&gt; 29&lt;/span&gt; 
+&lt;span&gt; 30&lt;/span&gt; &lt;span&gt;//&lt;/span&gt;&lt;span&gt; 验证该位置的像素  不是背景色为true&lt;/span&gt;
+&lt;span&gt; 31&lt;/span&gt; &lt;span&gt;function&lt;/span&gt;&lt;span&gt; checkColor(i, j, width, bg) {
+&lt;/span&gt;&lt;span&gt; 32&lt;/span&gt;     &lt;span&gt;var&lt;/span&gt; x =&lt;span&gt; calc(width, i, j);
+&lt;/span&gt;&lt;span&gt; 33&lt;/span&gt; 
+&lt;span&gt; 34&lt;/span&gt;     &lt;span&gt;if&lt;/span&gt; (imgD.data[x] != bg[0] &amp;amp;&amp;amp; imgD.data[x + 1] != bg[1] &amp;amp;&amp;amp; imgD.data[x + 2] != bg[2&lt;span&gt;]) {
+&lt;/span&gt;&lt;span&gt; 35&lt;/span&gt;         &lt;span&gt;return&lt;/span&gt; &lt;span&gt;true&lt;/span&gt;&lt;span&gt;;
+&lt;/span&gt;&lt;span&gt; 36&lt;/span&gt;     } &lt;span&gt;else&lt;/span&gt;&lt;span&gt; {
+&lt;/span&gt;&lt;span&gt; 37&lt;/span&gt;         &lt;span&gt;return&lt;/span&gt; &lt;span&gt;false&lt;/span&gt;&lt;span&gt;;
+&lt;/span&gt;&lt;span&gt; 38&lt;/span&gt; &lt;span&gt;    }
+&lt;/span&gt;&lt;span&gt; 39&lt;/span&gt; &lt;span&gt;}
+&lt;/span&gt;&lt;span&gt; 40&lt;/span&gt; 
+&lt;span&gt; 41&lt;/span&gt; &lt;span&gt;//&lt;/span&gt;&lt;span&gt; 改变颜色值&lt;/span&gt;
+&lt;span&gt; 42&lt;/span&gt; &lt;span&gt;function&lt;/span&gt;&lt;span&gt; changeColor(i, j, colorArr) {
+&lt;/span&gt;&lt;span&gt; 43&lt;/span&gt;     &lt;span&gt;var&lt;/span&gt; x =&lt;span&gt; calc(width, i, j);
+&lt;/span&gt;&lt;span&gt; 44&lt;/span&gt;     imgD.data[x] = colorArr[0&lt;span&gt;];
+&lt;/span&gt;&lt;span&gt; 45&lt;/span&gt;     imgD.data[x + 1] = colorArr[1&lt;span&gt;];
+&lt;/span&gt;&lt;span&gt; 46&lt;/span&gt;     imgD.data[x + 2] = colorArr[2&lt;span&gt;];
+&lt;/span&gt;&lt;span&gt; 47&lt;/span&gt; &lt;span&gt;}
+&lt;/span&gt;&lt;span&gt; 48&lt;/span&gt; 
+&lt;span&gt; 49&lt;/span&gt; 
+&lt;span&gt; 50&lt;/span&gt; &lt;span&gt;//&lt;/span&gt;&lt;span&gt; 返回对应像素点的序号&lt;/span&gt;
+&lt;span&gt; 51&lt;/span&gt; &lt;span&gt;function&lt;/span&gt;&lt;span&gt; calc(width, i, j) {
+&lt;/span&gt;&lt;span&gt; 52&lt;/span&gt;     &lt;span&gt;if&lt;/span&gt; (j &amp;lt; 0&lt;span&gt;) {
+&lt;/span&gt;&lt;span&gt; 53&lt;/span&gt;         j = 0&lt;span&gt;;
+&lt;/span&gt;&lt;span&gt; 54&lt;/span&gt; &lt;span&gt;    }
+&lt;/span&gt;&lt;span&gt; 55&lt;/span&gt;     &lt;span&gt;return&lt;/span&gt; 4 * (i * width +&lt;span&gt; j);
+&lt;/span&gt;&lt;span&gt; 56&lt;/span&gt; &lt;span&gt;}
+&lt;/span&gt;&lt;span&gt; 57&lt;/span&gt; 
+&lt;span&gt; 58&lt;/span&gt; &lt;span&gt;//&lt;/span&gt;&lt;span&gt; 方向数组&lt;/span&gt;
+&lt;span&gt; 59&lt;/span&gt; &lt;span&gt;var&lt;/span&gt; next =&lt;span&gt; [
+&lt;/span&gt;&lt;span&gt; 60&lt;/span&gt;     [0, 1], &lt;span&gt;//&lt;/span&gt;&lt;span&gt;右&lt;/span&gt;
+&lt;span&gt; 61&lt;/span&gt;     [1, 0], &lt;span&gt;//&lt;/span&gt;&lt;span&gt;下&lt;/span&gt;
+&lt;span&gt; 62&lt;/span&gt;     [0, -1], &lt;span&gt;//&lt;/span&gt;&lt;span&gt; 左&lt;/span&gt;
+&lt;span&gt; 63&lt;/span&gt;     [-1, 0] &lt;span&gt;//&lt;/span&gt;&lt;span&gt;上 &lt;/span&gt;
+&lt;span&gt; 64&lt;/span&gt; &lt;span&gt;];
+&lt;/span&gt;&lt;span&gt; 65&lt;/span&gt; 
+&lt;span&gt; 66&lt;/span&gt; &lt;span&gt;//&lt;/span&gt;&lt;span&gt; 深度优先搜索 &lt;/span&gt;
+&lt;span&gt; 67&lt;/span&gt; &lt;span&gt;function&lt;/span&gt;&lt;span&gt; dfs(x, y, color) {
+&lt;/span&gt;&lt;span&gt; 68&lt;/span&gt; &lt;span&gt;    changeColor(x, y, color);
+&lt;/span&gt;&lt;span&gt; 69&lt;/span&gt;     &lt;span&gt;for&lt;/span&gt; (&lt;span&gt;var&lt;/span&gt; k = 0; k &amp;lt;= 3; k++&lt;span&gt;) {
+&lt;/span&gt;&lt;span&gt; 70&lt;/span&gt;         &lt;span&gt;//&lt;/span&gt;&lt;span&gt; 下一个坐标&lt;/span&gt;
+&lt;span&gt; 71&lt;/span&gt;         &lt;span&gt;var&lt;/span&gt; tx = x + next[k][0&lt;span&gt;];
+&lt;/span&gt;&lt;span&gt; 72&lt;/span&gt;         &lt;span&gt;var&lt;/span&gt; ty = y + next[k][1&lt;span&gt;];
+&lt;/span&gt;&lt;span&gt; 73&lt;/span&gt; 
+&lt;span&gt; 74&lt;/span&gt;         &lt;span&gt;//&lt;/span&gt;&lt;span&gt;判断越界&lt;/span&gt;
+&lt;span&gt; 75&lt;/span&gt;         &lt;span&gt;if&lt;/span&gt; (tx &amp;lt; 0 || tx &amp;gt;= height || ty &amp;lt; 0 || ty &amp;gt;=&lt;span&gt; width) {
+&lt;/span&gt;&lt;span&gt; 76&lt;/span&gt;             &lt;span&gt;continue&lt;/span&gt;&lt;span&gt;;
+&lt;/span&gt;&lt;span&gt; 77&lt;/span&gt; &lt;span&gt;        }
+&lt;/span&gt;&lt;span&gt; 78&lt;/span&gt; 
+&lt;span&gt; 79&lt;/span&gt; 
+&lt;span&gt; 80&lt;/span&gt;         &lt;span&gt;if&lt;/span&gt; (book[tx][ty] == 0 &amp;amp;&amp;amp;&lt;span&gt; checkColor(tx, ty, width, bg)) {
+&lt;/span&gt;&lt;span&gt; 81&lt;/span&gt;             &lt;span&gt;//&lt;/span&gt;&lt;span&gt; 判断位置&lt;/span&gt;
+&lt;span&gt; 82&lt;/span&gt;             book[tx][ty] = 1&lt;span&gt;;
+&lt;/span&gt;&lt;span&gt; 83&lt;/span&gt; &lt;span&gt;            dfs(tx, ty, color);
+&lt;/span&gt;&lt;span&gt; 84&lt;/span&gt; &lt;span&gt;        }
+&lt;/span&gt;&lt;span&gt; 85&lt;/span&gt; 
+&lt;span&gt; 86&lt;/span&gt; &lt;span&gt;    }
+&lt;/span&gt;&lt;span&gt; 87&lt;/span&gt;     &lt;span&gt;return&lt;/span&gt;&lt;span&gt;;
+&lt;/span&gt;&lt;span&gt; 88&lt;/span&gt; &lt;span&gt;}
+&lt;/span&gt;&lt;span&gt; 89&lt;/span&gt; 
+&lt;span&gt; 90&lt;/span&gt; &lt;span&gt;/*&lt;/span&gt;&lt;span&gt;****上面为封装的函数****&lt;/span&gt;&lt;span&gt;*/&lt;/span&gt;
+&lt;span&gt; 91&lt;/span&gt; 
+&lt;span&gt; 92&lt;/span&gt; &lt;span&gt;/*&lt;/span&gt;&lt;span&gt;**参数**&lt;/span&gt;&lt;span&gt;*/&lt;/span&gt;
+&lt;span&gt; 93&lt;/span&gt; &lt;span&gt;var&lt;/span&gt; bg = colorRgb(&quot;#fff&quot;); &lt;span&gt;//&lt;/span&gt;&lt;span&gt;忽略的背景色&lt;/span&gt;
+&lt;span&gt; 94&lt;/span&gt; &lt;span&gt;var&lt;/span&gt; width = 220&lt;span&gt;;
+&lt;/span&gt;&lt;span&gt; 95&lt;/span&gt; &lt;span&gt;var&lt;/span&gt; height = 220&lt;span&gt;;
+&lt;/span&gt;&lt;span&gt; 96&lt;/span&gt; &lt;span&gt;var&lt;/span&gt; imgD;  &lt;span&gt;//&lt;/span&gt;&lt;span&gt;预留给 像素信息数组&lt;/span&gt;
+&lt;span&gt; 97&lt;/span&gt; &lt;span&gt;var&lt;/span&gt; colors = [&quot;#368BFF&quot;, &quot;#EF2767&quot;, &quot;#F17900&quot;, &quot;#399690&quot;, &quot;#5aa6f7&quot;, &quot;#fd417e&quot;, &quot;#ffc000&quot;, &quot;#59b6a6&quot;];   &lt;span&gt;//&lt;/span&gt;&lt;span&gt;染色数组&lt;/span&gt;
+&lt;span&gt; 98&lt;/span&gt; &lt;span&gt;//&lt;/span&gt;&lt;span&gt; 随机colors数组的一个序号&lt;/span&gt;
+&lt;span&gt; 99&lt;/span&gt; &lt;span&gt;var&lt;/span&gt; ranNum = (&lt;span&gt;function&lt;/span&gt;&lt;span&gt;() {
+&lt;/span&gt;&lt;span&gt;100&lt;/span&gt;     &lt;span&gt;var&lt;/span&gt; len =&lt;span&gt; colors.length;
+&lt;/span&gt;&lt;span&gt;101&lt;/span&gt;     &lt;span&gt;return&lt;/span&gt; &lt;span&gt;function&lt;/span&gt;&lt;span&gt;() {
+&lt;/span&gt;&lt;span&gt;102&lt;/span&gt;         &lt;span&gt;return&lt;/span&gt; Math.floor(Math.random() *&lt;span&gt; len);
+&lt;/span&gt;&lt;span&gt;103&lt;/span&gt; &lt;span&gt;    }
+&lt;/span&gt;&lt;span&gt;104&lt;/span&gt; &lt;span&gt;})();
+&lt;/span&gt;&lt;span&gt;105&lt;/span&gt; 
+&lt;span&gt;106&lt;/span&gt; &lt;span&gt;//&lt;/span&gt;&lt;span&gt; 标记数组 &lt;/span&gt;
+&lt;span&gt;107&lt;/span&gt; &lt;span&gt;var&lt;/span&gt; book =&lt;span&gt; []; 
+&lt;/span&gt;&lt;span&gt;108&lt;/span&gt; &lt;span&gt;for&lt;/span&gt; (&lt;span&gt;var&lt;/span&gt; i = 0; i &amp;lt; height; i++&lt;span&gt;) { 
+&lt;/span&gt;&lt;span&gt;109&lt;/span&gt; 　　book[i] =&lt;span&gt; []; 
+&lt;/span&gt;&lt;span&gt;110&lt;/span&gt; 　　&lt;span&gt;for&lt;/span&gt; (&lt;span&gt;var&lt;/span&gt; j = 0; j &amp;lt; width; j++&lt;span&gt;) { 
+&lt;/span&gt;&lt;span&gt;111&lt;/span&gt; 　　　　book[i][j] = 0&lt;span&gt;; 
+&lt;/span&gt;&lt;span&gt;112&lt;/span&gt; &lt;span&gt;　　} 
+&lt;/span&gt;&lt;span&gt;113&lt;/span&gt; &lt;span&gt;}
+&lt;/span&gt;&lt;span&gt;114&lt;/span&gt; 
+&lt;span&gt;115&lt;/span&gt; 
+&lt;span&gt;116&lt;/span&gt; &lt;span&gt;//&lt;/span&gt;&lt;span&gt; canvas 部分&lt;/span&gt;
+&lt;span&gt;117&lt;/span&gt; &lt;span&gt;var&lt;/span&gt; canvas = $(&quot;canvas&quot;)[0&lt;span&gt;];
+&lt;/span&gt;&lt;span&gt;118&lt;/span&gt; &lt;span&gt;var&lt;/span&gt; ctx = canvas.getContext(&quot;2d&quot;&lt;span&gt;);
+&lt;/span&gt;&lt;span&gt;119&lt;/span&gt; 
+&lt;span&gt;120&lt;/span&gt; &lt;span&gt;var&lt;/span&gt; img = &lt;span&gt;new&lt;/span&gt;&lt;span&gt; Image();
+&lt;/span&gt;&lt;span&gt;121&lt;/span&gt; img.src = path; &lt;span&gt;//&lt;/span&gt;&lt;span&gt;这里的path就是图片的地址&lt;/span&gt;
+&lt;span&gt;122&lt;/span&gt; img.onload = &lt;span&gt;function&lt;/span&gt;&lt;span&gt;() {
+&lt;/span&gt;&lt;span&gt;123&lt;/span&gt;     ctx.drawImage(img, 0, 0&lt;span&gt;, width, height);
+&lt;/span&gt;&lt;span&gt;124&lt;/span&gt;     imgD = ctx.getImageData(0, 0&lt;span&gt;, width, height);
+&lt;/span&gt;&lt;span&gt;125&lt;/span&gt; 
+&lt;span&gt;126&lt;/span&gt;     &lt;span&gt;for&lt;/span&gt; (&lt;span&gt;var&lt;/span&gt; i = 0; i &amp;lt; height; i++&lt;span&gt;) {
+&lt;/span&gt;&lt;span&gt;127&lt;/span&gt;         &lt;span&gt;for&lt;/span&gt; (&lt;span&gt;var&lt;/span&gt; j = 0; j &amp;lt; width; j++&lt;span&gt;) {
+&lt;/span&gt;&lt;span&gt;128&lt;/span&gt;             &lt;span&gt;if&lt;/span&gt; (book[i][j] == 0 &amp;amp;&amp;amp; checkColor(i, j, width, bg)) { &lt;span&gt;//&lt;/span&gt;&lt;span&gt;没标记过 且是非背景色&lt;/span&gt;
+&lt;span&gt;129&lt;/span&gt;                 book[i][j] = 1&lt;span&gt;;
+&lt;/span&gt;&lt;span&gt;130&lt;/span&gt;                 &lt;span&gt;var&lt;/span&gt; color =&lt;span&gt; colorRgb(colors[ranNum()]);
+&lt;/span&gt;&lt;span&gt;131&lt;/span&gt;                 dfs(i, j, color);    &lt;span&gt;//&lt;/span&gt;&lt;span&gt;深度优先搜索&lt;/span&gt;
+&lt;span&gt;132&lt;/span&gt; &lt;span&gt;            }
+&lt;/span&gt;&lt;span&gt;133&lt;/span&gt; &lt;span&gt;        }
+&lt;/span&gt;&lt;span&gt;134&lt;/span&gt; &lt;span&gt;    }
+&lt;/span&gt;&lt;span&gt;135&lt;/span&gt; 
+&lt;span&gt;136&lt;/span&gt;     ctx.putImageData(imgD, 0, 0&lt;span&gt;);
+&lt;/span&gt;&lt;span&gt;137&lt;/span&gt; }&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3&gt;&amp;nbsp;&lt;/h3&gt;&lt;h3&gt;&lt;span&gt;总结&lt;/span&gt;&lt;/h3&gt;&lt;h3&gt;&lt;p&gt;&lt;span&gt;虽然看起来有点长，其实大部分函数都在处理像素点的信息。实现起来，主要就是得对深度优先搜索有所了解，每个像素点都进行深度优先搜索，染过色的自然被标记过，所以当一个新的没标记过的像素点出现时，自然意味着新的颜色块。细节方面，就是注意一下imgD.data和像素点序号之间的对应关系，别的也就还好了。不过注意一点就是，因为像素点很小，所以肉眼觉得不相连的色块也有可能是连在一起的，会染成一样的颜色。&lt;/span&gt;&lt;/p&gt;&lt;/h3&gt;','1493297408','1','1493297408') [ RunTime:0.1430s ]
+
+[ 2017-04-27T20:50:10+08:00 ] 127.0.0.1 /admin/article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `article`  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./app/Admin/View/default/Base/loading.html): failed to open stream: No such file or directory E:\xampp\htdocs\think\system\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-04-27T20:50:29+08:00 ] 127.0.0.1 /admin/article/editarticle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `article` SET `id`='13',`auditing`='1',`uptime`='1493297429',`admin_id`='1' WHERE ( id='13' ) [ RunTime:0.0870s ]
+
+[ 2017-04-27T20:51:14+08:00 ] 127.0.0.1 /admin/article/findone.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` WHERE ( id='13' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-04-27T20:55:50+08:00 ] 127.0.0.1 /admin/article/findone.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `article` WHERE ( id='12' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-04-27T20:55:58+08:00 ] 127.0.0.1 /admin/article/editarticle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `article` SET `id`='12',`title`='888',`parent`='php',`tag`='',`auditing`='1',`content`='&lt;p&gt;[pre]1111111[pre]&lt;/p&gt;',`uptime`='1493297758',`admin_id`='1' WHERE ( id='12' ) [ RunTime:0.0830s ]
+
+[ 2017-04-27T20:56:00+08:00 ] 127.0.0.1 /admin/article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article`  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./app/Admin/View/default/Base/loading.html): failed to open stream: No such file or directory E:\xampp\htdocs\think\system\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-27T20:56:04+08:00 ] 127.0.0.1 /admin/article/findone.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` WHERE ( id='12' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-04-27T20:56:38+08:00 ] 127.0.0.1 /admin/article/findone.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` WHERE ( id='12' ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-04-27T20:56:44+08:00 ] 127.0.0.1 /admin/article/findone.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` WHERE ( id='12' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-04-27T20:57:38+08:00 ] 127.0.0.1 /admin/article/editarticle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `article` SET `id`='12',`title`='888',`parent`='php',`tag`='',`auditing`='1',`content`='&lt;p&gt;跟那些过往的编辑器一样，你需要放置一个标签（一般为textarea文本域）作为编辑器的目标元素，然后调用&amp;nbsp;&lt;em&gt;layedit.build(\'id\')&lt;/em&gt;&amp;nbsp;即可，如下所示：&lt;/p&gt;&lt;pre class=&quot;layui-code layui-box layui-code-view&quot;&gt;&lt;h3 class=&quot;layui-code-h3&quot;&gt;code&lt;a href=&quot;http://www.layui.com/doc/modules/code.html&quot; target=&quot;_blank&quot;&gt;layui.code&lt;/a&gt;&lt;/h3&gt;&lt;ol class=&quot;layui-code-ol&quot;&gt;&lt;li&gt;&amp;lt;textarea id=&quot;demo&quot; style=&quot;display: none;&quot;&amp;gt;&amp;lt;/textarea&amp;gt;&lt;/li&gt;&lt;li&gt;&amp;lt;script&amp;gt;&lt;/li&gt;&lt;li&gt;layui.use(\'layedit\', function(){&lt;/li&gt;&lt;li&gt;  var layedit = layui.layedit;&lt;/li&gt;&lt;li&gt;  layedit.build(\'demo\'); //建立编辑器&lt;/li&gt;&lt;li&gt;});&lt;/li&gt;&lt;li&gt;&amp;lt;/script&amp;gt;&lt;/li&gt;&lt;li&gt;      &lt;/li&gt;&lt;/ol&gt;&lt;/pre&gt;&lt;p&gt;然后你会看到一个如下模样（部分工具Bar未配置出来），它跟Layui的所有存在体一样，兼容IE6/7以外的全部浏览器。&lt;/p&gt;',`uptime`='1493297858',`admin_id`='1' WHERE ( id='12' ) [ RunTime:0.0670s ]
+
+[ 2017-04-27T20:57:40+08:00 ] 127.0.0.1 /admin/article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `article`  [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./app/Admin/View/default/Base/loading.html): failed to open stream: No such file or directory E:\xampp\htdocs\think\system\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-27T20:59:32+08:00 ] 127.0.0.1 /admin/article/findone.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `article` WHERE ( id='12' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-04-27T21:01:03+08:00 ] 127.0.0.1 /admin/article/editarticle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `article` SET `id`='12',`title`='888',`parent`='php',`tag`='',`auditing`='1',`content`='&lt;p style=&quot;-webkit-tap-highlight-color: rgba(0, 0, 0, 0); line-height: 22px; font-family: &amp;quot;Helvetica Neue&amp;quot;, Helvetica, &amp;quot;PingFang SC&amp;quot;, 微软雅黑, Tahoma, Arial, sans-serif;&quot;&gt;在建立编辑器的方法&amp;nbsp;&lt;em style=&quot;padding-right: 3px; padding-left: 3px; color: rgb(102, 102, 102);&quot;&gt;layedit.build(id, options)&lt;/em&gt;&amp;nbsp;的第二个参数（options）中，允许我们对编辑器进行一些设置，如：&lt;/p&gt;&lt;pre class=&quot;layui-box layui-code-view&quot; style=&quot;padding: 0px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); white-space: pre-wrap; word-wrap: break-word; position: relative; box-sizing: content-box !important;&quot;&gt;&lt;h3 class=&quot;layui-code-h3&quot; style=&quot;padding-right: 10px; padding-left: 10px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-size: 12px; font-weight: 400; position: relative; height: 30px; line-height: 30px; border-bottom: 1px solid rgb(221, 221, 221); box-sizing: content-box !important;&quot;&gt;code&lt;a href=&quot;http://www.layui.com/doc/modules/code.html&quot; target=&quot;_blank&quot; style=&quot;color: rgb(153, 153, 153); position: absolute; right: 10px; top: 0px; box-sizing: content-box !important;&quot;&gt;layui.code&lt;/a&gt;&lt;/h3&gt;&lt;ol class=&quot;layui-code-ol&quot; style=&quot;-webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative; overflow: auto; box-sizing: content-box !important;&quot;&gt;&lt;li style=&quot;margin-left: 45px; padding-right: 5px; padding-left: 5px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); list-style: decimal-leading-zero; position: relative; line-height: 20px; border-left: 1px solid rgb(221, 221, 221); background-color: rgb(255, 255, 255); box-sizing: content-box !important;&quot;&gt;layedit.build(\'id\', {&lt;/li&gt;&lt;li style=&quot;margin-left: 45px; padding-right: 5px; padding-left: 5px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); list-style: decimal-leading-zero; position: relative; line-height: 20px; border-left: 1px solid rgb(221, 221, 221); background-color: rgb(255, 255, 255); box-sizing: content-box !important;&quot;&gt;  height: 180 //设置编辑器高度&lt;/li&gt;&lt;li style=&quot;margin-left: 45px; padding-right: 5px; padding-left: 5px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); list-style: decimal-leading-zero; position: relative; line-height: 20px; border-left: 1px solid rgb(221, 221, 221); background-color: rgb(255, 255, 255); box-sizing: content-box !important;&quot;&gt;});&lt;/li&gt;&lt;li style=&quot;margin-left: 45px; padding-right: 5px; padding-left: 5px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); list-style: decimal-leading-zero; position: relative; line-height: 20px; border-left: 1px solid rgb(221, 221, 221); background-color: rgb(255, 255, 255); box-sizing: content-box !important;&quot;&gt;      &lt;/li&gt;&lt;/ol&gt;&lt;/pre&gt;&lt;p style=&quot;-webkit-tap-highlight-color: rgba(0, 0, 0, 0); line-height: 22px; font-family: &amp;quot;Helvetica Neue&amp;quot;, Helvetica, &amp;quot;PingFang SC&amp;quot;, 微软雅黑, Tahoma, Arial, sans-serif;&quot;&gt;options可提供支持的参数如下表&lt;/p&gt;',`uptime`='1493298063',`admin_id`='1' WHERE ( id='12' ) [ RunTime:0.0540s ]
+
+[ 2017-04-27T21:01:04+08:00 ] 127.0.0.1 /admin/article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `article`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./app/Admin/View/default/Base/loading.html): failed to open stream: No such file or directory E:\xampp\htdocs\think\system\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-27T21:01:12+08:00 ] 127.0.0.1 /admin/article/findone.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `article` WHERE ( id='12' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-04-27T21:01:37+08:00 ] 127.0.0.1 /admin/article/editarticle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `article` SET `id`='12',`title`='layui的layedit',`parent`='php',`tag`='',`auditing`='1',`content`='&lt;p style=&quot;-webkit-tap-highlight-color: rgba(0, 0, 0, 0); line-height: 22px; font-family: &quot; helvetica=&quot;&quot; neue&quot;,=&quot;&quot; helvetica,=&quot;&quot; &quot;pingfang=&quot;&quot; sc&quot;,=&quot;&quot; 微软雅黑,=&quot;&quot; tahoma,=&quot;&quot; arial,=&quot;&quot; sans-serif;&quot;=&quot;&quot;&gt;在建立编辑器的方法 &lt;em style=&quot;padding-right: 3px; padding-left: 3px; color: rgb(102, 102, 102);&quot;&gt;layedit.build(id, options)&lt;/em&gt; 的第二个参数（options）中，允许我们对编辑器进行一些设置，如：&lt;/p&gt;&lt;pre class=&quot;layui-box layui-code-view&quot; style=&quot;padding: 0px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); white-space: pre-wrap; word-wrap: break-word; position: relative; box-sizing: content-box !important;&quot;&gt;&lt;h3 class=&quot;layui-code-h3&quot; style=&quot;padding-right: 10px; padding-left: 10px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-size: 12px; font-weight: 400; position: relative; height: 30px; line-height: 30px; border-bottom: 1px solid rgb(221, 221, 221); box-sizing: content-box !important;&quot;&gt;code&lt;a href=&quot;http://www.layui.com/doc/modules/code.html&quot; target=&quot;_blank&quot; style=&quot;color: rgb(153, 153, 153); position: absolute; right: 10px; top: 0px; box-sizing: content-box !important;&quot;&gt;layui.code&lt;/a&gt;&lt;/h3&gt;&lt;ol class=&quot;layui-code-ol&quot; style=&quot;-webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative; overflow: auto; box-sizing: content-box !important;&quot;&gt;&lt;li style=&quot;margin-left: 45px; padding-right: 5px; padding-left: 5px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); list-style: decimal-leading-zero; position: relative; line-height: 20px; border-left: 1px solid rgb(221, 221, 221); background-color: rgb(255, 255, 255); box-sizing: content-box !important;&quot;&gt;layedit.build(\'id\', {&lt;/li&gt;&lt;li style=&quot;margin-left: 45px; padding-right: 5px; padding-left: 5px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); list-style: decimal-leading-zero; position: relative; line-height: 20px; border-left: 1px solid rgb(221, 221, 221); background-color: rgb(255, 255, 255); box-sizing: content-box !important;&quot;&gt;  height: 180 //设置编辑器高度&lt;/li&gt;&lt;li style=&quot;margin-left: 45px; padding-right: 5px; padding-left: 5px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); list-style: decimal-leading-zero; position: relative; line-height: 20px; border-left: 1px solid rgb(221, 221, 221); background-color: rgb(255, 255, 255); box-sizing: content-box !important;&quot;&gt;});&lt;/li&gt;&lt;li style=&quot;margin-left: 45px; padding-right: 5px; padding-left: 5px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); list-style: decimal-leading-zero; position: relative; line-height: 20px; border-left: 1px solid rgb(221, 221, 221); background-color: rgb(255, 255, 255); box-sizing: content-box !important;&quot;&gt;      &lt;/li&gt;&lt;/ol&gt;&lt;/pre&gt;&lt;p style=&quot;-webkit-tap-highlight-color: rgba(0, 0, 0, 0); line-height: 22px; font-family: &quot; helvetica=&quot;&quot; neue&quot;,=&quot;&quot; helvetica,=&quot;&quot; &quot;pingfang=&quot;&quot; sc&quot;,=&quot;&quot; 微软雅黑,=&quot;&quot; tahoma,=&quot;&quot; arial,=&quot;&quot; sans-serif;&quot;=&quot;&quot;&gt;options可提供支持的参数如下表&lt;/p&gt;',`uptime`='1493298097',`admin_id`='1' WHERE ( id='12' ) [ RunTime:0.0610s ]
+
+[ 2017-04-27T21:01:39+08:00 ] 127.0.0.1 /admin/article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `article`  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./app/Admin/View/default/Base/loading.html): failed to open stream: No such file or directory E:\xampp\htdocs\think\system\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-27T21:04:02+08:00 ] 127.0.0.1 /admin/article/findone.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` WHERE ( id='11' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-04-27T21:06:20+08:00 ] 127.0.0.1 /admin/article/editarticle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `admin` WHERE ( adminuser='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `article` SET `id`='11',`title`='777',`parent`='php',`tag`='',`auditing`='1',`content`='&lt;div class=&quot;site-text&quot;&gt;&lt;p&gt;code模块会去自动查找class为&lt;a&gt;layui-code&lt;/a&gt;的类，如果你初始给的不是该类，仅仅只是一个pre标签，那么需要通过elem设置选择器来指向元素：&lt;/p&gt;&lt;pre class=&quot;layui-code layui-box layui-code-view&quot; lay-title=&quot;JavaScript&quot;&gt;&lt;h3 class=&quot;layui-code-h3&quot;&gt;JavaScript&lt;a href=&quot;http://www.layui.com/doc/modules/code.html&quot; target=&quot;_blank&quot;&gt;layui.code&lt;/a&gt;&lt;/h3&gt;&lt;ol class=&quot;layui-code-ol&quot;&gt;&lt;li&gt;layui.code({&lt;/li&gt;&lt;li&gt;  elem: \'pre\' //默认值为&lt;a&gt;.layui-code&lt;/a&gt;&lt;/li&gt;&lt;li&gt;});&lt;/li&gt;&lt;li&gt;      &lt;/li&gt;&lt;/ol&gt;&lt;/pre&gt;&lt;/div&gt;',`uptime`='1493298380',`admin_id`='1' WHERE ( id='11' ) [ RunTime:0.0870s ]
+
+[ 2017-04-27T21:06:21+08:00 ] 127.0.0.1 /admin/article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `article`  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./app/Admin/View/default/Base/loading.html): failed to open stream: No such file or directory E:\xampp\htdocs\think\system\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

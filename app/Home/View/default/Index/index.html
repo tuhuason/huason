@@ -1,0 +1,108 @@
+<extend name="Base/layout" />
+
+<block name="stylesheets">
+<link rel="stylesheet" type="text/css" href="__CSS__/hwSlide.css">
+</block>
+
+<block name="urls">
+
+</block>
+
+<block name="content">
+    <div class="tips shadow">
+        <span><i class="layui-icon" style="margin-right: 10px;color: #009688;font-size: 18px;">&#xe645;</i>感谢访问本站！</span>
+    </div>
+    <div class="page-left">
+        <div class="shadow hwslider" id="motto">
+            <ul>
+                <li><img class="motto_img" src="__IMG__/big/1.jpg"><div class="title">生来倔强，We are young!</div></li>
+                <li><img class="motto_img" src="__IMG__/big/2.jpg"></li>
+                <li><img class="motto_img" src="__IMG__/big/3.jpg"></li>
+                <li><img class="motto_img" src="__IMG__/big/4.jpg"></li>
+                <li><img class="motto_img" src="__IMG__/big/5.jpg"></li>
+                <li><img class="motto_img" src="__IMG__/big/6.jpg"></li>
+            </ul>
+
+            
+        </div>
+    
+        <empty name="data">
+        <div class="blog-box-empty shadow">
+            <div class="l-content">没有文章，请添加文章。</div>
+        </div>
+        </empty>
+        <foreach name="data" key="k" item="art">
+            <include file="Base:blog" />
+        </foreach>
+    </div>
+    <div class="page-right">
+        <div class="blog-tag shadow">
+            <h2>博主资料</h2>
+            <div class="introduce">
+                <img src="__IMG__/logo1.png" alt="Huason" width="100px" height="30px" style="padding: 10px">
+            <p class="">90后程序员，PHP开发工程师</p>
+            <p class=""><i class="fa fa-location-arrow"></i>&nbsp;福建 - 龙岩</p>
+            </div>
+        </div>
+        <include file="Base:hot_new_list" />
+        <include file="Base:link" />
+    </div>
+</block>
+
+<block name="javascript">
+<script src="__JS__/index.js"></script>
+<script src="__JS__/hwSlide.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        Index.initialize({
+           
+        });
+        $("#motto").hwSlider({
+            height:385,
+            autoPlay: false,
+            arrShow: true,
+            dotShow: true,
+            touch: true
+        });
+
+        layui.use(['layer','form','element','flow'], function(){
+            var layer = layui.layer,
+                form = layui.form(),
+                element = layui.element(),
+                $ = layui.jquery,
+                flow = layui.flow;
+
+            flow.lazyimg({
+                elem: '#motto img'
+            });
+
+
+            // layer.open({
+            //     type: 2,
+            //     title: false,
+            //     area: ['630px', '360px'],
+            //     shade: 0.8,
+            //     closeBtn: 0,
+            //     shadeClose: true,
+            //     content: '//player.youku.com/embed/XMjY3MzgzODg0'
+            // });
+            // layer.open({
+            //     type: 1
+            //     ,title: false //不显示标题栏
+            //     ,closeBtn: false
+            //     ,area: '300px;'
+            //     ,shade: 0.8
+            //     ,id: 'LAY_layuipro' //设定一个id，防止重复弹出
+            //     ,btn: ['火速围观']
+            //     ,moveType: 1 //拖拽模式，0或者1
+            //     ,content: ''
+            //     ,success: function(layero){
+            //         var btn = layero.find('.layui-layer-btn');
+            //         btn.css('text-align', 'center');
+            //     }
+            // });
+
+        });
+    });
+</script>
+</block>

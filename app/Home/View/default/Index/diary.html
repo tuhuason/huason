@@ -1,0 +1,57 @@
+<extend name="Base/layout" />
+
+<block name="stylesheets">
+<style type="text/css">
+</style>
+</block>
+<block name="urls">
+</block>
+
+<block name="javascript">
+<script src="__JS__/index.js"></script>
+<script type="text/javascript">
+    $(function(){
+        Index.systole();
+    });
+</script>
+</block>
+
+<block name="content">
+    <div class="layui-breadcrumb crumbs shadow" lay-separator="/">         
+        <a href="/">首页</a>
+        <a>日记</a> 
+    </div>
+    <div class="wrap">
+        <empty name="data">
+        <div class="blog-box-empty shadow">
+            <div class="l-content">没有日记，请添加日记。</div>
+        </div>
+        <else />
+        <div class="box shadow">
+            <div class="history">
+                <h2>How time flies</h2>
+                <div class="timeline-line"></div>
+                <foreach name="data" item="diys" key="time">
+                <div class="history-date">
+                    <ul>
+                        <h2 class="first">
+                            <a href="javascript:;">{$time}年<i class="layui-icon" style="vertical-align: middle;text-decoration:none;">&#xe625;</i></a>
+                        </h2>
+                        <foreach name="diys" item="diy">
+                        <li class="green">
+                            <h3>{$diy.addtime|date='m-d',###}<span>{$diy.addtime|date='H:i:s',###}</span></h3>
+                            <i class="layui-icon dot-circle">&#xe643;</i>
+                            <div class="log-content">
+                                {$diy.content|htmlspecialchars_decode}
+                            </div>
+                            <div class="clear"></div>
+                        </li>
+                        </foreach>
+                    </ul>
+                </div>
+                </foreach>
+            </div>
+        </div>
+        </empty>
+    </div>
+</block>

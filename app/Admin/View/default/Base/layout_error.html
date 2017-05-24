@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{/*错误页面布局, 有块名:title/content 变量:$code */}
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title><block name="title"></block></title>
+    <style>
+        body{ background-image:url(__IMG__/error/bg.png); background-size:cover;}
+        .pager{ width:208px;margin:auto;overflow:hidden; margin-top:13%;}
+        .text-center .without-margin{width:630px; margin:auto; font-size:46px; color:#4ab8f7; font-family:"msyh",Arial;}
+        .text-center .text-success{width:210px; margin:auto; font-size:28px; color:#3bbb3b; margin-top:10px;}
+        .text-center .contentinfo{width:250px; margin:auto; font-size:20px; color:#999; margin-top:10px;}
+        .text-center span{color:#3bbb3b;}
+    </style>
+</head>
+<body>
+<div class="pager">
+    <img src="__IMG__/error/{$code}.png">
+</div>
+<div class="text-center">
+    <p class="without-margin"><block name="content"></block></p>
+</div>
+</body>
+</html>

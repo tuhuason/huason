@@ -1,0 +1,60 @@
+<extend name="Base/layout" />
+<block name="content">
+<div class="" style="margin-bottom: 10px;">
+<button class="layui-btn layui-btn-normal" onclick="Review.auditing_reviewes()"><i class="layui-icon" style="">&#xe605;</i>批量审核</button>
+<button class="layui-btn layui-btn-danger" onclick="Review.delete_reviewes()"><i class="layui-icon" style="">&#xe640;</i>批量删除</button>
+</div>
+<table class="layui-table layui-form" id="review">
+    <colgroup>
+    <col width="30">
+    </colgroup>
+  	<thead>
+	    <tr>
+            <th><input type="checkbox" lay-skin="primary" lay-filter="review" name="select_all"></th>
+	      	<th>ID</th>
+            <th>文章ID</th>
+            <th>评论者</th>
+	      	<th>评论时间</th>
+            <th>评论标识</th>
+            <th>评论内容</th>
+            <th>回复次数</th>
+            <th>点赞次数</th>
+            <th>审核</th>
+            <th>操作</th>
+	    </tr> 
+  	</thead>
+  	<tbody>
+        <foreach name="review"  item="re">
+    	<tr data-id="{$re.id}" data-content="{$re.content}">
+            <td><input type="checkbox" lay-skin="primary" name="select" value="{$re.id},{$re.article_id}"></td>
+	      	<td>{$re.id}</td>
+            <td>{$re.article_id}</td>
+	      	<td>{$re.reviewer}</td>
+            <td>{$re.addtime|date='Y-m-d H:i:s',###}</td>
+            <td>{$re.identifier}</td>
+            <td><a>查看内容</a></td>
+            <td>{$re.count}</td>
+            <td>{$re.upvote}</td>
+            <td data-id="{$re.id}"><input type="checkbox" name="auditing" lay-filter="auditing" lay-skin="switch" lay-text="是|否" <if condition="$re['auditing']">checked</if>></td>
+            <td>
+                <a class="layui-btn layui-btn-danger layui-btn-small delete_art" onclick="Review.delete_review('{$re.id}','{$re.article_id}')"><i class="layui-icon" style="">&#xe640;</i></a>
+            </td>
+    	</tr>
+        </foreach>
+  	</tbody>
+</table>
+</block>
+<block name="urls">
+    review:"{:U('Admin/review/index')}",
+    deleteReview:"{:U('Admin/review/deleteReview')}",
+    editReview:"{:U('Admin/review/editReview')}"
+</block>
+<block name="javascript">
+    <script type="text/javascript" src="__JS__/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="__JS__/review.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        Review.initialize();
+    });
+    </script>
+</block>

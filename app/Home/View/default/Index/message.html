@@ -1,0 +1,66 @@
+<extend name="Base/layout" />
+<block name="content">
+    <include file="Base:breadcrumb" />
+    <div class="page-left">
+        <div class="blog-tag shadow">
+            <fieldset class="layui-elem-field layui-field-title">
+                <legend>留言</legend>
+                <div class="layui-field-box">
+                    <form class="layui-form blog-editor" id="message-form">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label box-label">名称：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="commenter" lay-verify="commenter" placeholder="请输入名称" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <textarea class="layui-textarea layui-hide" name="content" lay-verify="message_content" id="messageEditor" placeholder="请输入留言内容">
+                            </textarea>
+                        </div>
+                        <div class="layui-form-item">
+                            <button type="button" class="layui-btn layui-btn-normal" lay-submit="" lay-filter="message">提交留言</button>
+                        </div>
+                    </form>
+                </div>
+            </fieldset>
+            <h2>留言</h2>
+            <div>
+                <dd class="review" id="message">
+                </dd>
+                <div class="hf">
+                    <form class="layui-form"> 
+                        <textarea id="reply_message_from" type="text" class="layui-textarea" name="content" autocomplete="off" maxlength="100" placeholder="请输入留言内容" lay-verify="reply_content" style="height:105px;"></textarea>
+                        <button type="button" class="layui-btn layui-btn-normal" lay-submit="" lay-filter="reply_message" style="margin-top:5px;">回复</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-right topic">
+        <div class="blog-tag shadow">
+            <h2>博主资料</h2>
+            <div class="introduce">
+                <img src="__IMG__/logo1.png" alt="Huason" width="100px" height="30px" style="padding: 10px">
+            <p class="">90后程序员，PHP开发工程师</p>
+            <p class=""><i class="fa fa-location-arrow"></i>&nbsp;福建 - 龙岩</p>
+            </div>
+        </div>
+        <include file="Base:hot_new_list" />
+        <include file="Base:link" />
+    </div>
+</block>
+<block name="urls">
+    message:"{:U('message/addMessage')}",
+    reply_message:"{:U('Admin/ReplyMessage/addReplyMessage')}",
+    upvote:"{:U('Admin/message/upvote')}",
+    reply_upvote:"{:U('Admin/ReplyMessage/upvote')}",
+    page:"{:U('message/page')}"
+</block>
+<block name="javascript">
+<script src="__JS__/reply.js"></script>
+<script type="text/javascript">
+    $(function(){
+        Reply.initialize();
+    });
+</script>
+</block>

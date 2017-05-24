@@ -1,0 +1,58 @@
+<extend name="Base/layout" />
+<block name="content">
+<div class="" style="margin-bottom: 10px;">
+<button class="layui-btn" onclick="Message.auditings()"><i class="layui-icon" style="">&#xe605;</i>批量审核</button>
+<button class="layui-btn layui-btn-danger" onclick="Message.delete_messages()"><i class="layui-icon" style="">&#xe640;</i>批量删除</button>
+</div>
+<table class="layui-table layui-form" id="message">
+    <colgroup>
+    <col width="30">
+    </colgroup>
+  	<thead>
+	    <tr>
+            <th><input type="checkbox" lay-skin="primary" lay-filter="message" name="select_all"></th>
+	      	<th>ID</th>
+            <th>留言者</th>
+	      	<th>留言者时间</th>
+            <th>留言标识</th>
+            <th>留言内容</th>
+            <th>回复次数</th>
+            <th>点赞次数</th>
+            <th>审核</th>
+            <th>操作</th>
+	    </tr> 
+  	</thead>
+  	<tbody>
+        <foreach name="message"  item="me">
+    	<tr data-id="{$me.id}" data-content="{$me.content}">
+            <td><input type="checkbox" lay-skin="primary" name="select" value="{$me.id},{$me.identifier}"></td>
+	      	<td>{$me.id}</td>
+	      	<td>{$me.commenter}</td>
+            <td>{$me.addtime|date='Y-m-d H:i:s',###}</td>
+            <td>{$me.identifier}</td>
+            <td><a>查看内容</a></td>
+            <td>{$me.count}</td>
+            <td>{$me.upvote}</td>
+            <td data-id="{$me.id}"><input type="checkbox" name="auditing" lay-filter="auditing" lay-skin="switch" lay-text="是|否" <if condition="$me['auditing']">checked</if>></td>
+            <td>
+                <a class="layui-btn layui-btn-danger layui-btn-small delete_art" onclick="Message.delete_message('{$me.id}','{$me.identifier}')"><i class="layui-icon" style="">&#xe640;</i></a>
+            </td>
+    	</tr>
+        </foreach>
+  	</tbody>
+</table>
+</block>
+<block name="urls">
+    message:"{:U('Admin/message/index')}",
+    deleteMessage:"{:U('Admin/message/deleteMessage')}",
+    editMessage:"{:U('Admin/message/editMessage')}"
+</block>
+<block name="javascript">
+    <script type="text/javascript" src="__JS__/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="__JS__/message.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        Message.initialize();
+    });
+    </script>
+</block>
