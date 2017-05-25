@@ -49,10 +49,12 @@ class BaseController extends Controller
         session('admin_id',$cur_user['id']);
         session('role', $cur_user['role_id']);
         
-        //主页获取最热和最新文章
-        $hot = M('Article')->join('category ON article.catid = category.catid')->where("auditing = 1 and admin_id='%d'",session('admin_id'))->order('hit desc,addtime desc')->limit(10)->select();
-        $new = M('Article')->join('category ON article.catid = category.catid')->where("auditing = 1 and admin_id='%d'",session('admin_id'))->order('comment desc')->limit(10)->select();
-        //文章分类
+        if(session('admin_id') != null){
+            //主页获取最热和最新文章
+            $hot = M('Article')->join('category ON article.catid = category.catid')->where("auditing = 1 and admin_id='%d'",session('admin_id'))->order('hit desc,addtime desc')->limit(10)->select();
+            $new = M('Article')->join('category ON article.catid = category.catid')->where("auditing = 1 and admin_id='%d'",session('admin_id'))->order('comment desc')->limit(10)->select();
+            //文章分类
+        }
         $category = M('category')->select();
 
         // 设置公共模版变量

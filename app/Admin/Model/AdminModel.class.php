@@ -96,6 +96,8 @@ class AdminModel
 
         $data['role_id'] = isset($data['role_id']) ? $data['role_id'] : 0;
         $data['createtime'] = time();
+        $data['lasttime'] = time();
+        $data['lastip'] = get_client_ip();
 
         if($res){
             $res = $User->add($data);

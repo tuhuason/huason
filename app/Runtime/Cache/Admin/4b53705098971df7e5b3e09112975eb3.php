@@ -15,9 +15,11 @@
     <div class="layui-layout layui-layout-admin">
         <div class="layui-header header">
             <a class="logo" href="<?php echo U('/Account/index/');?>" title="Huason"><img src="/static/img/logo.png"></a>
-            <span class="title">后台管理</span>
-            <a class="webfront" href="/">前台首页</a>
+            <!-- <span class="title">后台管理</span> -->
             <ul class="layui-nav" lay-filter="top_nav">
+                <li class="layui-nav-item">
+                    <a href="/">前台首页</a>
+                </li>
                 <li class="layui-nav-item">
                     <a href="javascript:;"><?php echo ($username); ?></a>
                     <dl class="layui-nav-child">
