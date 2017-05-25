@@ -80,7 +80,7 @@ var Index = {
                             if (res.status == 'ok') {
                                 $.each(res.results.data, function(index, art){
                                     var html = '<div class="blog-box shadow">';
-                                    html += '<div class="l-img"><img src="'+Base.paths.image+'/small/'+(index+1)+'.png"></div>';
+                                    html += '<div class="l-img"><img src="'+Base.paths.image+'/default.jpg"></div>';
                                     html += '<div class="l-box">';
                                     html += '<div class="tab">'+Base.tags(art.tag)+'</div><div class="l-title"><a href="/article/'+art.id+'">'+art.title+'</a></div>';
                                     html += '<div class="l-content">'+Base.html_decode(art.content)+'</div>';
