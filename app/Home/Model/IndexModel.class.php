@@ -20,7 +20,7 @@ class IndexModel{
     }
 
     public function findAllDiary(){
-        $data = M('Diary')->where("admin_id='%d'",session('admin_id'))->order('addtime desc')->select();
+        $data = M('Diary')->where("admin_id=1")->order('addtime desc')->select();
         $diary = array();
         
         foreach ($data as $diy) {
@@ -37,7 +37,7 @@ class IndexModel{
     public function search($param){
         $map['title|content'] = array('like','%'.$param.'%');
         $map['auditing'] = 1;
-        $map['admin_id'] = session('admin_id');
+        $map['admin_id'] = 1;
         $data = M('Article')->join('category ON article.catid = category.catid')->where($map)->select();
 
         return $data;

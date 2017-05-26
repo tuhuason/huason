@@ -31,8 +31,8 @@ class ArticleController extends BaseController {
                 return;
             }else{
                 //文章详情页里 获取最热和最新文章
-                $hot_list = M('Article')->where("auditing = 1 and admin_id='%d'",session('admin_id'))->order('hit desc,addtime desc')->limit(10)->select();
-                $new_list = M('Article')->where("auditing = 1 and admin_id='%d'",session('admin_id'))->order('comment desc')->limit(10)->select();
+                $hot_list = M('Article')->where("auditing = 1 and admin_id=1")->order('hit desc,addtime desc')->limit(10)->select();
+                $new_list = M('Article')->where("auditing = 1 and admin_id=1")->order('comment desc')->limit(10)->select();
                 $review = M('Review')->where("article_id='%d'",$id)->select();
 
                 $this->assign(array(
@@ -54,7 +54,7 @@ class ArticleController extends BaseController {
         $where =array(
             'auditing' => 1,
             'name'=>'前端',
-            'admin_id' => session('admin_id')
+            'admin_id' => 1
         ); 
         $data = M('Article')->join('category ON article.catid = category.catid')->where($where)->order('tag desc,addtime desc')->select();
         
@@ -69,7 +69,7 @@ class ArticleController extends BaseController {
         $where =array(
             'auditing' => 1,
             'name'=>'PHP',
-            'admin_id' => session('admin_id')
+            'admin_id' => 1
         ); 
         $data = M('Article')->join('category ON article.catid = category.catid')->where($where)->order('tag desc,addtime desc')->select();
 
@@ -84,7 +84,7 @@ class ArticleController extends BaseController {
         $where =array(
             'auditing' => 1,
             'name'=>'杂谈',
-            'admin_id' => session('admin_id')
+            'admin_id' => 1
         ); 
         $data = M('Article')->join('category ON article.catid = category.catid')->where($where)->order('tag desc,addtime desc')->select();
 
@@ -100,7 +100,7 @@ class ArticleController extends BaseController {
         $where =array(
             'auditing' => 1,
             'name'=>'生活百科',
-            'admin_id' => session('admin_id')
+            'admin_id' => 1
         ); 
         $data = M('Article')->join('category ON article.catid = category.catid')->where($where)->order('tag desc,addtime desc')->select();
         
@@ -119,8 +119,8 @@ class ArticleController extends BaseController {
             $Article = M('Article');
 
             //加载分页
-            $total_page = $Article->where("auditing=1 and admin_id='%d'",session('admin_id'))->count();
-            $data['data'] = $Article->join('category ON article.catid = category.catid')->where("auditing=1 and admin_id='%d'",session('admin_id'))->order('addtime desc,tag desc')->page($current_page.','.$num)->select();
+            $total_page = $Article->where("auditing=1 and admin_id=1")->count();
+            $data['data'] = $Article->join('category ON article.catid = category.catid')->where("auditing=1 and admin_id=1")->order('addtime desc,tag desc')->page($current_page.','.$num)->select();
             $data['total_page'] = ceil($total_page/$num);
 
             $this->successAjax($data);

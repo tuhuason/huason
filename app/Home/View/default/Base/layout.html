@@ -39,10 +39,10 @@
                 </form>
             </div>
             <div class="login">
-                <if condition="!isset($_COOKIE['openID']) || !isset($_COOKIE['openID'])">
-                    <a title="qq登录"><i class="iconfont qqlogin">&#xe631;</i></a>
+                <if condition="!isset($_COOKIE['openid']) || !isset($_COOKIE['openid'])">
+                    <a title="qq登录" href="{:U('/qq_login')}"><i class="iconfont qqlogin">&#xe631;</i></a>
                 <else/>
-                    <a></a>
+                    <a><img src=""></a>
                 </if>
             </div>
         </div>

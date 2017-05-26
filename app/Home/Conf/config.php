@@ -13,8 +13,8 @@ return array(
     // 'TRACE_MAX_RECORD'      =>  100,    // 每个级别的错误信息 最大记录数
 
     'THINK_SDK_QQ' => array(
-		'APP_KEY'    => '', //应用注册成功后分配的 APP ID
+		'APP_KEY'    => '101399999', //应用注册成功后分配的 APP ID
 		'APP_SECRET' => '', //应用注册成功后分配的KEY
-		'CALLBACK'   => '', //注册应用填写的callback
+		'CALLBACK'   => 'http://'. $_SERVER['SERVER_NAME'].'/qqcallback', //注册应用填写的callback
 	)
 );

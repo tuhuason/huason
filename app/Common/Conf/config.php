@@ -28,18 +28,18 @@ return array(
 
     //会话和cookie
     'SESSION_OPTIONS' => array(
-        'prefix' => 'cyphy_',
+        'prefix' => 'huason_',
         'expire' => (30*24*60*60),
     ),
     'COOKIE_EXPIRE' => 0,
     'COOKIE_PATH'  => '/',
-    'COOKIE_PREFIX' => 'cyphy_',
+    'COOKIE_PREFIX' => 'huason_',
 
     //数据库配置
     'DB_TYPE' => 'mysql',
     'DB_HOST' => 'localhost',
-    'DB_USER' => 'root',
-    'DB_PWD' => '',
+    'DB_USER' => 'huason',
+    'DB_PWD' => '658655',
     'DB_NAME' => 'huason',
     'DB_PORT' => 3306,
     'DB_PREFIX' => '',
@@ -65,6 +65,8 @@ return array(
         'photo$' => 'Home/Index/photo',
         'about$' => 'Home/Index/about',
         'feedback$' => 'Home/Index/message',
+        'qq_login$' => 'Home/Index/qqLogin',
+        'qqcallback$' => 'Home/Index/callback'
         // 'product/:category\d/:id\d'=>'Products/Show',
     ),
 

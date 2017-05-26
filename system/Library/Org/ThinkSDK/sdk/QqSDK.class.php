@@ -69,7 +69,7 @@ class QqSDK extends ThinkOauth{
 			$data['openid'] = $this->openid();
 			return $data;
 		} else
-			throw new Exception("获取腾讯QQ ACCESS_TOKEN 出错：{$result}");
+			E("获取腾讯QQ ACCESS_TOKEN 出错：{$result}");
 	}
 	
 	/**
@@ -86,9 +86,9 @@ class QqSDK extends ThinkOauth{
 			if(isset($data['openid']))
 				return $data['openid'];
 			else
-				throw new Exception("获取用户openid出错：{$data['error_description']}");
+				E("获取用户openid出错：{$data['error_description']}");
 		} else {
-			throw new Exception('没有获取到openid！');
+			E('没有获取到openid！');
 		}
 	}
 }

@@ -11,6 +11,7 @@
 // | ThinkOauth.class.php 2013-02-25
 // +----------------------------------------------------------------------
 namespace Org\ThinkSDK;
+use Org\ThinkSDK\sdk\QqSDK;
 
 abstract class ThinkOauth{
 	/**
@@ -97,7 +98,7 @@ abstract class ThinkOauth{
 		//获取应用配置
 		$config = C("THINK_SDK_{$this->Type}");
 		if(empty($config['APP_KEY']) || empty($config['APP_SECRET'])){
-			throw new Exception('请配置您申请的APP_KEY和APP_SECRET');
+			E('请配置您申请的APP_KEY和APP_SECRET');
 		} else {
 			$this->AppKey    = $config['APP_KEY'];
 			$this->AppSecret = $config['APP_SECRET'];
@@ -112,12 +113,14 @@ abstract class ThinkOauth{
      */
     public static function getInstance($type, $token = null) {
     	$name = ucfirst(strtolower($type)) . 'SDK';
-    	require_once "sdk/{$name}.class.php";
-    	if (class_exists($name)) {
-    		return new $name($token);
-    	} else {
-    		halt(L('_CLASS_NOT_EXIST_') . ':' . $name);
-    	}
+    	// require_once THINK_PATH."Library/Org/ThinkSDK/sdk/{$name}.class.php";
+    	// if (class_exists($name)) {
+    	// 	return new $name($token);
+    	// } else {
+    	// 	halt(L('_CLASS_NOT_EXIST_') . ':' . $name);
+    	// }
+        $path="\Org\ThinkSDK\sdk\\$name";//注意这里与下面一句来实例化类的方式。
+        return new $path($token);
     }
 
 	/**
@@ -130,7 +133,7 @@ abstract class ThinkOauth{
 		if(!empty($config['CALLBACK']))
 			$this->Callback = $config['CALLBACK'];
 		else
-			throw new Exception('请配置回调页面地址');
+			E('请配置回调页面地址');
 	}
 	
 	/**
@@ -151,7 +154,7 @@ abstract class ThinkOauth{
 			if(is_array($_param)){
 				$params = array_merge($params, $_param);
 			} else {
-				throw new Exception('AUTHORIZE配置不正确！');
+				E('AUTHORIZE配置不正确！');
 			}
 		}
 		return $this->GetRequestCodeURL . '?' . http_build_query($params);
@@ -227,7 +230,7 @@ abstract class ThinkOauth{
 				$opts[CURLOPT_POSTFIELDS] = $params;
 				break;
 			default:
-				throw new Exception('不支持的请求方式！');
+				E('不支持的请求方式！');
 		}
 		
 		/* 初始化并执行curl请求 */
@@ -236,7 +239,7 @@ abstract class ThinkOauth{
 		$data  = curl_exec($ch);
 		$error = curl_error($ch);
 		curl_close($ch);
-		if($error) throw new Exception('请求发生错误：' . $error);
+		if($error) E('请求发生错误：' . $error);
 		return  $data;
 	}
 	

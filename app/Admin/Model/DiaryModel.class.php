@@ -12,7 +12,7 @@ class DiaryModel extends BaseModel
     public function findAll()
     {
         $Diary = M('Diary');
-        $res = $Diary->where("admin_id='%d'",session('admin_id'))->select();
+        $res = $Diary->where("admin_id='%d'", session('admin_id'))->select();
         // var_dump($res);
         if($res){
             return $res;
@@ -36,12 +36,11 @@ class DiaryModel extends BaseModel
     public function add($content, &$error='')
     {
         $Diary = M('Diary');
-        $admin_id = session('admin_id');
 
         $data = array(
             'content' => $content,
             'addtime' => time(),
-            'admin_id' => $admin_id,
+            'admin_id' => session('admin_id'),
             'uptime' => time()
         );
 
