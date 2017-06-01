@@ -9,10 +9,12 @@ var Index = {
                 flow = layui.flow,
                 laypage = layui.laypage;
 
-            var remarkIndex = layedit.build('remarkEditor',{height: 150,tool: ['face']});
+            var remarkIndex = layedit.build('remarkEditor',{height: 150,tool: ['face']}),
+                openid = $('#header .login').find('span[type="openid"]').text(),
+                img = $('#header .login').find('img').attr('src'),
+                name = $('#header .login').find('a[type="nickname"]').text();
             form.render();
             form.verify({
-                reviewer: [/(.+){2,12}$/, '名称必须2到12位'],
                 content: function(value){
                     value = $.trim(layedit.getText(remarkIndex));
                     if(value == ''){
@@ -23,13 +25,14 @@ var Index = {
             });
             
             form.on('submit(remark)', function(data){
-                var name = data.field['reviewer'],
+                var openid = $('#header .login').find('span[type="openid"]').text(),
+                    img = $('#header .login').find('img').attr('src'),
                     content = data.field['content'],
                     articleId = $('.blog-detail').attr('data-id'),
                     masterID = $('.blog-detail').attr('data-mid'),
                     addtime = new Date().getTime(),
                     rand_str = Base.genNonDuplicateID(),
-                    datas = {reviewer:name,content:content,article_id:articleId,identifier:rand_str,addtime:Math.floor(addtime/1000)},
+                    datas = {reviewer:name,openid:openid,content:content,article_id:articleId,identifier:rand_str,addtime:Math.floor(addtime/1000)},
                     comment = $('#comment');
 
                 Base.ajax({
@@ -39,7 +42,7 @@ var Index = {
                     success: function (res) {
                         if (res.status == 'ok') {
                             var html = '<dl class="list identifier" data-id="'+rand_str+'">';
-                                html += '<img class="comment-avatar" src="'+Base.paths.image+'/lufei.jpg" alt=""/>';
+                                html += '<img class="comment-avatar" src="'+img+'" alt=""/>';
                                 html += '<div class="comment-body">';
                                 html += '<div class="comment-header"><span class="name">'+name+'</a></span><span class="date">'+Base.format_datetime(addtime/1000)+'</span></div>';
                                 html += '<div class="comment-content">'+Base.html_decode(content)+'</div>';
@@ -80,7 +83,7 @@ var Index = {
                             if (res.status == 'ok') {
                                 $.each(res.results.data, function(index, art){
                                     var html = '<div class="blog-box shadow">';
-                                    html += '<div class="l-img"><img src="'+Base.paths.image+'/default.jpg"></div>';
+                                    html += '<div class="l-img"><img src="'+Base.paths.image+'/small/'+(index+1)+'.png"></div>';
                                     html += '<div class="l-box">';
                                     html += '<div class="tab">'+Base.tags(art.tag)+'</div><div class="l-title"><a href="/article/'+art.id+'">'+art.title+'</a></div>';
                                     html += '<div class="l-content">'+Base.html_decode(art.content)+'</div>';
@@ -137,21 +140,22 @@ var Index = {
                                 if (res.status == 'ok') {
                                     $.each(res.results.comment, function(index, comment){
                                         var html = '<dl class="list identifier" data-id="'+comment.identifier+'">';
-                                            html += '<img class="comment-avatar" src="'+Base.paths.image+'/lufei.jpg" alt=""/>';
+                                            html += '<img class="comment-avatar" src="'+comment.avatar+'" alt=""/>';
                                             html += '<div class="comment-body">';
                                             html += '<div class="comment-header"><span class="name">'+comment.reviewer+'</a></span><span class="date">'+Base.format_datetime(comment.addtime)+'</span></div>';
                                             html += '<div class="comment-content">'+Base.html_decode(comment.content)+'</div>';
+                                            // html += comment.reviewer == name ? '<div class="comment-footer"><a></a></div>' :'<div class="comment-footer"><a class="comment-upvote"><i class="iconfont" style="font-size: 19px;">&#xe6ce;</i> (<em>'+comment.upvote+'</em>)</a><a class="comment-reply"><span>回复</span> (<em>'+comment.count+'</em>)</a></div>';
                                             html += '<div class="comment-footer"><a class="comment-upvote"><i class="iconfont" style="font-size: 19px;">&#xe6ce;</i> (<em>'+comment.upvote+'</em>)</a><a class="comment-reply"><span>回复</span> (<em>'+comment.count+'</em>)</a></div>';
                                             html += '</div>';
                                             html += '<dd class="children">';
                                             $.each(res.results.reply_review, function(index, reply){
                                                 if(comment.reviewer == reply.reply_master){
                                                     html += '<dl class="list reply_identifier" data-id="'+reply.identifier+'">';
-                                                    html += '<img class="comment-avatar" src="'+Base.paths.image+'/lufei.jpg" alt=""/>';
+                                                    html += '<img class="comment-avatar" src="'+reply.avatar+'" alt=""/>';
                                                     html += '<div class="comment-body">';
-                                                    html += '<div class="comment-header"><span class="user">我</span> 回复 <span class="commenter">'+reply.reply_master+'</span><span class="date">'+Base.format_datetime(reply.addtime)+'</span></div>';
+                                                    html += '<div class="comment-header"><span class="user">'+reply.reply_reviewer+'</span> 回复 <span class="commenter">'+reply.reply_master+'</span><span class="date">'+Base.format_datetime(reply.addtime)+'</span></div>';
                                                     html += '<div class="comment-content">'+Base.html_decode(reply.content)+'</div>';
-                                                    html += '<div class="comment-footer"><a class="comment-upvote"><i class="iconfont" style="font-size: 19px;">&#xe6ce;</i> (<em>'+reply.upvote+'</em>)</a><a class="comment-reply"><span>回复</span></a></div>';
+                                                    html += reply.reply_reviewer == name ? '<div class="comment-footer"><a></a></div>' :'<div class="comment-footer"><a class="comment-upvote"><i class="iconfont" style="font-size: 19px;">&#xe6ce;</i> (<em>'+reply.upvote+'</em>)</a><a class="comment-reply"><span>回复</span></a></div>';
                                                     html += '</div>';
                                                     html += '</dl>';
                                                 }
@@ -178,13 +182,11 @@ var Index = {
             //点赞事件
             $('#comment').on('click','.comment-upvote',function(e){
                 
-                var $em = $(this).find('em'),
-                    upvote = parseInt($em.text()),
+                var $this = $(this),
+                    upvote = parseInt($this.find('em').text()),
                     identifier = $(this).parents('.identifier').attr('data-id'),
                     reply_identifier = $(this).parents('.reply_identifier').attr('data-id'),
                     children = $(this).parents('.children');
-
-                $(this).removeClass('comment-upvote').addClass('comment-upvoted');
 
                 if(children.length == 1){
                     var datas = {type:'add',identifier:reply_identifier};
@@ -194,7 +196,8 @@ var Index = {
                         data: {data : datas},
                         success: function (res) {
                             if (res.status == 'ok') {
-                                $em.text(upvote+1);
+                                $this.find('em').text(upvote+1);
+                                $this.removeClass('comment-upvote').addClass('comment-upvoted');
                                 layer.msg('点赞成功',{time:1500});
                             } else {
                                 layer.msg(res.errdesc,{offset:'120px',time:1500});
@@ -210,7 +213,8 @@ var Index = {
                         data: {data : datas},
                         success: function (res) {
                             if (res.status == 'ok') {
-                                $em.text(upvote+1);
+                                $this.find('em').text(upvote+1);
+                                $this.removeClass('comment-upvote').addClass('comment-upvoted');
                                 layer.msg('点赞成功',{time:1500});
                             } else {
                                 layer.msg(res.errdesc,{offset:'120px',time:1500});
@@ -223,13 +227,11 @@ var Index = {
 
             //取消点赞事件
             $('#comment').on('click','.comment-upvoted',function(e){
-                var $em = $(this).find('em'),
-                    upvote = parseInt($em.text()),
+                var $this = $(this),
+                    upvote = parseInt($this.find('em').text()),
                     identifier = $(this).parents('.identifier').attr('data-id'),
                     reply_identifier = $(this).parents('.reply_identifier').attr('data-id'),
                     children = $(this).parents('.children');
-
-                $(this).addClass('comment-upvote').removeClass('comment-upvoted');
 
                 if(children.length == 1){
                     var datas = {type:'delete',identifier:reply_identifier};
@@ -239,7 +241,8 @@ var Index = {
                         data: {data : datas},
                         success: function (res) {
                             if (res.status == 'ok') {
-                                $em.text(upvote-1)
+                                $this.find('em').text(upvote-1);
+                                $this.addClass('comment-upvote').removeClass('comment-upvoted');
                                 layer.msg('取消点赞成功',{time:1500});
                             } else {
                                 layer.msg(res.errdesc,{offset:'120px',time:1500});
@@ -255,7 +258,8 @@ var Index = {
                         data: {data : datas},
                         success: function (res) {
                             if (res.status == 'ok') {
-                                $em.text(upvote-1)
+                                $this.find('em').text(upvote-1);
+                                $this.addClass('comment-upvote').removeClass('comment-upvoted');
                                 layer.msg('取消点赞成功',{time:1500});
                             } else {
                                 layer.msg(res.errdesc,{offset:'120px',time:1500});
@@ -386,5 +390,5 @@ var Index = {
             $warpEle.parent().removeAttr("style");
             return false;
         });
-    },
+    }
 };

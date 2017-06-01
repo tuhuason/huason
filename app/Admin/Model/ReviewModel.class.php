@@ -90,6 +90,12 @@ class ReviewModel extends BaseModel
     public function upvote($data, &$error='')
     {
         $Review = M('Review');
+
+        if(!isset($_COOKIE['openid'])){
+            $error = '请登录后回复！';
+            return false;
+        }
+        
         if($data['type'] == 'add'){
             $res = $Review->where("identifier = '%s'", $data['identifier'])->setInc('upvote');
             if($res){

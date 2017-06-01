@@ -26,14 +26,11 @@
         <div class="blog-tag shadow">
             <fieldset class="layui-elem-field layui-field-title">
                 <legend>评论</legend>
-                <div class="layui-field-box">
+                <div class="layui-field-box center">
+                    <if condition="!isset($_COOKIE['openid'])">
+                    <a class="layui-btn layui-btn-normal" href="{:U('/qq_login')}" style="margin-top:5px;">请登录后评论</a>
+                    <else/>
                     <form class="layui-form blog-editor" id="comment-form">
-                        <div class="layui-form-item">
-                            <label class="layui-form-label box-label">名称：</label>
-                            <div class="layui-input-inline">
-                                <input type="text" name="reviewer" lay-verify="reviewer" placeholder="请输入名称" autocomplete="off" class="layui-input">
-                            </div>
-                        </div>
                         <div class="layui-form-item">
                             <textarea class="layui-textarea layui-hide" name="content" lay-verify="content" id="remarkEditor" placeholder="请输入文章内容">
                             </textarea>
@@ -42,6 +39,7 @@
                             <button type="button" class="layui-btn layui-btn-normal" lay-submit="" lay-filter="remark">提交评论</button>
                         </div>
                     </form>
+                    </if>
                 </div>
             </fieldset>
             <h2>评论</h2>
@@ -49,10 +47,16 @@
                 <dd class="review" id="comment">
                 </dd>
                 <div class="hf">
+                    
                     <form class="layui-form"> 
                         <textarea id="reply_review_from" type="text" class="layui-textarea" name="content" autocomplete="off" maxlength="100" placeholder="请输入留言内容" lay-verify="reply_review" style="height:105px;"></textarea>
+                        <if condition="!isset($_COOKIE['openid'])">
+                        <a class="layui-btn layui-btn-normal" href="{:U('/qq_login')}" style="margin-top:5px;">请登录后回复</a>
+                        <else/>
                         <button type="button" class="layui-btn layui-btn-normal" lay-submit="" lay-filter="reply_review" style="margin-top:10px;">回复</button>
+                        </if>
                     </form>
+                    
                 </div>
             </div>
         </div>

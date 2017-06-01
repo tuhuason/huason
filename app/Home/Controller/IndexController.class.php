@@ -20,45 +20,41 @@ class IndexController extends BaseController {
         $this->display('index');
     }
 
-    public function qqLoginAction($type = 'qq'){
-        empty($type) && $this->error('参数错误');
-  
+    public function qqLoginAction(){
+        $type = 'qq';
+        $referer = $_SERVER['HTTP_REFERER'];
+        session('referer', $referer);
         $sns = \Org\ThinkSDK\ThinkOauth::getInstance($type);
       
-         //跳转到授权页面  
+        //跳转到授权页面  
         redirect($sns->getRequestCodeURL());
     }
 
     //授权回调地址
-    public function callbackAction($type = 'qq', $code = null){
-        empty($type) && $this->error('参数错误');
-        
+    public function callbackAction(){
+        $type = 'qq';
+        $code = $_GET['code'];
+
         //ThinkOauth类并实例化一个对象
         $sns = \Org\ThinkSDK\ThinkOauth::getInstance($type);
 
-        //腾讯微博需传递的额外参数
-        $extend = null;
-        if($type == 'tencent'){
-            $extend = array('openid' => $this->_get('openid'), 'openkey' => $this->_get('openkey'));
-        }
-
-        //请妥善保管这里获取到的Token信息，方便以后API调用
-        //调用方法，实例化SDK对象的时候直接作为构造函数的第二个参数传入
-        //如： $qq = ThinkOauth::getInstance('qq', $token);
-        $token = $sns->getAccessToken($code , $extend);
+        //获取到的Token信息，方便API调用
+        $token = $sns->getAccessToken($code);
 
         //获取当前登录用户信息
-        if(is_array($token)){
-            $user_info = A('Type', 'Event')->$type($token);
+        $qq_login = D('Qq');
+        $data = $qq_login->login($token);
+        //设置cookie有效期
+        setcookie('openid', $token['openid'], time()+86400);
+        redirect(session('referer'));
+        return;
+    }
 
-            echo("<h1>恭喜！使用 {$type} 用户登录成功</h1><br>");
-            echo("授权信息为：<br>");
-            dump($token);
-            echo("当前登录用户信息为：<br>");
-            dump($user_info);
-        }
-    }    
-
+    public function qqLogoutAction(){
+        setcookie ("openid", "", time() - 3600);
+        redirect(session('referer'));
+        return;
+    }
     public function photoAction(){
         $this->display('photo');
     }

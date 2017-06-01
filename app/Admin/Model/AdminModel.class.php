@@ -27,7 +27,8 @@ class AdminModel
         if ($this->checkPassword($username, $password, $error)) {
 
             //验证码
-            if($this->checkCode($code, $error) === false){
+            if(check_code($code) === false){
+                $error = '验证码错误';
                 return false;
             }
 

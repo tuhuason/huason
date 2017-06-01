@@ -13,7 +13,7 @@ class DiaryModel extends BaseModel
     {
         $Diary = M('Diary');
         $res = $Diary->where("admin_id='%d'", session('admin_id'))->select();
-        // var_dump($res);
+
         if($res){
             return $res;
         }

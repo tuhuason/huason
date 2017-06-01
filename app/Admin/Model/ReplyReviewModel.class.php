@@ -13,7 +13,7 @@ class ReplyReviewModel extends BaseModel
     {
         $ReplyReview = M('reply_review');
         $res = $ReplyReview->select();
-        // var_dump($res);
+
         if($res){
             return $res;
         }
@@ -23,6 +23,11 @@ class ReplyReviewModel extends BaseModel
     public function add($data, &$error='')
     {
         $ReplyReview = M('reply_review');
+
+        if(!isset($_COOKIE['openid'])){
+            $error = '请登录后回复！';
+            return false;
+        }
 
         //开启事务
         M()->startTrans();
@@ -74,6 +79,12 @@ class ReplyReviewModel extends BaseModel
     public function upvote($data, &$error='')
     {
         $ReplyReview = M('reply_review');
+
+        if(!isset($_COOKIE['openid'])){
+            $error = '请登录后回复！';
+            return false;
+        }
+        
         if($data['type'] == 'add'){
             $res = $ReplyReview->where("identifier = '%s'", $data['identifier'])->setInc('upvote');
             if($res){

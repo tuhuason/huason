@@ -39,11 +39,22 @@
                 </form>
             </div>
             <div class="login">
-                <if condition="!isset($_COOKIE['openid']) || !isset($_COOKIE['openid'])">
-                    <a title="qq登录" href="{:U('/qq_login')}"><i class="iconfont qqlogin">&#xe631;</i></a>
-                <else/>
-                    <a><img src=""></a>
-                </if>
+                <ul class="layui-nav layui-show">
+                    <if condition="!isset($_COOKIE['openid'])">
+                    <li class="layui-nav-item">
+                        <a title="qq登录" href="{:U('/qq_login')}" type="qq_login"><i class="iconfont qqlogin">&#xe631;</i></a>
+                    </li>
+                    <else/>
+                    <li class="layui-nav-item">
+                        <img src="{$user.avatar}" class="layui-circle" alt="{$user.nickname}" title="{$user.nickname}">
+                        <a type="nickname" class="layui-hide">{$user.nickname}</a>
+                        <span type="openid" class="layui-hide">{$user.openid}</span>
+                        <dl class="layui-nav-child">
+                            <dd><a href="{:U('/qq_logout')}" id="qq_logout">退出</a></dd>
+                        </dl>
+                      </li>
+                    </if>
+                </ul>
             </div>
         </div>
     </div>
@@ -74,7 +85,7 @@
     </div>
     
     <div class="footer">
-        <p>Huason © <a class="site_url" href="###"></a></p>
+        <p>Copyright © 2017 Design By Huason <a class="site_url" href="http://www.miibeian.gov.cn/">闽ICP备17001904号</a></p>
     </div>
 
     <div class="layui-fixbar" id="gotop" style="display:none;right:20px;">
@@ -93,46 +104,8 @@
     $(document).ready(function(e) {
         Base.initialize();
         Base.urls = {<block name="urls"></block>};
-
         CalendarHandler.initialize();
     });
-        layui.use(['form','element'], function(){
-            var form = layui.form(),
-            element = layui.element(),
-            $ = layui.jquery;
-
-            //gotop
-            $(window).scroll(function(){ 
-                var scrH = document.documentElement.scrollTop + document.body.scrollTop; 
-                if(scrH > 60){
-                    $('#header').addClass('header_fixed').fadeIn();
-                }else{
-                    $('#header').removeClass('header_fixed');
-                }
-
-                if(scrH > 150){ 
-                    $('#gotop').fadeIn(400); 
-                }else{ 
-                    $('#gotop').stop().fadeOut(400); 
-                } 
-            });
-
-            $("#gotop").click(function(e) {
-                e.preventDefault();
-                $("html,body").animate({scrollTop:0},80);
-            });
-
-            //移动设备
-            var treeMobile = $('.site-tree-mobile'),
-                shadeMobile = $('.site-mobile-shade');
-            treeMobile.on('click', function() {
-                $('body').addClass('site-mobile');
-            });
-            shadeMobile.on('click', function() {
-                $('body').removeClass('site-mobile');
-            });
-        });
-
     </script>
     <block name="javascript"></block>
     

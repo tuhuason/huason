@@ -7,11 +7,13 @@ var Reply = {
                 flow = layui.flow,
                 laypage = layui.laypage;
 
-            var messageIndex = layedit.build('messageEditor',{height: 150,tool: ['face']});
+            var messageIndex = layedit.build('messageEditor',{height: 150,tool: ['face']}),
+                openid = $('#header .login').find('span[type="openid"]').text(),
+                img = $('#header .login').find('img').attr('src'),
+                name = $('#header .login').find('a[type="nickname"]').text();
 
             form.render();
             form.verify({
-                commenter: [/(.+){2,12}$/, '名称必须2到12位'],
                 message_content: function(value){
                     value = $.trim(layedit.getText(messageIndex));
                     if(value == ''){
@@ -22,11 +24,10 @@ var Reply = {
             });
             //提交留言
             form.on('submit(message)', function(data){
-                var name = data.field['commenter'],
-                    content = data.field['content'],
+                var content = data.field['content'],
                     addtime = new Date().getTime(),
                     rand_str = Base.genNonDuplicateID(),
-                    datas = {commenter:name,content:content,addtime:Math.floor(addtime/1000),identifier:rand_str},
+                    datas = {commenter:name,openid:openid,content:content,addtime:Math.floor(addtime/1000),identifier:rand_str},
                     comment = $('#message');
 
                 Base.ajax({
@@ -36,7 +37,7 @@ var Reply = {
                     success: function (res) {
                         if (res.status == 'ok') {
                             var html = '<dl class="list identifier" data-id="'+rand_str+'">';
-                                html += '<img class="comment-avatar" src="'+Base.paths.image+'/lufei.jpg" alt=""/>';
+                                html += '<img class="comment-avatar" src="'+img+'" alt=""/>';
                                 html += '<div class="comment-body">';
                                 html += '<div class="comment-header"><span class="name">'+name+'</a></span><span class="date">'+Base.format_datetime(addtime/1000)+'</span></div>';
                                 html += '<div class="comment-content">'+Base.html_decode(content)+'</div>';
@@ -74,32 +75,24 @@ var Reply = {
                             if (res.status == 'ok') {
                                 $.each(res.results.message, function(index, message){
                                     var html = '<dl class="list identifier" data-id="'+message.identifier+'">';
-                                        html += '<img class="comment-avatar" src="'+Base.paths.image+'/lufei.jpg" alt=""/>';
+                                        html += '<img class="comment-avatar" src="'+message.avatar+'" alt=""/>';
                                         html += '<div class="comment-body">';
                                         html += '<div class="comment-header"><span class="name">'+message.commenter+'</a></span><span class="date">'+Base.format_datetime(message.addtime)+'</span></div>';
                                         html += '<div class="comment-content">'+Base.html_decode(message.content)+'</div>';
                                         html += '<div class="comment-footer">';
-                                        if('我'==message.commenter){
-                                            html += '<a></a>';
-                                        }else{
-                                            html += '<a class="comment-upvote"><i class="iconfont" style="font-size: 19px;">&#xe6ce;</i> (<em>'+message.upvote+'</em>)</a><a class="comment-reply"><span>回复</span> (<em>'+message.count+'</em>)</a>';
-                                        }
+                                        html += message.commenter == name ? '<a></a>' : '<a class="comment-upvote"><i class="iconfont" style="font-size: 19px;">&#xe6ce;</i> (<em>'+message.upvote+'</em>)</a><a class="comment-reply"><span>回复</span> (<em>'+message.count+'</em>)</a>';
                                         html += '</div>';
                                         html += '</div>';
                                         html += '<dd class="children">';
                                         $.each(res.results.reply_message, function(index, reply){
                                             if(message.commenter == reply.reply_master){
                                                 html += '<dl class="list reply_identifier" data-id="'+reply.identifier+'">';
-                                                html += '<img class="comment-avatar" src="'+Base.paths.image+'/lufei.jpg" alt=""/>';
+                                                html += '<img class="comment-avatar" src="'+reply.avatar+'" alt=""/>';
                                                 html += '<div class="comment-body">';
-                                                html += '<div class="comment-header"><span class="user">我</span> 回复 <span class="commenter">'+reply.reply_master+'</span><span class="date">'+Base.format_datetime(reply.addtime)+'</span></div>';
+                                                html += '<div class="comment-header"><span class="user">'+reply.reply_commenter+'</span> 回复 <span class="commenter">'+reply.reply_master+'</span><span class="date">'+Base.format_datetime(reply.addtime)+'</span></div>';
                                                 html += '<div class="comment-content">'+Base.html_decode(reply.content)+'</div>';
                                                 html += '<div class="comment-footer">';
-                                                // if('我'==reply.reply_commenter){
-                                                //     html += '<a></a>';
-                                                // }else{
-                                                    html += '<a class="comment-upvote"><i class="iconfont" style="font-size: 19px;">&#xe6ce;</i> (<em>'+reply.upvote+'</em>)</a><a class="comment-reply"><span>回复</span></a>';
-                                                // }
+                                                html += reply.reply_commenter == name ? '<a></a>' : '<a class="comment-upvote"><i class="iconfont" style="font-size: 19px;">&#xe6ce;</i> (<em>'+reply.upvote+'</em>)</a><a class="comment-reply"><span>回复</span> (<em>'+message.count+'</em>)</a>';
                                                 html += '</div>';
                                                 html += '</div>';
                                                 html += '</dl>';
@@ -122,13 +115,11 @@ var Reply = {
 
             $('#message').on('click','.comment-upvote',function(e){
                 
-                var $em = $(this).find('em'),
-                    upvote = parseInt($em.text()),
+                var $this = $(this),
+                    upvote = parseInt($this.find('em').text()),
                     identifier = $(this).parents('.identifier').attr('data-id'),
                     reply_identifier = $(this).parents('.reply_identifier').attr('data-id'),
                     children = $(this).parents('.children');
-
-                $(this).removeClass('comment-upvote').addClass('comment-upvoted');
 
                 if(children.length == 1){
                     var datas = {type:'add',identifier:reply_identifier};
@@ -138,7 +129,8 @@ var Reply = {
                         data: {data : datas},
                         success: function (res) {
                             if (res.status == 'ok') {
-                                $em.text(upvote+1);
+                                $this.find('em').text(upvote+1);
+                                $this.removeClass('comment-upvote').addClass('comment-upvoted');
                                 layer.msg('点赞成功',{time:1500});
                             } else {
                                 layer.msg(res.errdesc,{offset:'120px',time:1500});
@@ -154,7 +146,8 @@ var Reply = {
                         data: {data : datas},
                         success: function (res) {
                             if (res.status == 'ok') {
-                                $em.text(upvote+1);
+                                $this.find('em').text(upvote+1);
+                                $this.removeClass('comment-upvote').addClass('comment-upvoted');
                                 layer.msg('点赞成功',{time:1500});
                             } else {
                                 layer.msg(res.errdesc,{offset:'120px',time:1500});
@@ -166,8 +159,8 @@ var Reply = {
             });
 
             $('#message').on('click','.comment-upvoted',function(e){
-                var $em = $(this).find('em'),
-                    upvote = parseInt($em.text()),
+                var $this = $(this),
+                    upvote = parseInt($this.find('em').text()),
                     identifier = $(this).parents('.identifier').attr('data-id'),
                     reply_identifier = $(this).parents('.reply_identifier').attr('data-id'),
                     children = $(this).parents('.children');
@@ -182,7 +175,8 @@ var Reply = {
                         data: {data : datas},
                         success: function (res) {
                             if (res.status == 'ok') {
-                                $em.text(upvote-1)
+                                $this.find('em').text(upvote-1);
+                                $this.addClass('comment-upvote').removeClass('comment-upvoted');
                                 layer.msg('取消点赞成功',{time:1500});
                             } else {
                                 layer.msg(res.errdesc,{offset:'120px',time:1500});
@@ -198,7 +192,8 @@ var Reply = {
                         data: {data : datas},
                         success: function (res) {
                             if (res.status == 'ok') {
-                                $em.text(upvote-1)
+                                $this.find('em').text(upvote-1);
+                                $this.addClass('comment-upvote').removeClass('comment-upvoted');
                                 layer.msg('取消点赞成功',{time:1500});
                             } else {
                                 layer.msg(res.errdesc,{offset:'120px',time:1500});
@@ -263,9 +258,9 @@ var Reply = {
                         addtime = new Date().getTime();
 
                     if(user){
-                        datas = {reply_commenter:'我', reply_master:user, content:content, identifier:rand_str, addtime:Math.floor(addtime/1000)};
+                        datas = {reply_commenter:name, reply_master:user, content:content, identifier:rand_str, addtime:Math.floor(addtime/1000)};
                     }else{
-                        datas = {reply_commenter:'我', reply_master:name, content:content, identifier:rand_str, addtime:Math.floor(addtime/1000)};
+                        datas = {reply_commenter:name, reply_master:name, content:content, identifier:rand_str, addtime:Math.floor(addtime/1000)};
                     }
 
                     Base.ajax({
@@ -276,9 +271,9 @@ var Reply = {
                             if (res.status == 'ok') {
                                 //获取每条留言的innerHTML结构，每次只替换textarea的输入内容和 当前发送时间
                                 var html = '<dl class="list reply_identifier" data-id="'+rand_str+'">';
-                                    html += '<img class="comment-avatar" src="'+Base.paths.image+'/lufei.jpg" alt=""/>';
+                                    html += '<img class="comment-avatar" src="'+img+'" alt=""/>';
                                     html += '<div class="comment-body">';
-                                    html += '<div class="comment-header"><span class="user">我</span> 回复 <span class="commenter">'+(user!= false?user:name)+'</span><span class="date">'+Base.format_datetime(addtime/1000)+'</span></div>';
+                                    html += '<div class="comment-header"><span class="user">'+name+'</span> 回复 <span class="commenter">'+(user!= false?user:name)+'</span><span class="date">'+Base.format_datetime(addtime/1000)+'</span></div>';
                                     html += '<div class="comment-content">'+Base.html_decode(content)+'</div>';
                                     html += '<div class="comment-footer"><a></a></div>';
                                     html += '</div>';

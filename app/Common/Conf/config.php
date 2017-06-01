@@ -44,12 +44,6 @@ return array(
     'DB_PORT' => 3306,
     'DB_PREFIX' => '',
     'DB_CHARSET' =>  'utf8',
-    
-    //多语言支持
-    // 'LANG_SWITCH_ON' => true,
-    // 'LANG_AUTO_DETECT' => false,
-    // 'LANG_LIST' => array_keys(Language::getList()),
-    // 'DEFAULT_LANG' => Language::get(),
 
     //URL模式
     'URL_MODE' => 2,
@@ -66,8 +60,8 @@ return array(
         'about$' => 'Home/Index/about',
         'feedback$' => 'Home/Index/message',
         'qq_login$' => 'Home/Index/qqLogin',
+        'qq_logout$' => 'Home/Index/qqLogout',
         'qqcallback$' => 'Home/Index/callback'
-        // 'product/:category\d/:id\d'=>'Products/Show',
     ),
 
     //日志
@@ -76,9 +70,4 @@ return array(
     'LOG_LEVEL' => 'EMERG,ALERT,CRIT,ERR',
     'LOG_FILE_SIZE' => 2097152,
     'LOG_EXCEPTION_RECORD' => false,
-
-    // 产品型号和版本
-    // 'PRODUCT_ARCH' => $_->defaultArch,
-    // 'PRODUCT_VERSION' => $_->defaultVersion,
-    // 'PRODUCT_COMPANY' => $_->defaultEntity,
 );

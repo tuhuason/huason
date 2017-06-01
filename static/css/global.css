@@ -30,9 +30,12 @@ body {min-width: 320px;background-image: url(../img/bg.jpg)}
 .box .content {padding: 15px 20px;font-size: 14px;line-height: 26px;word-wrap: break-word;}
 .footer {clear:both;padding: 15px 0;text-align: center;color: #fff;font-weight: 300;width: 100%;clear: both;border-top: 1px solid #404553;background-color: #393D49;}
 .search {top: 10px;position: absolute;right: 130px;}
-.login{top: 13px;position: absolute;right: 40px;}
-.qqlogin{font-size: 32px;color: #c2c2c2;}
+.login{position: absolute;right: 80px;}
+.qqlogin{font-size: 40px;color: #c2c2c2;}
 .qqlogin:hover{color: #fff;}
+.qq-nav{display: block;}
+.center{text-align: center;}
+/*#qq_logout{position: absolute;top:50px;width:40px;line-height: 30px;color: #fff;background-color: #009688; text-align: center;}*/
 .search form{position: relative;}
 .search_input {color: #999;width: 250px;}
 .search_btn{position: absolute;width: 40px;height:100%;font-size: 22px;top: 0;right: 0;cursor: pointer;border: 1px solid #1E9FFF; border-radius: 2px;}
@@ -139,9 +142,9 @@ blockquote{display:block;border-left:8px solid #9dcfef;padding:5px 10px;margin:1
 .review-reply span em {font-style: normal;}
 
 /* comment */
-.list{ position:relative; padding-left:46px;vertical-align:top;border-bottom:1px dotted #c2c2c2;}
+.list{ position:relative; padding-left:40px;vertical-align:top;border-bottom:1px dotted #c2c2c2;}
 .list .comment-avatar {position: absolute;top: 20px;left: 0;}
-.list .comment-avatar{width: 45px; height: 45px; }
+.list .comment-avatar{width: 40px; height: 40px; }
 .list .comment-header{ padding-top:18px;line-height:20px; }
 .list .comment-header .date {margin-left: 7px;color:#999;}
 .list .comment-body {padding-left: 10px;}
@@ -258,6 +261,6 @@ blockquote{display:block;border-left:8px solid #9dcfef;padding:5px 10px;margin:1
     .search_input{width: 130px;}
     .layui-main{width:auto;margin: 0 10px;}
     .search{right: 60px}
-    .login{right:10px;}
+    .login{right:45px;}
     .logo img {width: 100px;}
 }

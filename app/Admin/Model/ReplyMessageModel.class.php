@@ -13,7 +13,7 @@ class ReplyMessageModel extends BaseModel
     {
         $ReplyMessage = M('reply_message');
         $res = $ReplyMessage->select();
-        // var_dump($res);
+
         if($res){
             return $res;
         }
@@ -24,6 +24,11 @@ class ReplyMessageModel extends BaseModel
     {
         $ReplyMessage = M('reply_message');
         
+        if(!isset($_COOKIE['openid'])){
+            $error = '请登录后回复！';
+            return false;
+        }
+
         //开启事务
         M()->startTrans();
         $res = $ReplyMessage->add($data);
@@ -73,6 +78,12 @@ class ReplyMessageModel extends BaseModel
     public function upvote($data, &$error='')
     {
         $ReplyMessage = M('reply_message');
+
+        if(!isset($_COOKIE['openid'])){
+            $error = '请登录后回复！';
+            return false;
+        }
+        
         if($data['type'] == 'add'){
             $res = $ReplyMessage->where("identifier = '%s'", $data['identifier'])->setInc('upvote');
             if($res){

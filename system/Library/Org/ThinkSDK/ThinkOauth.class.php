@@ -93,7 +93,8 @@ abstract class ThinkOauth{
 	public function __construct($token = null){
 		//设置SDK类型
 		$class = get_class($this);
-		$this->Type = strtoupper(substr($class, 0, strlen($class)-3));
+		$tmp_class = end(explode('\\',$class));
+		$this->Type = strtoupper(substr($tmp_class, 0, strlen($tmp_class)-3));
 
 		//获取应用配置
 		$config = C("THINK_SDK_{$this->Type}");
@@ -146,6 +147,7 @@ abstract class ThinkOauth{
 			'client_id'     => $this->AppKey,
 			'redirect_uri'  => $this->Callback,
 			'response_type' => $this->ResponseType,
+			'state'         => md5(uniqid(rand(), true))
 		);
 		
 		//获取额外参数

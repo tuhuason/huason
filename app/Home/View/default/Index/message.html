@@ -5,14 +5,11 @@
         <div class="blog-tag shadow">
             <fieldset class="layui-elem-field layui-field-title">
                 <legend>留言</legend>
-                <div class="layui-field-box">
+                <div class="layui-field-box center">
+                    <if condition="!isset($_COOKIE['openid'])">
+                    <a class="layui-btn layui-btn-normal" href="{:U('/qq_login')}" style="margin-top:5px;">请登录后留言</a>
+                    <else/>
                     <form class="layui-form blog-editor" id="message-form">
-                        <div class="layui-form-item">
-                            <label class="layui-form-label box-label">名称：</label>
-                            <div class="layui-input-inline">
-                                <input type="text" name="commenter" lay-verify="commenter" placeholder="请输入名称" autocomplete="off" class="layui-input">
-                            </div>
-                        </div>
                         <div class="layui-form-item">
                             <textarea class="layui-textarea layui-hide" name="content" lay-verify="message_content" id="messageEditor" placeholder="请输入留言内容">
                             </textarea>
@@ -21,6 +18,7 @@
                             <button type="button" class="layui-btn layui-btn-normal" lay-submit="" lay-filter="message">提交留言</button>
                         </div>
                     </form>
+                    </if>
                 </div>
             </fieldset>
             <h2>留言</h2>
@@ -30,7 +28,11 @@
                 <div class="hf">
                     <form class="layui-form"> 
                         <textarea id="reply_message_from" type="text" class="layui-textarea" name="content" autocomplete="off" maxlength="100" placeholder="请输入留言内容" lay-verify="reply_content" style="height:105px;"></textarea>
+                        <if condition="!isset($_COOKIE['openid'])">
+                        <a class="layui-btn layui-btn-normal" href="{:U('/qq_login')}" style="margin-top:5px;">请登录后回复</a>
+                        <else/>
                         <button type="button" class="layui-btn layui-btn-normal" lay-submit="" lay-filter="reply_message" style="margin-top:5px;">回复</button>
+                        </if>
                     </form>
                 </div>
             </div>

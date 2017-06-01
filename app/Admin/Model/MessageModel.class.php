@@ -76,6 +76,12 @@ class MessageModel extends BaseModel
     public function upvote($data, &$error='')
     {
         $Message = M('Message');
+
+        if(!isset($_COOKIE['openid'])){
+            $error = '请登录后点赞！';
+            return false;
+        }
+        
         if($data['type'] == 'add'){
             $res = $Message->where("identifier = '%s'", $data['identifier'])->setInc('upvote');
             if($res){

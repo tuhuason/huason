@@ -11,12 +11,6 @@ var Base = {
         plugin : '/static/plugin'
     },
 
-    // 当前语言
-    // language : 'zh-cn',
-
-    // 当前主题
-    // theme : 'classic',
-
     // 当前页面标识符
     pageIdentifier : '',
 
@@ -32,6 +26,7 @@ var Base = {
         $('.layui-main .page-right .blog-tag').find('span.num:eq(0)').css('background-color','#009688');
         $('.layui-main .page-right .blog-tag').find('span.num:eq(1)').css('background-color','#2196f3');
         $('.layui-main .page-right .blog-tag').find('span.num:eq(2)').css('background-color','#5fb878');
+
         //移动设备
         var treeMobile = $('.site-tree-mobile'),
             shadeMobile = $('.site-mobile-shade');
@@ -41,20 +36,26 @@ var Base = {
         shadeMobile.on('click', function() {
             $('body').removeClass('site-mobile');
         });
-        //gotop
-        $('.layui-body').scroll(function() {
-            if($(this).scrollTop() >= 80) {
-              $("#gotop").fadeIn(); 
-            } else {
-              $("#gotop").fadeOut();
+        $(window).scroll(function(){ 
+            var scrH = document.documentElement.scrollTop + document.body.scrollTop; 
+            if(scrH > 60){
+                $('#header').addClass('header_fixed').fadeIn();
+            }else{
+                $('#header').removeClass('header_fixed');
             }
-        });
-        
-        $("#gotop").click(function(e) {
-            e.preventDefault();
-            $(".layui-body").animate({scrollTop:0},80);
+
+            if(scrH > 150){ 
+                $('#gotop').fadeIn(400); 
+            }else{ 
+                $('#gotop').stop().fadeOut(400); 
+            } 
         });
 
+        $("#gotop").click(function(e) {
+            e.preventDefault();
+            $("html,body").animate({scrollTop:0},80);
+        });
+        
         //mobile gotop
         $(window).scroll(function(){ 
             var scrH=document.documentElement.scrollTop+document.body.scrollTop; 
@@ -64,21 +65,12 @@ var Base = {
                 $('#gotop').stop().fadeOut(400); 
             }
 
-            // if(scrH>593){
-            //     $('#article_hot_list').css({'position':'fixed','top':'60px'});
-            //     $('#link').css({'position':'fixed','top':'416px'});
-            // }else{ 
-            //     $('#article_hot_list').css({'position':'relative','top':'0px'});
-            //     $('#link').css({'position':'relative','top':'0px'});
-            // }
         });
 
         $("#gotop").click(function(e) {
             e.preventDefault();
             $("html,body").animate({scrollTop:0},80);
         });
-
-        // $('body').on('click.comment-reply', '.comment-reply', function (e) { e.stopPropagation(); });
 
         layui.use(['layer','form','element'], function(){
             var form = layui.form(),
