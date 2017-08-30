@@ -47,10 +47,10 @@ class MessageController extends BaseController {
             $data = I('post.data', '');
             $error = '';
             if(count($data) == count($data, 1)){
-                $success = D('Review')->delete($data['id'], $data['article_id'], $error);
+                $success = D('Message')->delete($data, $error);
             }else{
                 foreach ($data as $da) {
-                    $success = D('Review')->delete($da['id'], $da['article_id'],$error);
+                    $success = D('Message')->delete($da, $error);
                 }
             }
 

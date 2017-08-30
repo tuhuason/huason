@@ -5,8 +5,8 @@
         <div class="blog-tag shadow">
             <fieldset class="layui-elem-field layui-field-title">
                 <legend>留言</legend>
-                <div class="layui-field-box center">
-                    <if condition="!isset($_COOKIE['openid'])">
+                <div class="layui-field-box <if condition="!session('openid')">center</if>">
+                    <if condition="!session('openid')">
                     <a class="layui-btn layui-btn-normal" href="{:U('/qq_login')}" style="margin-top:5px;">请登录后留言</a>
                     <else/>
                     <form class="layui-form blog-editor" id="message-form">
@@ -28,7 +28,7 @@
                 <div class="hf">
                     <form class="layui-form"> 
                         <textarea id="reply_message_from" type="text" class="layui-textarea" name="content" autocomplete="off" maxlength="100" placeholder="请输入留言内容" lay-verify="reply_content" style="height:105px;"></textarea>
-                        <if condition="!isset($_COOKIE['openid'])">
+                        <if condition="!session('openid')">
                         <a class="layui-btn layui-btn-normal" href="{:U('/qq_login')}" style="margin-top:5px;">请登录后回复</a>
                         <else/>
                         <button type="button" class="layui-btn layui-btn-normal" lay-submit="" lay-filter="reply_message" style="margin-top:5px;">回复</button>
@@ -53,9 +53,9 @@
 </block>
 <block name="urls">
     message:"{:U('message/addMessage')}",
-    reply_message:"{:U('Admin/ReplyMessage/addReplyMessage')}",
-    upvote:"{:U('Admin/message/upvote')}",
-    reply_upvote:"{:U('Admin/ReplyMessage/upvote')}",
+    reply_message:"{:U('ReplyMessage/addReplyMessage')}",
+    upvote:"{:U('message/upvote')}",
+    reply_upvote:"{:U('ReplyMessage/upvote')}",
     page:"{:U('message/page')}"
 </block>
 <block name="javascript">

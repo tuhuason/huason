@@ -20,7 +20,7 @@ var Diary = {
                         "sNext" : '下一页',
                         "sLast" : '末页'
                     }
-                },
+                }
             });
 
             form.on('checkbox(diary)', function(data){
@@ -157,6 +157,89 @@ var Diary = {
                         }
                     }
                 });
+            }
+        });
+    },
+
+    //编辑日记
+    edit_diy : function(id){
+        var edIndex = '';
+
+        Base.ajax({
+            url :Base.url('findOne'),
+            type:'post',
+            data : {id:id},
+            success : function(data) {
+                if (data.status == 'ok') {
+                    layer.open({
+                        type : 1,
+                        offset : '50px',
+                        area : '1000px',
+                        title : '编辑日志',
+                        btn:false,
+                        closeBtn:2,
+                        content : $('#edit_diary_container').html(),
+                        success : function(layero, index){
+                            layui.use(['form','element','layedit'], function(){
+                                var form = layui.form(),
+                                    element = layui.element(),
+                                    layedit = layui.layedit,
+                                    content = data.results.content;
+
+                                layero.find('textarea[name="content"]').val(content);
+
+                                form.render();
+                                
+                                edIndex = layedit.build('edit_editorDiary',{height: 250,tool: ['left', 'center', 'right', '|', 'face','code','link','unlink']});
+                                form.verify({
+                                    content: function(value){
+                                        value = $.trim(layedit.getText(edIndex));
+                                        if(value == ''){
+                                            return '请输入文章内容';
+                                        }
+                                        layedit.sync(edIndex);//同步内容
+                                    }
+                                });
+
+
+                                form.on('submit(edit-diary)', function(data){
+                                    layer.confirm('你确定要更新日志吗？',{
+                                        icon:3,
+                                        offset:'120px',
+                                        btn:['确定','取消'],
+                                        closeBtn:2,
+                                        yes: function(index){
+                                            var content = data.field['content'],
+                                                datas = {id:id,content:content};
+
+                                            Base.ajax({
+                                                url :Base.url('editDiary'),
+                                                type:'post',
+                                                data : {data:datas},
+                                                success : function(data) {
+                                                    if (data.status == 'ok') {
+                                                        layer.msg(data.results,{offset:'120px',time:1000},function(){
+                                                            layer.closeAll();
+                                                            Base.redirect(Base.url('article'));
+                                                        });
+                                                    } else {
+                                                        layer.msg(data.errdesc,{offset:'120px',time:1500});
+                                                        layer.closeAll('loading');
+                                                        return false;
+                                                    }
+                                                }
+                                            });
+                                        }
+                                    });
+                                });
+                            });
+                        }
+                    });
+                } else {
+                    layer.msg(data.errdesc,{offset:'120px',time:1500});
+                    layer.closeAll('loading');
+                    return false;
+                }
             }
         });
     }

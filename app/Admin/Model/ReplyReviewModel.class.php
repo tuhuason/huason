@@ -20,19 +20,40 @@ class ReplyReviewModel extends BaseModel
         return false;
     }
 
+    public function pages($id)
+    {
+        $ReplyReview = M('reply_review');
+        $res = $ReplyReview->join('qq_login ON reply_review.reply_reviewer = qq_login.nickname')->where("auditing = 1 and article_id= '%s'",$id)->select();
+
+        $data = [];
+        if($res){
+            foreach ($res as $reply_review) {
+                $reply_review['content'] = htmlspecialchars_decode($reply_review['content']);
+                $data[] = $reply_review;
+            }
+            return $data;
+        }
+        return false;
+    }
+
     public function add($data, &$error='')
     {
         $ReplyReview = M('reply_review');
 
-        if(!isset($_COOKIE['openid'])){
+        if(!session('openid')){
             $error = '请登录后回复！';
+            return false;
+        }
+
+        if($data['reply_reviewer'] == $data['reply_master']){
+            $error = '亲，不能对自己回复！';
             return false;
         }
 
         //开启事务
         M()->startTrans();
         $res = $ReplyReview->add($data);
-        $num = M('review')->where("reviewer = '%s'", $data['reply_master'])->setInc('count');
+        $num = M('review')->where("identifier = '%s'", $data['master_identifier'])->setInc('count');
         if($res && $num){
             //提交事务
             M()->commit();
@@ -46,6 +67,9 @@ class ReplyReviewModel extends BaseModel
     
     public function delete($data, &$error='')
     {
+        if($this->authority($error) === false){
+            return false;
+        }
 
         $ReplyReview = M('reply_review');
 
@@ -66,9 +90,13 @@ class ReplyReviewModel extends BaseModel
 
     public function update($data, &$error='')
     {
-        $ReplyReview = M('reply_review');
+        if($this->authority($error) === false){
+            return false;
+        }
 
+        $ReplyReview = M('reply_review');
         $res = $ReplyReview->save($data);
+        
         if($res){
             return true;
         }
@@ -80,10 +108,17 @@ class ReplyReviewModel extends BaseModel
     {
         $ReplyReview = M('reply_review');
 
-        if(!isset($_COOKIE['openid'])){
-            $error = '请登录后回复！';
+        if(!session('openid')){
+            $error = '请登录后点赞！';
             return false;
         }
+        
+        if( strtolower($data['openid']) == strtolower(session('openid')) ){
+            $error = '亲，不能对自己点赞';
+            return false;
+        }
+        
+        unset($data['openid']);
         
         if($data['type'] == 'add'){
             $res = $ReplyReview->where("identifier = '%s'", $data['identifier'])->setInc('upvote');

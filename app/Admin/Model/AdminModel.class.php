@@ -4,7 +4,7 @@ namespace Admin\Model;
 
 use Think\Storage;
 use Think\Verify;
-class AdminModel
+class AdminModel extends BaseModel
 {
     protected $trueTableName  = 'admin';
 
@@ -32,14 +32,15 @@ class AdminModel
                 return false;
             }
 
+            // 设置会话
+            session('username', $username);
+
             $User = M('Admin');
             $data = array(
                 'lastip' => get_client_ip(),
                 'lasttime' => time()
             );
             $User->where("adminuser='%s'",$username)->save($data);
-            // 设置会话
-            session('username', $username);
 
             return true;
         } else {
@@ -73,20 +74,19 @@ class AdminModel
     // 注销用户登录
     public function logout()
     {
-        session(null);
-        session('[destory]');
-
+        session('username',null);
+        session('admin_id',null);
+        session('role',null);
         return true;
     }
 
-    // 修改管理员密码
-    public function changePassword($username, $oldpassword, $newpassword, &$error='') {
-        $data = D('Admin', 'Service')->changePassword($username, $oldpassword, $newpassword);
-        return $this->isSuccess($data, $error);
-    }
-
     //注册
-    public function reg($data, &$error=''){
+    public function reg($data, &$error='')
+    {
+        if($this->authority($error) === false){
+            return false;
+        }
+
         $User = M('Admin');
         $res = $this->findByUsername($data['adminuser'], $error);
 
@@ -94,7 +94,7 @@ class AdminModel
         if($this->checkCode($data['code'], $error) === false){
             return false;
         }
-
+        
         $data['role_id'] = isset($data['role_id']) ? $data['role_id'] : 0;
         $data['createtime'] = time();
         $data['lasttime'] = time();
@@ -112,7 +112,8 @@ class AdminModel
     }
 
     //
-    public function findByUsername($username, &$error=''){
+    public function findByUsername($username, &$error='')
+    {
         $User = M('Admin');
         $res = $User->where("adminuser='%s'",$username)->find();
         
@@ -126,11 +127,11 @@ class AdminModel
 
     public function delete($id, &$error='')
     {
-        $Art = M('Admin');
-
         if($this->authority($error) === false){
             return false;
         }
+
+        $Art = M('Admin');
         
         $res = $Art->where("id='%d'",$id)->delete();
 
@@ -141,12 +142,13 @@ class AdminModel
         return false;
     }
 
-    public function role($data, &$error=''){
-        $User = M('Admin');
-
+    public function role($data, &$error='')
+    {
         if($this->authority($error) === false){
             return false;
         }
+
+        $User = M('Admin');
 
         $res = $User->save($data);
         if($res){
@@ -156,12 +158,13 @@ class AdminModel
         return false;
     }
     
-    public function update($data, &$error=''){
-        $User = M('Admin');
-
+    public function update($data, &$error='')
+    {
         if($this->authority($error) === false){
             return false;
         }
+
+        $User = M('Admin');
 
         $res = $User->save($data);
         if($res){
@@ -169,15 +172,5 @@ class AdminModel
         }
         $error = '更新失败！';
         return false;
-    }
-
-    protected function authority(&$error=''){
-        $role = session('role');
-        if($role != 1) {
-            $error = '你没有权限！';
-            return false;
-        }else{
-            return true;
-        }
     }
 }

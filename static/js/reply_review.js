@@ -20,13 +20,13 @@ var Reply_review={
                         "sNext" : '下一页',
                         "sLast" : '末页'
                     }
-                },
+                }
             });
             
             $('#reply_review tbody tr').each(function(){
                 var content = $(this).attr('data-content');
                 $(this).find('td:eq(7) a').hover(function(){
-                    layer.tips('<span class="tips">'+Base.html_decode(content)+'</span>',this,{tips: [1, '#fff'],time:122222220});
+                    layer.tips('<span class="tips">'+content+'</span>',this,{tips: [1, '#fff'],time:122222220});
                 },function(){
                     layer.closeAll('tips');
                 });

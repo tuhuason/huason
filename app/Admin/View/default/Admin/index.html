@@ -96,7 +96,7 @@
                     <input type="text" name="code" lay-verify="code" placeholder="请输入验证码" autocomplete="off" class="layui-input">
                 </div>
                 <div class="layui-form-mid layui-word-aux">
-                    <img id="verify" alt="点击更换" title="点击更换" src="{:U('Admin/Account/verify',array())}" class="verify">
+                    <img id="verify" alt="点击更换" title="点击更换" src="{:U('Admin/Account/verify',array())}" class="verify" onclick="this.src='{:U('Admin/Account/verify',rand())}'+'?'+Math.random()">
                 </div>
             </div>
             <div class="layui-form-item">
@@ -114,8 +114,7 @@
     deleteUser:"{:U('Admin/admin/deleteUser')}",
     roleUser:"{:U('Admin/admin/roleUser')}",
     addUser:"{:U('admin/Account/reg')}",
-    editUser:"{:U('admin/admin/editUser')}",
-    verify:"{:U('admin/Account/verify',array())}"
+    editUser:"{:U('admin/admin/editUser')}"
 </block>
 <block name="javascript">
     <script type="text/javascript" src="__JS__/jquery.dataTables.min.js"></script>

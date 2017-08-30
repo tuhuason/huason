@@ -1,10 +1,10 @@
 <?php
 namespace Admin\Controller;
 
-class DiaryController extends BaseController {
+class CategoryController extends BaseController {
     public function __construct()
     {
-        $this->setWebTitle('日记')
+        $this->setWebTitle('分类')
             ->setIdentifier('article');
         //     ->setLicense(false)
         //     ->addCrumb(L('index'), U('Home/Index/index'));
@@ -15,47 +15,47 @@ class DiaryController extends BaseController {
     // 首页
     public function indexAction()
     {
-        $data = D('Diary')->findAll();
-        
-        $this->assign('diary', $data);
-        $this->assign('identifier', 'article.diary');
+        $data = D('Category')->findAll();
+
+        $this->assign('category', $data);
+        $this->assign('identifier', 'article.log');
        
         $this->display('index');
     }
-    public function addDiaryAction()
+    public function addCategoryAction()
     {
         if(IS_POST){
 
-            $content = I('post.content', '');
-
-            $error = '';
-            $success = D('Diary')->add($content, $error);
-
-            if ($success) {
-                $this->successAjax('日记添加成功');
-            } else {
-                $this->errorAjax($error);
-            }    
-        }
-    }
-
-    public function editDiaryAction()
-    {
-        if(IS_POST){
             $data = I('post.data', '');
 
             $error = '';
-            $success = D('Diary')->update($data, $error);
+            $success = D('Category')->add($data, $error);
 
             if ($success) {
-                $this->successAjax('日记更新成功');
+                $this->successAjax('添加分类成功');
             } else {
                 $this->errorAjax($error);
             }    
         }
     }
 
-    public function deleteDiaryAction()
+    public function editCategoryAction()
+    {
+        if(IS_POST){
+            $data = I('post.data', '');;
+
+            $error = '';
+            $success = D('Category')->update($data, $error);
+
+            if ($success) {
+                $this->successAjax('更新分类成功');
+            } else {
+                $this->errorAjax($error);
+            }    
+        }
+    }
+
+    public function deleteCategoryAction()
     {
         if(IS_POST){
 
@@ -64,14 +64,14 @@ class DiaryController extends BaseController {
             $error = '';
             if(is_array($id)){
                 foreach ($id as $i) {
-                    $success = D('Diary')->delete($i, $error);
+                    $success = D('Category')->delete($i, $error);
                 }
             }else{
-                $success = D('Diary')->delete($id, $error);
+                $success = D('Category')->delete($id, $error);
             }
 
             if ($success) {
-                $this->successAjax('删除日记成功');
+                $this->successAjax('删除分类成功');
             } else {
                 $this->errorAjax($error);
             }    

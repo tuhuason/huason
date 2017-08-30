@@ -39,7 +39,7 @@ return array(
     'DB_TYPE' => 'mysql',
     'DB_HOST' => 'localhost',
     'DB_USER' => 'huason',
-    'DB_PWD' => '658655',
+    'DB_PWD' => '',
     'DB_NAME' => 'huason',
     'DB_PORT' => 3306,
     'DB_PREFIX' => '',
@@ -55,13 +55,11 @@ return array(
         'article/:id\d' =>   'Home/Article/article',
         'article$' => 'Home/Article/index',
         'search' => 'Home/Article/search',
-        'diary$' => 'Home/Index/diary',
-        'photo$' => 'Home/Index/photo',
-        'about$' => 'Home/Index/about',
-        'feedback$' => 'Home/Index/message',
+        'feedback$' => 'Home/message/index',
         'qq_login$' => 'Home/Index/qqLogin',
         'qq_logout$' => 'Home/Index/qqLogout',
-        'qqcallback$' => 'Home/Index/callback'
+        'qqcallback$' => 'Home/Index/callback',
+        'u/:id\s' => 'Home/user/index',
     ),
 
     //日志

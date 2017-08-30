@@ -1,6 +1,6 @@
 <if condition="$art['auditing']">
 <div class="blog-box shadow">
-    <div class="l-img"><img src="__IMG__/default.jpg"></div>
+    <div class="l-img"><img src="http://q.qlogo.cn/qqapp/101399999/2D1DFA0DEA2990CF49AB2EDE8C371D16/100"></div>
     <div class="l-box">
         <div class="tab">
             <switch name="art['tag']" >
@@ -18,15 +18,15 @@
             </switch>
         </div>
         <div class="l-title"><a href="{:U('/article/'.$art['id'])}">{$art.title}</a></div>
-        <div class="l-content">{$art.content|htmlspecialchars_decode}</div>
+        <div class="l-content">{$art.content|htmlspecialchars_decode|strip_tags|mb_substr=0,100}...</div>
     </div>
     <div class="clear"></div>
     <div class="l-footer">
         <span title="时间"><i class="iconfont" style="font-size: 17px;">&#xe665;</i>{$art.addtime|format_datetime=2}</span>
         <span title="作者"><i class="layui-icon">&#xe612;</i>{$username}</span>
-        <span title="标签"><i class="iconfont" style="font-size: 17px;">&#xe690;</i>{$art.name}</span>
+        <span title="标签"><a href="/article/{$art.description}" class="comment"><i class="iconfont" style="font-size: 17px;">&#xe690;</i>{$art.name}</a></span>
         <span class="info" title="浏览次数"><i class="iconfont" style="font-size: 21px;">&#xe71a;</i>{$art.hit}</span>
-        <span class="info" title="评论数"><i class="iconfont" style="font-size: 17px;">&#xe6ad;</i>{$art.comment}</span>
+        <span class="info" title="评论数"><a href="/article/{$art.id}/#comment" class="comment"><i class="iconfont" style="font-size: 17px;">&#xe6ad;</i>{$art.comment}</a></span>
     </div>
 </div>
 </if>

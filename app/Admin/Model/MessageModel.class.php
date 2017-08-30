@@ -20,6 +20,22 @@ class MessageModel extends BaseModel
         return false;
     }
 
+    public function pages($current_page, $num)
+    {
+        $Message = M('Message');
+        $res = $Message->page($current_page.','.$num)->join('qq_login ON message.commenter = qq_login.nickname')->order('addtime desc')->select();
+
+        $data = [];
+        if($res){
+            foreach ($res as $message) {
+                $message['content'] = htmlspecialchars_decode($message['content']);
+                $data[] = $message;
+            }
+            return $data;
+        }
+        return false;
+    }
+    
     //是否已经留言
     public function isCommented($name){
         $Message = M('Message');
@@ -48,11 +64,14 @@ class MessageModel extends BaseModel
         return false;
     }
     
-    public function delete($id, $article_id, &$error='')
+    public function delete($data, &$error='')
     {
+        if($this->authority($error) === false){
+            return false;
+        }
 
         $Message = M('Message');
-        $res = $Message->where("id='%s'",$id)->delete();
+        $res = $Message->where("id='%s'",$data['id'])->delete();
 
         if($res){
             return true;
@@ -63,9 +82,13 @@ class MessageModel extends BaseModel
 
     public function update($data, &$error='')
     {
-        $Message = M('Message');
+        if($this->authority($error) === false){
+            return false;
+        }
 
+        $Message = M('Message');
         $res = $Message->save($data);
+        
         if($res){
             return true;
         }
@@ -77,10 +100,17 @@ class MessageModel extends BaseModel
     {
         $Message = M('Message');
 
-        if(!isset($_COOKIE['openid'])){
+        if(!session('openid')){
             $error = '请登录后点赞！';
             return false;
         }
+        
+        if( strtolower($data['openid']) == strtolower(session('openid')) ){
+            $error = '亲，不能对自己点赞';
+            return false;
+        }
+        
+        unset($data['openid']);
         
         if($data['type'] == 'add'){
             $res = $Message->where("identifier = '%s'", $data['identifier'])->setInc('upvote');

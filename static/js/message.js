@@ -20,13 +20,13 @@ var Message = {
                         "sNext" : '下一页',
                         "sLast" : '末页'
                     }
-                },
+                }
             });
 
             $('#message tbody tr').each(function(){
                 var content = $(this).attr('data-content');
                 $(this).find('td:eq(5) a').hover(function(){
-                    layer.tips('<span class="tips">'+Base.html_decode(content)+'</span>',this,{tips: [1, '#fff'],time:0});
+                    layer.tips('<span class="tips">'+content+'</span>',this,{tips: [1, '#fff'],time:0});
                 },function(){
                     layer.closeAll('tips');
                 });
@@ -63,14 +63,14 @@ var Message = {
             btn:['确定','取消'],
             yes: function(index){
                 Base.ajax({
-                    url :Base.url('deleteReview'),
+                    url :Base.url('deleteMessage'),
                     type:'post',
                     data : {data:datas},
                     success : function(data) {
                         if (data.status == 'ok') {
                             layer.msg(data.results,{offset:'120px',time:1000},function(){
                                 layer.closeAll();
-                                Base.redirect(Base.url('user'));
+                                Base.redirect(Base.url('message'));
                             });
                         } else {
                             layer.msg(data.errdesc,{offset:'120px',time:1500});
@@ -101,14 +101,14 @@ var Message = {
             btn:['确定','取消'],
             yes: function(index){
                 Base.ajax({
-                    url :Base.url('deleteReview'),
+                    url :Base.url('deleteMessage'),
                     type:'post',
                     data : {data:datas},
                     success : function(data) {
                         if (data.status == 'ok') {
                             layer.msg(data.results,{offset:'120px',time:1000},function(){
                                 layer.closeAll();
-                                Base.redirect(Base.url('article'));
+                                Base.redirect(Base.url('message'));
                             });
                         } else {
                             layer.msg(data.errdesc,{offset:'120px',time:1500});
@@ -179,11 +179,11 @@ var Message = {
         });
 
         if(datas.length == 0){
-            layer.msg('请选择审核的文章评论',{offset:'120px',time:2000});
+            layer.msg('请选择审核的留言',{offset:'120px',time:2000});
             return false;
         }
 
-        layer.confirm('你确定要审核这些文章评论吗？',{
+        layer.confirm('你确定要审核这些留言吗？',{
             icon:3,
             offset:'120px',
             btn:['确定','取消'],
@@ -198,7 +198,7 @@ var Message = {
                         if (data.status == 'ok') {
                             layer.msg('审核成功',{offset:'120px',time:1000},function(){
                                 layer.closeAll();
-                                Base.redirect(Base.url('article'));
+                                Base.redirect(Base.url('message'));
                             });
                         } else {
                             layer.msg(data.errdesc,{offset:'120px',time:1500});

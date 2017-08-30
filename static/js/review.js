@@ -21,13 +21,13 @@ var Review = {
                         "sNext" : '下一页',
                         "sLast" : '末页'
                     }
-                },
+                }
             });
 
             $('#review tbody tr').each(function(){
                 var content = $(this).attr('data-content');
                 $(this).find('td:eq(6) a').hover(function(){
-                    layer.tips('<span class="tips">'+Base.html_decode(content)+'</span>',this,{tips: [1, '#fff'],time:0});
+                    layer.tips('<span class="tips">'+content+'</span>',this,{tips: [1, '#fff'],time:0});
                 },function(){
                     layer.closeAll('tips');
                 });
@@ -71,7 +71,7 @@ var Review = {
                         if (data.status == 'ok') {
                             layer.msg(data.results,{offset:'120px',time:1000},function(){
                                 layer.closeAll();
-                                Base.redirect(Base.url('user'));
+                                Base.redirect(Base.url('review'));
                             });
                         } else {
                             layer.msg(data.errdesc,{offset:'120px',time:1500});
@@ -109,7 +109,7 @@ var Review = {
                         if (data.status == 'ok') {
                             layer.msg(data.results,{offset:'120px',time:1000},function(){
                                 layer.closeAll();
-                                Base.redirect(Base.url('article'));
+                                Base.redirect(Base.url('review'));
                             });
                         } else {
                             layer.msg(data.errdesc,{offset:'120px',time:1500});
@@ -198,7 +198,7 @@ var Review = {
                         if (data.status == 'ok') {
                             layer.msg('审核成功',{offset:'120px',time:1000},function(){
                                 layer.closeAll();
-                                Base.redirect(Base.url('article'));
+                                Base.redirect(Base.url('review'));
                             });
                         } else {
                             layer.msg(data.errdesc,{offset:'120px',time:1500});

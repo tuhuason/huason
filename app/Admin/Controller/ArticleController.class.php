@@ -16,9 +16,9 @@ class ArticleController extends BaseController {
     public function indexAction()
     {
         $data = D('Article')->findAll();
+        $categorys = M('category')->select();
 
-        $this->assign('identifier', 'article.art');
-        $this->assign('article', $data);
+        $this->assign(array('identifier' => 'article.art', 'article' => $data, 'categorys' => $categorys));
 
         $this->display('index');
     }

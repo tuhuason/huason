@@ -1,0 +1,52 @@
+<extend name="Base/layout" />
+
+<block name="javascript">
+<script src="__JS__/index.js"></script>
+<script type="text/javascript">
+    $(function(){
+        Index.initialize({
+        });
+    });
+</script>
+</block>
+
+
+<block name="content">
+    <div class="box box-user shadow">
+        <ul class="layui-nav user-nav">
+            <li class="layui-nav-item layui-this">
+                <a href="{:U('u/'.md5(session('openid')))}">个人信息</a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="{:U('user/message')}">我的消息</a>
+            </li>
+        </ul>
+        <form class="layui-form layui-form-pane">
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="width:120px;">名称</label>
+                <div class="layui-input-block" style="margin-left: 120px;">
+                    <input type="text" name="name"  class="layui-input" readonly="" value="{$data.nickname}">
+                    
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="width:120px;">OPENID</label>
+                <div class="layui-input-block" style="margin-left: 120px;">
+                    <input type="text" name="name"  class="layui-input" readonly="" value="{$data.openid}" title="{$data.openid}">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="width:120px;">上次登录ip</label>
+                <div class="layui-input-block" style="margin-left: 120px;">
+                    <input type="text" name="name"  class="layui-input" readonly="" value="{$data.lastip}">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="width:120px;">上次登录时间</label>
+                <div class="layui-input-block" style="margin-left: 120px;">
+                    <input type="text" name="name"  class="layui-input" readonly="" value="{$data.lasttime|date='Y-m-d H:i:s',###}">
+                </div>
+            </div>
+        </form>
+    </div>
+</block>

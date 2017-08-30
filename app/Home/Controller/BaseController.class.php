@@ -20,41 +20,28 @@ class BaseController extends Controller
     {
         parent::__construct();
 
-        // //用户是否登录
-        // if (!D('Account')->isLogined()) {
-        //     if (IS_AJAX) {
-        //         $this->errorAjax(L('not authorized'), -9999);
-        //     }
-
-        //     // 用户未登录, 跳转到登录界面
-        //     if ('account' == strtolower(CONTROLLER_NAME)) {
-        //         session('referer', U('Home/Index/index'));
-        //     } else {
-        //         session('referer', __SELF__);
-        //     }
-        //     redirect(U('Home/Account/login'));
-        //     exit;
-        // }
-
         // 设置公共属性
-        $this->_username = session('username');
+        $this->_username = 'huason.tu';
 
         $this->setIdentifier($this->_identifier);
 
         //  菜单项
         $menu_list = D('Base')->getMenuList();
 
-        //获取当前用户的信息
-        $cur_user = M('Admin')->where("adminuser='%s'",$this->_username)->find();
-        // session('admin_id',$cur_user['id']);
-        // session('role', $cur_user['role_id']);
-        
         //主页获取最热和最新文章
-        $hot = M('Article')->join('category ON article.catid = category.catid')->where("auditing = 1 and admin_id=1")->order('hit desc,addtime desc')->limit(10)->select();
-        $new = M('Article')->join('category ON article.catid = category.catid')->where("auditing = 1 and admin_id=1")->order('comment desc')->limit(10)->select();
-        //文章分类
+        $hot = M('Article')->alias('a')->field('a.id,a.title,a.hit,a.comment,a.tag,a.content,a.addtime,a.auditing,category.description,category.name')->join('category on a.catid = category.catid')->where("auditing = 1 and admin_id=1")->order('hit desc,addtime desc')->limit(10)->select();
+        $new = M('Article')->field('id,title,hit,comment')->where("auditing = 1 and admin_id=1")->order('comment desc')->limit(10)->select();
 
+        //文章分类
         $category = M('category')->select();
+
+        //qq登录用户信息
+        $user = M('qq_login')->where("openid = '%s'", session('openid'))->select();
+
+        if(session('openid')){
+            $reply_review_num = M('reply_review')->where("reply_master = '%s' and is_readed = 0", $user[0]['nickname'])->count();
+            $reply_message_num = M('reply_message')->where("reply_master = '%s' and is_readed = 0", $user[0]['nickname'])->count();
+        }
 
         // 设置公共模版变量
         $this->assign(array(
@@ -64,7 +51,10 @@ class BaseController extends Controller
             'menu_list' => $menu_list,
             'new' => $new,
             'hot' => $hot,
-            'category' => $category
+            'category' => $category,
+            'user' => $user,
+            'reply_review_num' => $reply_review_num,
+            'reply_message_num' => $reply_message_num
         ));
     }
 

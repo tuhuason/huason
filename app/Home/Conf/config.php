@@ -14,7 +14,7 @@ return array(
 
     'THINK_SDK_QQ' => array(
 		'APP_KEY'    => '101399999', //应用注册成功后分配的 APP ID
-		'APP_SECRET' => '', //应用注册成功后分配的KEY
-		'CALLBACK'   => 'http://'. $_SERVER['SERVER_NAME'].'/qqcallback', //注册应用填写的callback
+		'APP_SECRET' => '42081d55e11350395a00fa044a346521', //应用注册成功后分配的KEY
+		'CALLBACK'   => 'http://'.$_SERVER['HTTP_HOST'].'/qqcallback', //注册应用填写的callback
 	)
 );

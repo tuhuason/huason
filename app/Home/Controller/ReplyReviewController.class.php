@@ -29,7 +29,8 @@ class ReplyReviewController extends BaseController {
             $data = I('post.data', '');
 
             $error = '';
-            $success = D('ReplyReview')->add($data, $error);
+            $reply_review = new \Admin\Model\ReplyReviewModel();
+            $success = $reply_review->add($data, $error);
 
             if ($success) {
                 $this->successAjax('留言成功');
@@ -55,6 +56,25 @@ class ReplyReviewController extends BaseController {
 
             if ($success) {
                 $this->successAjax('删除留言成功');
+            } else {
+                $this->errorAjax($error);
+            }    
+        }
+    }
+
+    //点赞或取消点赞
+    public function upvoteAction()
+    {
+        if(IS_POST){
+
+            $data = I('post.data', '');
+
+            $error = '';
+            $reply_review = new \Admin\Model\ReplyReviewModel();
+            $success = $reply_review->upvote($data, $error);
+
+            if ($success) {
+                $this->successAjax('点赞成功');
             } else {
                 $this->errorAjax($error);
             }    

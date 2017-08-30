@@ -19,13 +19,9 @@ var Base = {
     
     // 初始化
     initialize : function(settings) {
-        $("#verify_img").on('click',function() {
-            $("#verify_img").attr({"src" : Base.url('verify')});
-        });
-
-        $('.layui-main .page-right .blog-tag').find('span.num:eq(0)').css('background-color','#009688');
-        $('.layui-main .page-right .blog-tag').find('span.num:eq(1)').css('background-color','#2196f3');
-        $('.layui-main .page-right .blog-tag').find('span.num:eq(2)').css('background-color','#5fb878');
+        $('.layui-main .page-right .blog-tag').find('span.num:eq(0)').css('background-color','gold');
+        $('.layui-main .page-right .blog-tag').find('span.num:eq(1)').css('background-color','#E6E8FA');
+        $('.layui-main .page-right .blog-tag').find('span.num:eq(2)').css('background-color','#B87333');
 
         //移动设备
         var treeMobile = $('.site-tree-mobile'),
@@ -49,6 +45,12 @@ var Base = {
             }else{ 
                 $('#gotop').stop().fadeOut(400); 
             } 
+
+            if(scrH > 1000 && $(document.body).width() >= 768){
+                $('#article_hot_list').addClass('article_fixed');
+            }else{
+                $('#article_hot_list').removeClass('article_fixed');
+            }
         });
 
         $("#gotop").click(function(e) {
@@ -273,19 +275,6 @@ var Base = {
         });
     },
 
-    html_decode : function(str){   
-        var s = "";   
-        if (str.length == 0) return "";     
-        s = str.replace(/&amp;/g, "&"); 
-        s = s.replace(/&lt;/g, "<"); 
-        s = s.replace(/&gt;/g, ">"); 
-        s = s.replace(/&nbsp;/g, " "); 
-        s = s.replace(/&#39;/g, "\'"); 
-        s = s.replace(/&quot;/g, "\""); 
-        s = s.replace(/<br\/>/g, "\n"); 
-        return s;
-    },
-
     tags : function(tag){
         switch(tag){
             case '置顶':
@@ -306,26 +295,33 @@ var Base = {
     format_datetime : function(time){
         time = parseInt(time);
         var now = new Date(),
-            difference = (now.getTime() - new Date(time*1000).getTime())/1000;
+            this_time = new Date(time*1000),
+            this_year = this_time.getFullYear(),
+            this_month = (this_time.getMonth() + 1) <10 ? "0" + (this_time.getMonth() + 1) : (this_time.getMonth() + 1),
+            this_date = this_time.getDate(),
+            this_hour = this_time.getHours() < 10 ? "0" + this_time.getHours() : this_time.getHours(),
+            this_minute = this_time.getMinutes() < 10 ? "0" + this_time.getMinutes() : this_time.getMinutes(),
+            this_second = this_time.getSeconds() < 10 ? "0" + this_time.getSeconds() : this_time.getSeconds(),
+            difference = (now.getTime() - this_time.getTime())/1000;
 
         switch(true){
             case difference<= 180:
                 return '刚刚';
                 break;
             case difference<= 3600:
-                return Math.ceil(difference/60)+'分钟前';
+                return Math.floor(difference/60)+'分钟前';
                 break;
             case difference<= 86400:
-                return Math.ceil(difference/3600)+'小时前';
+                return Math.floor(difference/3600)+'小时前';
                 break;
             case difference<= 2592000:
-                return Math.ceil(difference/86400)+'天前';
+                return Math.floor(difference/86400)+'天前';
                 break;
             case difference<= 31536000:
-                return Math.ceil(difference/2592000)+'个月前';
+                return Math.floor(difference/2592000)+'个月前';
                 break;
             default:
-                return Math.ceil(difference/31536000)+'年前';
+                return this_year+'-'+this_month+'-'+this_date+' '+this_hour+':'+this_minute+':'+this_second;
         }
         
     },

@@ -17,15 +17,16 @@
             <ul class="layui-nav" lay-filter="top_nav">
                 <foreach name="menu_list" key="menu_identifier" item="menu">
                 <if condition="empty($menu['children'])">
-                <li class="layui-nav-item">
+                <li class="layui-nav-item <if condition="$menu_identifier == $identifier">layui-this</if>">
                 <a href="{$menu.url}">{$menu.name}</a>
                 </li>
                 <else/>
-                <li class="layui-nav-item">
+                <php> $ident = current(explode('.',$identifier));</php>
+                <li class="layui-nav-item <if condition="$menu_identifier == $ident">layui-this</if>">
                     <a href="{$menu.url}">{$menu.name}</a>
                     <dl class="layui-nav-child">
                         <foreach name="menu.children" key="childrenmenu_identifier" item="childmenu">
-                        <dd><a href="{$childmenu.url}">{$childmenu.name}</a></dd>
+                        <dd <if condition="($menu_identifier.'.'.$childrenmenu_identifier) == $identifier">class="layui-this"</if>><a href="{$childmenu.url}">{$childmenu.name}</a></dd>
                         </foreach>
                     </dl>
                   </li>
@@ -39,19 +40,26 @@
                 </form>
             </div>
             <div class="login">
+                <if condition="session('openid') && ($reply_message_num + $reply_review_num) gt 0">
+                <a href="{:U('user/message')}" class="news">{$reply_message_num+$reply_review_num}</a>
+                </if>
                 <ul class="layui-nav layui-show">
-                    <if condition="!isset($_COOKIE['openid'])">
+                    <if condition="!session('openid')">
                     <li class="layui-nav-item">
                         <a title="qq登录" href="{:U('/qq_login')}" type="qq_login"><i class="iconfont qqlogin">&#xe631;</i></a>
                     </li>
                     <else/>
                     <li class="layui-nav-item">
-                        <img src="{$user.avatar}" class="layui-circle" alt="{$user.nickname}" title="{$user.nickname}">
-                        <a type="nickname" class="layui-hide">{$user.nickname}</a>
-                        <span type="openid" class="layui-hide">{$user.openid}</span>
+                        <foreach name="user" item="us">
+                        <img src="{$us.avatar}" class="layui-circle" alt="{$us.nickname}" title="{$us.nickname}">
+                        <a type="nickname" class="layui-hide">{$us.nickname}</a>
+                        <a type="master_id" class="layui-hide">{$us.id}</a>
+                        <span type="openid" class="layui-hide">{$us.openid}</span>
                         <dl class="layui-nav-child">
+                            <dd><a href="{:U('/u/'.md5($us['openid']))}" id="qq_logout">个人中心</a></dd>
                             <dd><a href="{:U('/qq_logout')}" id="qq_logout">退出</a></dd>
                         </dl>
+                        </foreach>
                       </li>
                     </if>
                 </ul>
@@ -89,7 +97,7 @@
     </div>
 
     <div class="layui-fixbar" id="gotop" style="display:none;right:20px;">
-        <li class="layui-icon layui-fixbar-top" style="display: list-item;background-color:rgba(0, 0, 0, 0.48);">&#xe604;</li>
+        <li class="layui-icon layui-fixbar-top" style="display: list-item;background-color:rgba(0, 0, 0, 0.7);">&#xe604;</li>
     </div>
     <div class="site-tree-mobile layui-hide">
         <i class="layui-icon">&#xe602;</i>

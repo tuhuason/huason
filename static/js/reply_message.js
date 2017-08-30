@@ -20,13 +20,13 @@ var Reply_message = {
                         "sNext" : '下一页',
                         "sLast" : '末页'
                     }
-                },
+                }
             });
             
             $('#reply_message tbody tr').each(function(){
                 var content = $(this).attr('data-content');
                 $(this).find('td:eq(6) a').hover(function(){
-                    layer.tips('<span class="tips">'+Base.html_decode(content)+'</span>',this,{tips: [1, '#fff'],time:0});
+                    layer.tips('<span class="tips">'+content+'</span>',this,{tips: [1, '#fff'],time:0});
                 },function(){
                     layer.closeAll('tips');
                 });

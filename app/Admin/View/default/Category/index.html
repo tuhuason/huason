@@ -1,0 +1,94 @@
+<extend name="Base/layout" />
+<block name="content">
+<div class="" style="margin-bottom: 10px;">
+<button class="layui-btn layui-btn-normal" id="add-category"><i class="layui-icon" style="">&#xe654;</i>添加分类</button>
+<button class="layui-btn layui-btn-danger" onclick="Category.delete_cates()"><i class="layui-icon" style="">&#xe640;</i>批量删除</button>
+</div>
+<table class="layui-table layui-form" id="category">
+    <thead>
+        <tr>
+            <th width="10"><input type="checkbox" lay-skin="primary" lay-filter="category" name="select_all"></th>
+            <th>ID</th>
+            <th>名称</th>
+            <th>描述</th>
+            <th>文章总数</th>
+            <th>操作</th>
+        </tr> 
+    </thead>
+    <tbody>
+        <foreach name="category"  item="cate">
+        <tr data-id="{$cate.catid}">
+            <td><input type="checkbox" lay-skin="primary" name="select" value="{$cate.catid}"></td>
+            <td>{$cate.catid}</td>
+            <td>{$cate.name}</td>
+            <td>{$cate.description}</td>
+            <td>{$cate.count}</td>
+            <td>
+                <a class="layui-btn layui-btn-normal layui-btn-small" onclick="Category.edit_cate('{$cate.catid}')"><i class="layui-icon" style="">&#xe642;</i></a>
+                <a class="layui-btn layui-btn-danger layui-btn-small delete_art" onclick="Category.delete_cate('{$cate.catid}')"><i class="layui-icon" style="">&#xe640;</i></a>
+            </td>
+        </tr>
+        </foreach>
+    </tbody>
+</table>
+<script type="text/template" id="add_category_container">
+    <div class="template-box">
+        <form class="layui-form layui-form-pane">
+            <div class="layui-form-item">
+                <label class="layui-form-label">分类名称</label>
+                <div class="layui-input-block">
+                    <input type="text" name="name" lay-verify="name" placeholder="请输入分类名称" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">分类描述</label>
+                <div class="layui-input-block">
+                    <input type="text" name="description" lay-verify="description" placeholder="请输入分类描述" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button type="button" class="layui-btn" lay-submit="" lay-filter="add-category">确定</button>
+                    <button type="button" class="layui-btn layui-btn-primary btn-cancel">取消</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</script>
+<script type="text/template" id="edit_category_container">
+    <div class="template-box">
+        <form class="layui-form layui-form-pane">
+            <div class="layui-form-item">
+                <label class="layui-form-label">分类名称</label>
+                <div class="layui-input-block">
+                    <input type="text" name="name" lay-verify="name" placeholder="请输入分类名称" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">分类描述</label>
+                <div class="layui-input-block">
+                    <input type="text" name="description" lay-verify="description" placeholder="请输入分类描述" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button type="button" class="layui-btn" lay-submit="" lay-filter="edit-category">确定</button>
+                    <button type="button" class="layui-btn layui-btn-primary btn-cancel">取消</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</script>
+</block>
+<block name="javascript">
+    <script type="text/javascript" src="__JS__/category.js"></script>
+    <script type="text/javascript" src="__JS__/jquery.dataTables.min.js"></script>
+    <script type="text/javascript">
+
+        $(function(){
+            Category.initialize();
+            Base.urls = {category:"{:U('/Admin/Category/index')}",addCategory:"{:U('Admin/Category/addCategory')}",deleteCategory:"{:U('Admin/Category/deleteCategory')}",editCategory:"{:U('Admin/Category/editCategory')}"};
+            
+        });
+    </script>
+</block>

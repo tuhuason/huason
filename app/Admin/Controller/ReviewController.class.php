@@ -55,7 +55,7 @@ class ReviewController extends BaseController {
             }
 
             if ($success) {
-                $this->successAjax('删除文章成功');
+                $this->successAjax('删除评论成功');
             } else {
                 $this->errorAjax($error);
             }    

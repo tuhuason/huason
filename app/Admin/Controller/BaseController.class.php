@@ -17,18 +17,12 @@ class BaseController extends Controller
     public function __construct()
     {
         parent::__construct();
-        $admin = D('Admin');
-        if (!$admin->isLogined()) {
+        if (!D('Admin')->isLogined()) {
             if (IS_AJAX) {
                 $this->errorAjax('您没有权限访问!', -9999);
             }
-            // 用户未登录, 跳转到登录界面
-            if ('account' == strtolower(CONTROLLER_NAME)) {
-                session('referer', U('admin/Index/index'));
-            } else {
-                session('referer', __SELF__);
-            }
-            redirect(U('admin/Account/index'));
+
+            redirect(U('admin/Account/login'));
             exit;
         }
 

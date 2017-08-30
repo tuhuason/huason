@@ -20,19 +20,19 @@
             <th>评论数</th>
             <th>已审核</th>
             <th>操作</th>
-	    </tr> 
+	    </tr>
   	</thead>
   	<tbody>
         <foreach name="article"  item="art">
     	<tr data-id="{$art.id}">
             <td><input type="checkbox" lay-skin="primary" name="select" value="{$art.id},{$art.catid}"></td>
 	      	<td>{$art.id}</td>
-	      	<td data-catid="{$art.catid}" data-tag="{$art.tag}" data-content="{$art.content}">{$art.title}</td>
+	      	<td title="{$art.title}">{$art.title}</td>
             <td>{$art.addtime|date='Y-m-d H:i:s',###}</td>
             <td>{$art.uptime|date='Y-m-d H:i:s',###}</td>
             <td>{$art.hit}</td>
             <td>{$art.comment}</td>
-            <td data-id="{$art.id}"><input type="checkbox" name="auditing" lay-filter="auditing" lay-skin="switch" lay-text="是|否" <if condition="$art['auditing']">checked</if>></td>
+            <td data-id="{$art.id}"><input type="checkbox" name="auditing" lay-filter="auditing" lay-skin="switch" lay-text="是|否" <if condition="!session('role')">disabled</if> <if condition="$art['auditing']">checked</if>></td>
             <td>
                 <a class="layui-btn layui-btn-normal layui-btn-small" onclick="Article.edit_art('{$art.id}')"><i class="layui-icon" style="">&#xe642;</i></a>
                 <a class="layui-btn layui-btn-danger layui-btn-small delete_art" onclick="Article.delete_art('{$art.id}','{$art.catid}')"><i class="layui-icon" style="">&#xe640;</i></a>
@@ -57,12 +57,9 @@
                     <div class="layui-input-inline">
                         <select name="catid" lay-filter="catid" lay-verify="catid">
                             <option value=""></option>
-                            <option value="1">PHP</option>
-                            <!-- <option value="python">Python</option> -->
-                            <option value="2">前端</option>
-                            <option value="3">杂谈</option>
-                            <!-- <option value="share">技术分享</option> -->
-                            <option value="4">生活百科</option>
+                            <foreach name="categorys" item="category">
+                                <option value="{$category.catid}">{$category.name}</option>
+                            </foreach>
                         </select>
                     </div>
                 </div>
@@ -111,12 +108,9 @@
                 <div class="layui-input-block">
                     <select name="catid" lay-filter="catid" lay-verify="catid">
                         <option value=""></option>
-                        <option value="1">PHP</option>
-                        <!-- <option value="python">Python</option> -->
-                        <option value="2">前端</option>
-                        <option value="3">杂谈</option>
-                        <!-- <option value="share">技术分享</option> -->
-                        <option value="4">生活百科</option>
+                        <foreach name="categorys" item="category">
+                            <option value="{$category.catid}">{$category.name}</option>
+                        </foreach>
                     </select>
                 </div>
             </div>

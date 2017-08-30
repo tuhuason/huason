@@ -5,7 +5,7 @@
     <p style="padding: 10px 15px; margin-bottom: 20px; margin-top: 10px; border:1px solid #ddd;display:inline-block;">
         <span style="padding-left:1em;">当前用户：{$username}</span>
         <span style="padding-left:1em;">IP：{$cur_user.lastip}</span>
-        <span style="padding-left:1em;">地点：未知</span>
+        <span style="padding-left:1em;">地点：{$cur_user.lastip|get_area_from_ip}</span>
         <span style="padding-left:1em;">时间：{$cur_user.lasttime|date='Y-m-d H:i:s',###}</span>
     </p>
     <div class="clear"></div>

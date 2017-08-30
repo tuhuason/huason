@@ -13,9 +13,26 @@ class ReviewModel extends BaseModel
     {
         $Review = M('Review');
         $res = $Review->select();
-        // var_dump($res);
+
         if($res){
             return $res;
+        }
+        return false;
+    }
+
+    //分页
+    public function pages($current_page, $num, $id)
+    {
+        $Review = M('Review');
+        $res = $Review->page($current_page.','.$num)->join('qq_login ON review.reviewer = qq_login.nickname')->where("article_id= '%s'",$id)->order('addtime desc')->select();
+
+        $data = [];
+        if($res){
+            foreach ($res as $review) {
+                $review['content'] = htmlspecialchars_decode($review['content']);
+                $data[] = $review;
+            }
+            return $data;
         }
         return false;
     }
@@ -43,7 +60,7 @@ class ReviewModel extends BaseModel
         //开启事务
         M()->startTrans();
         $res = $Review->add($data);
-        $num = M('Article')->where("id = '%s'", $data['article_id'])->setInc('comment');
+        $num = M('Article')->lock(true)->where("id = '%s'", $data['article_id'])->setInc('comment');
         if($res && $num){
             //提交事务
             M()->commit();
@@ -57,13 +74,16 @@ class ReviewModel extends BaseModel
     
     public function delete($id, $article_id, &$error='')
     {
+        if($this->authority($error) === false){
+            return false;
+        }
 
         $Review = M('Review');
 
         //开启事务
         M()->startTrans();
         $res = $Review->where("id='%s'",$id)->delete();
-        $num = M('Article')->where("id = '%s'", $article_id)->setDec('comment');
+        $num = M('Article')->lock(true)->where("id = '%s'", $article_id)->setDec('comment');
         if($res && $num){
             //提交事务
             M()->commit();
@@ -77,9 +97,13 @@ class ReviewModel extends BaseModel
 
     public function update($data, &$error='')
     {
-        $Review = M('Review');
+        if($this->authority($error) === false){
+            return false;
+        }
 
+        $Review = M('Review');
         $res = $Review->save($data);
+        
         if($res){
             return true;
         }
@@ -91,10 +115,17 @@ class ReviewModel extends BaseModel
     {
         $Review = M('Review');
 
-        if(!isset($_COOKIE['openid'])){
-            $error = '请登录后回复！';
+        if(!session('openid')){
+            $error = '请登录后点赞！';
             return false;
         }
+        
+        if( strtolower($data['openid']) == strtolower(session('openid')) ){
+            $error = '亲，不能对自己点赞';
+            return false;
+        }
+        
+        unset($data['openid']);
         
         if($data['type'] == 'add'){
             $res = $Review->where("identifier = '%s'", $data['identifier'])->setInc('upvote');

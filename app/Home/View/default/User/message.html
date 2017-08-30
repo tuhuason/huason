@@ -1,0 +1,42 @@
+<extend name="Base/layout" />
+
+<block name="javascript">
+<script src="__JS__/index.js"></script>
+<script type="text/javascript">
+    $(function(){
+        Index.initialize({
+        });
+    });
+</script>
+</block>
+
+
+<block name="content">
+    <div class="box box-user shadow">
+        <ul class="layui-nav user-nav">
+            <li class="layui-nav-item">
+                <a href="{:U('u/'.md5(session('openid')))}">个人信息</a>
+            </li>
+            <li class="layui-nav-item layui-this">
+                <a href="{:U('user/message')}">我的消息</a>
+            </li>
+        </ul>
+        <if condition="!$reply && !$reply_message">
+            <div class="blog-box-empty shadow">
+                <div class="l-content">目前，暂无消息。</div>
+            </div>
+        </if>
+        <foreach name="reply" item="reply">
+        <li class="reply">
+            <p><span>{$reply.addtime|format_datetime=2} </span><a class="red">{$reply.reply_reviewer}</a> 在 <a href="/article/{$reply['article_id']}/#comment">{$reply.title}</a> 回复我</p>
+            <div class="reply-content">{$reply.content|htmlspecialchars_decode}</div>
+        </li>
+        </foreach>
+        <foreach name="reply_message" item="reply">
+        <li class="reply">
+            <p><span>{$reply.addtime|format_datetime=2} </span><a class="red">{$reply.reply_commenter}</a> 在 <a href="{:U('/feedback')}">留言</a> 回复我</p>
+            <div class="reply-content">{$reply.content|htmlspecialchars_decode}</div>
+        </li>
+        </foreach>
+    </div>
+</block>

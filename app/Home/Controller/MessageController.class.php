@@ -4,7 +4,26 @@ namespace Home\Controller;
 class MessageController extends BaseController {
     public function __construct()
     {
+        $this->setWebTitle('首页')
+            ->setIdentifier('message')
+            ->addCrumb('首页', '/');
+
         parent::__construct();
+    }
+
+    public function indexAction(){
+
+        $this->addCrumb('留言')->setCrumbs();
+
+        $meassage = M('Message')->select();
+        $reply = M('reply_message')->where('auditing = 1')->select();
+        $this->assign(
+            array(
+                'message' => $meassage,
+                'reply' => $reply
+            )
+        );
+        $this->display('Index/message');
     }
 
     public function addMessageAction()
@@ -31,15 +50,36 @@ class MessageController extends BaseController {
             $num = I('post.num/d');;
 
             $Message = M('message');
-            $reply_message = M('reply_message');
+            $message = new \Admin\Model\MessageModel();
+            $reply_message = new \Admin\Model\ReplyMessageModel();
+
             //加载分页
             $total_page = $Message->where("auditing=1")->count();
-            $data['message'] = $Message->page($current_page.','.$num)->order('addtime desc')->select();
-            $data['reply_message'] = $reply_message->where("auditing=1")->select();
+            $data['message'] = $message->pages($current_page, $num);
+            $data['reply_message'] = $reply_message->pages();
             $data['total_page'] = ceil($total_page/$num);
-// var_dump($data);exit;
+
+
             $this->successAjax($data);
         }
         return $this->error404Page();
+    }
+
+    public function upvoteAction()
+    {
+        if(IS_POST){
+
+            $data = I('post.data', '');
+
+            $error = '';
+            $Message = new \Admin\Model\MessageModel();
+            $success = $Message->upvote($data, $error);
+
+            if ($success) {
+                $this->successAjax('更新成功');
+            } else {
+                $this->errorAjax($error);
+            }    
+        }
     }
 }

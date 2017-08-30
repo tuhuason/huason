@@ -16,7 +16,12 @@ class AdminController extends BaseController {
     public function indexAction()
     {
         $this->assign('identifier', 'user.all_user');
-        $user = M('Admin')->select();
+        
+        if(session('role') != 1){
+            $user = M('Admin')->where("adminuser = '%s'", session('username'))->select();
+        }else{
+            $user = M('Admin')->select();
+        }
 
         $this->assign('user',$user);
         $this->display('index');

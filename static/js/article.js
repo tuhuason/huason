@@ -21,7 +21,7 @@ var Article = {
                         "sNext" : '下一页',
                         "sLast" : '末页'
                     }
-                },
+                }
             });
 
             form.on('checkbox(article)', function(data){
@@ -89,12 +89,13 @@ var Article = {
                                     var title = data.field['title'],
                                         catid = data.field['catid'],
                                         tag = [],
-                                        content = data.field['content'],
-                                        datas = {title:title,catid: catid,tag:tag.toString(),content: content};
+                                        content = data.field['content'];
 
                                     $('form input:checkbox[name="tag"]:checked').each(function(index, dom){
                                         tag.push($(dom).val());
                                     });
+
+                                    var datas = {title:title,catid: catid,tag:tag.toString(),content: content};
 
                                     Base.ajax({
                                         url :Base.url('addArticle'),
@@ -206,9 +207,9 @@ var Article = {
                     if (data.status == 'ok') {
                         layer.msg('更改成功',{offset:'120px',time:1000});
                         layer.closeAll('loading');
-                        // $('td[data-id="'+id+'"]').find('input:checkbox[name="auditing"]').prop('checked',audit);
                     } else {
                         layer.msg(data.errdesc,{offset:'120px',time:1500});
+                        layer.closeAll('loading');
                         return false;
                     }
                 }
@@ -223,7 +224,6 @@ var Article = {
                     if (data.status == 'ok') {
                         layer.msg('更改成功',{offset:'120px',time:1000});
                         layer.closeAll('loading');
-                        // $('td[data-id="'+id+'"]').find('input:checkbox[name="auditing"]').prop('checked',audit);
                     } else {
                         layer.msg(data.errdesc,{offset:'120px',time:1500});
                         layer.closeAll('loading');
@@ -281,104 +281,113 @@ var Article = {
     edit_art : function(id){
         var edIndex = '';
 
-        layer.open({
-            type : 1,
-            offset : '50px',
-            area : '1000px',
-            title : '编辑文章',
-            btn:false,
-            closeBtn:2,
-            content : $('#edit_article_container').html(),
-            success : function(layero, index){
-                layui.use(['form','element','layedit'], function(){
-                    var form = layui.form(),
-                        element = layui.element(),
-                        layedit = layui.layedit,
-                        $article = $('#article').find('tbody tr[data-id="'+id+'"]')
-                        title = $article.find('td:eq(2)').text(),
-                        catid = $article.find('td:eq(2)').attr('data-catid'),
-                        tag = $article.find('td:eq(2)').attr('data-tag'),
-                        content = Base.html_decode($article.find('td:eq(2)').attr('data-content')),
-                        auditing = $article.find('td:eq(7) input[name="auditing"]:checked').val() == 'on' ? true : false,
-                        tags = (tag.indexOf(",") == -1)? tag.split() : tag.split(",");
+        Base.ajax({
+            url :Base.url('findOne'),
+            type:'post',
+            data : {id:id},
+            success : function(data) {
+                if (data.status == 'ok') {
+                    layer.open({
+                        type : 1,
+                        offset : '50px',
+                        area : '1000px',
+                        title : '编辑文章',
+                        btn:false,
+                        closeBtn:2,
+                        content : $('#edit_article_container').html(),
+                        success : function(layero, index){
+                            layui.use(['form','element','layedit'], function(){
+                                var form = layui.form(),
+                                    element = layui.element(),
+                                    layedit = layui.layedit,
+                                    tag = data.results.tag,
+                                    content = data.results.content,
+                                    tags = (tag.indexOf(",") == -1)? tag.split() : tag.split(",");
 
-                    for(var i = 0;i < tags.length;i++){
-                        layero.find('input:checkbox[name="tag"][value="'+tags[i]+'"]').prop('checked',true);
-                    }
-                    layero.find('input:checkbox[name="auditing"]').prop('checked',auditing);
-                    layero.find('input[name="title"]').val(title);
-                    layero.find('select[name="catid"]').val(catid);
-                    layero.find('textarea[name="content"]').val(content);
+                                for(var i = 0;i < tags.length;i++){
+                                    layero.find('input:checkbox[name="tag"][value="'+tags[i]+'"]').prop('checked',true);
+                                }
+                                layero.find('input:checkbox[name="auditing"]').prop('checked',data.results.auditing);
+                                layero.find('input[name="title"]').val(data.results.title);
+                                layero.find('select[name="catid"]').val(data.results.catid);
+                                layero.find('textarea[name="content"]').val(content);
 
-                    form.render();
-                    layedit.set({
-                        uploadImage: {
-                            url: Base.url('uploadImg'),
-                            type: 'post'
-                        }
-                    });
-                    edIndex = layedit.build('editors',{height: 250});
-                    form.verify({
-                    	title:function(value){
-                    		if(value == ''){
-                                return '请输入文章标题';
-                            }
-                    	},
-                    	catid:function(value){
-                    		if(value == ''){
-                                return '请输入文章分类';
-                            }
-                    	},
-                        content: function(value){
-                        	value = $.trim(layedit.getText(edIndex));
-                            if(value == ''){
-                                return '请输入文章内容';
-                            }
-                            layedit.sync(edIndex);//同步内容
-                        }
-                    });
-
-
-                    form.on('submit(eidt_article)', function(data){
-                        layer.confirm('你确定要更新文章吗？',{
-                            icon:3,
-                            offset:'120px',
-                            btn:['确定','取消'],
-                            closeBtn:2,
-                            yes: function(index){
-                    
-                                var tags = [];
-                                auditing = data.field['auditing'] == 'on' ? 1 : 0;
-                                title = data.field['title'];
-                                catid = data.field['catid'];
-                                content = data.field['content'];
-
-                                layero.find('form input:checkbox[name="tag"]:checked').each(function(index, dom){
-                                    tags.push($(dom).val());
-                                });
-
-                                var datas = {id:id,title:title,catid:catid,tag:tags.toString(),auditing:auditing,content:content};
-                                Base.ajax({
-                                    url :Base.url('editArticle'),
-                                    type:'post',
-                                    data : {data:datas},
-                                    success : function(data) {
-                                        if (data.status == 'ok') {
-                                            layer.msg(data.results,{offset:'120px',time:1000},function(){
-                                                layer.closeAll();
-                                                Base.redirect(Base.url('article'));
-                                            });
-                                        } else {
-                                            layer.msg(data.errdesc,{offset:'120px',time:1500});
-                                            layer.closeAll('loading');
-                                            return false;
-                                        }
+                                form.render();
+                                layedit.set({
+                                    uploadImage: {
+                                        url: Base.url('uploadImg'),
+                                        type: 'post'
                                     }
                                 });
-                            }
-                        });
+                                edIndex = layedit.build('editors',{height: 250});
+                                form.verify({
+                                    title:function(value){
+                                        if(value == ''){
+                                            return '请输入文章标题';
+                                        }
+                                    },
+                                    catid:function(value){
+                                        if(value == ''){
+                                            return '请输入文章分类';
+                                        }
+                                    },
+                                    content: function(value){
+                                        value = $.trim(layedit.getText(edIndex));
+                                        if(value == ''){
+                                            return '请输入文章内容';
+                                        }
+                                        layedit.sync(edIndex);//同步内容
+                                    }
+                                });
+
+
+                                form.on('submit(eidt_article)', function(data){
+                                    layer.confirm('你确定要更新文章吗？',{
+                                        icon:3,
+                                        offset:'120px',
+                                        btn:['确定','取消'],
+                                        closeBtn:2,
+                                        yes: function(index){
+                                
+                                            var tags = [];
+                                            auditing = data.field['auditing'] == 'on' ? 1 : 0;
+                                            title = data.field['title'];
+                                            catid = data.field['catid'];
+                                            content = data.field['content'];
+
+                                            layero.find('form input:checkbox[name="tag"]:checked').each(function(index, dom){
+                                                tags.push($(dom).val());
+                                            });
+
+                                            var datas = {id:id,title:title,catid:catid,tag:tags.toString(),auditing:auditing,content:content};
+                                            Base.ajax({
+                                                url :Base.url('editArticle'),
+                                                type:'post',
+                                                data : {data:datas},
+                                                success : function(data) {
+                                                    if (data.status == 'ok') {
+                                                        layer.msg(data.results,{offset:'120px',time:1000},function(){
+                                                            layer.closeAll();
+                                                            Base.redirect(Base.url('article'));
+                                                        });
+                                                    } else {
+                                                        layer.msg(data.errdesc,{offset:'120px',time:1500});
+                                                        layer.closeAll('loading');
+                                                        return false;
+                                                    }
+                                                }
+                                            });
+                                        }
+                                    });
+                                });
+                            });
+                        }
                     });
-                });
+                } else {
+                    layer.msg(data.errdesc,{offset:'120px',time:1500});
+                    layer.closeAll('loading');
+                    return false;
+                }
             }
         });
     }

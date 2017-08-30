@@ -11,14 +11,10 @@ class BaseModel
                 'url' => '/',
                 'name' => '首页'
             ),
-            'learn' => array(
-                'url' => U('article/index'),
+            'article' => array(
+                'url' => U('/article/'),
                 'name' => '文章',
                 'children' => array(
-                    'talk' => array(
-                        'url' => U('article/talk'),
-                        'name' => '杂谈'
-                    ),
                     'php' => array(
                         'url' => U('article/php'),
                         'name' => 'PHP'
@@ -27,9 +23,17 @@ class BaseModel
                         'url' => U('article/webFrontend'),
                         'name' => 'web前端'
                     ),
+                    'computer' => array(
+                        'url' => U('article/computer'),
+                        'name' => '计算机'
+                    ),
                     'life' => array(
                         'url' => U('article/life'),
                         'name' => '生活百科'
+                    ),
+                    'mysql' => array(
+                        'url' => U('article/mysql'),
+                        'name' => 'Mysql'
                     )
                 )
             ),
@@ -47,7 +51,7 @@ class BaseModel
             //         ),
             //     )
             // ),
-            'log' => array(
+            'diary' => array(
                 'url' => U('/diary'),
                 'name' => '日记'
             ),

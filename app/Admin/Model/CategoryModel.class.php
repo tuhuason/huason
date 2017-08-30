@@ -13,7 +13,7 @@ class CategoryModel extends BaseModel
     {
         $Category = M('Category');
         $res = $Category->select();
-        // var_dump($res);
+
         if($res){
             return $res;
         }
@@ -35,15 +35,13 @@ class CategoryModel extends BaseModel
 
     public function add($data, &$error='')
     {
-        $Category = M('Category');
-        
-        $data = array(
-            'content' => $content,
-            'addtime' => time(),
-            'uptime' => time()
-        );
+        if($this->authority($error) === false){
+            return false;
+        }
 
-        $res = $Diary->add($data);
+        $Category = M('Category');
+
+        $res = $Category->add($data);
         if($res){
             return true;
         }
@@ -51,16 +49,35 @@ class CategoryModel extends BaseModel
         return false;
     }
     
-    public function delete($id, &$error='')
+    public function update($data, &$error='')
     {
+        if($this->authority($error) === false){
+            return false;
+        }
 
-        $Diary = M('Diary');
-        $res = $Diary->where("id='%s'",$id)->delete();
+        $Category = M('Category');
+        $res = $Category->where("catid = '%s'", $data['catid'])->save($data);
 
         if($res){
             return true;
         }
-        $error = '删除日记失败！';
+        $error = '更新失败！';
+        return false;
+    }
+
+    public function delete($id, &$error='')
+    {
+        if($this->authority($error) === false){
+            return false;
+        }
+
+        $Category = M('Category');
+        $res = $Category->where("catid='%s'",$id)->delete();
+
+        if($res){
+            return true;
+        }
+        $error = '删除分类失败！';
         return false;
     }
 

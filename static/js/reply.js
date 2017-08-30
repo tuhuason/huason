@@ -39,9 +39,9 @@ var Reply = {
                             var html = '<dl class="list identifier" data-id="'+rand_str+'">';
                                 html += '<img class="comment-avatar" src="'+img+'" alt=""/>';
                                 html += '<div class="comment-body">';
-                                html += '<div class="comment-header"><span class="name">'+name+'</a></span><span class="date">'+Base.format_datetime(addtime/1000)+'</span></div>';
-                                html += '<div class="comment-content">'+Base.html_decode(content)+'</div>';
-                                html += '<div class="comment-footer"><a></a></div>';
+                                html += '<div class="comment-header"><span class="name">'+((openid == '2D1DFA0DEA2990CF49AB2EDE8C371D16') ? '<a>'+name+'</a><span class="commenter_role">博主</span>' : '<a>'+name+'</a>')+'</span><span type="openid" class="layui-hide">'+openid+'</span><span class="date">'+Base.format_datetime(addtime/1000)+'</span></div>';
+                                html += '<div class="comment-content">'+content+'</div>';
+                                html += '<div class="comment-footer"><a class=""><i class="iconfont" style="font-size: 19px;">&#xe6ce;</i> (<em>0</em>)</a><a class=""><span>回复</span> (<em>0</em>)</a></div>';
                                 html += '</div>';
                                 html += '<dd class="children">';
                                 html += '</dd>';
@@ -77,22 +77,23 @@ var Reply = {
                                     var html = '<dl class="list identifier" data-id="'+message.identifier+'">';
                                         html += '<img class="comment-avatar" src="'+message.avatar+'" alt=""/>';
                                         html += '<div class="comment-body">';
-                                        html += '<div class="comment-header"><span class="name">'+message.commenter+'</a></span><span class="date">'+Base.format_datetime(message.addtime)+'</span></div>';
-                                        html += '<div class="comment-content">'+Base.html_decode(message.content)+'</div>';
+                                        html += '<div class="comment-header"><span class="name">'+((message.openid == '2D1DFA0DEA2990CF49AB2EDE8C371D16') ? '<a>'+message.commenter+'</a><span class="commenter_role">博主</span>' : '<a>'+message.commenter+'</a>')+'</span><span type="openid" class="layui-hide">'+message.openid+'</span><span class="date">'+Base.format_datetime(message.addtime)+'</span></div>';
+                                        html += '<div class="comment-content">'+message.content+'</div>';
                                         html += '<div class="comment-footer">';
-                                        html += message.commenter == name ? '<a></a>' : '<a class="comment-upvote"><i class="iconfont" style="font-size: 19px;">&#xe6ce;</i> (<em>'+message.upvote+'</em>)</a><a class="comment-reply"><span>回复</span> (<em>'+message.count+'</em>)</a>';
+                                        html += message.commenter == name ? '<a class=""><i class="iconfont" style="font-size: 19px;">&#xe6ce;</i> (<em>'+message.upvote+'</em>)</a><a class=""><span>回复</span> (<em>'+message.count+'</em>)</a>' : '<a class="comment-upvote"><i class="iconfont" style="font-size: 19px;">&#xe6ce;</i> (<em>'+message.upvote+'</em>)</a><a class="comment-reply"><span>回复</span> (<em>'+message.count+'</em>)</a>';
                                         html += '</div>';
                                         html += '</div>';
                                         html += '<dd class="children">';
                                         $.each(res.results.reply_message, function(index, reply){
-                                            if(message.commenter == reply.reply_master){
+                                            if(message.identifier == reply.master_identifier){
                                                 html += '<dl class="list reply_identifier" data-id="'+reply.identifier+'">';
                                                 html += '<img class="comment-avatar" src="'+reply.avatar+'" alt=""/>';
                                                 html += '<div class="comment-body">';
-                                                html += '<div class="comment-header"><span class="user">'+reply.reply_commenter+'</span> 回复 <span class="commenter">'+reply.reply_master+'</span><span class="date">'+Base.format_datetime(reply.addtime)+'</span></div>';
-                                                html += '<div class="comment-content">'+Base.html_decode(reply.content)+'</div>';
+                                                html += '<div class="comment-header"><span class="user">'+((reply.openid == '2D1DFA0DEA2990CF49AB2EDE8C371D16') ? '<a>'+reply.reply_commenter+'</a><span class="commenter_role">博主</span>' : '<a>'+reply.reply_commenter+'</a>')+'</span><span type="openid" class="layui-hide">'+reply.openid+'</span> 回复 <span class="commenter">';
+                                                html += ((reply.master_openid == '2D1DFA0DEA2990CF49AB2EDE8C371D16') ? '<a>'+reply.reply_master+'</a><span class="commenter_role">博主</span>' : '<a>'+reply.reply_master+'</a>')+'</span><span type="openid" class="layui-hide">'+reply.master_openid+'</span><span class="date">'+Base.format_datetime(reply.addtime)+'</span></div>';
+                                                html += '<div class="comment-content">'+reply.content+'</div>';
                                                 html += '<div class="comment-footer">';
-                                                html += reply.reply_commenter == name ? '<a></a>' : '<a class="comment-upvote"><i class="iconfont" style="font-size: 19px;">&#xe6ce;</i> (<em>'+reply.upvote+'</em>)</a><a class="comment-reply"><span>回复</span> (<em>'+message.count+'</em>)</a>';
+                                                html += reply.reply_commenter == name ? '<a class=""><i class="iconfont" style="font-size: 19px;">&#xe6ce;</i> (<em>'+reply.upvote+'</em>)</a><a class=""><span>回复</span></a>' : '<a class="comment-upvote"><i class="iconfont" style="font-size: 19px;">&#xe6ce;</i> (<em>'+reply.upvote+'</em>)</a><a class="comment-reply"><span>回复</span></a>';
                                                 html += '</div>';
                                                 html += '</div>';
                                                 html += '</dl>';
@@ -119,10 +120,11 @@ var Reply = {
                     upvote = parseInt($this.find('em').text()),
                     identifier = $(this).parents('.identifier').attr('data-id'),
                     reply_identifier = $(this).parents('.reply_identifier').attr('data-id'),
+                    current_openid = $this.parent().parent().find('span[type="openid"]:eq(0)').text(),
                     children = $(this).parents('.children');
 
                 if(children.length == 1){
-                    var datas = {type:'add',identifier:reply_identifier};
+                    var datas = {type:'add',identifier:reply_identifier,openid:current_openid};
                     Base.ajax({
                         type: 'post',
                         url: Base.url('reply_upvote'),
@@ -139,7 +141,7 @@ var Reply = {
                         }
                     });
                 }else{
-                    var datas = {type:'add',identifier:identifier};
+                    var datas = {type:'add',identifier:identifier,openid:current_openid};
                     Base.ajax({
                         type: 'post',
                         url: Base.url('upvote'),
@@ -163,12 +165,13 @@ var Reply = {
                     upvote = parseInt($this.find('em').text()),
                     identifier = $(this).parents('.identifier').attr('data-id'),
                     reply_identifier = $(this).parents('.reply_identifier').attr('data-id'),
+                    current_openid = $this.parent().parent().find('span[type="openid"]:eq(0)').text(),
                     children = $(this).parents('.children');
 
                 $(this).addClass('comment-upvote').removeClass('comment-upvoted');
 
                 if(children.length == 1){
-                    var datas = {type:'delete',identifier:reply_identifier};
+                    var datas = {type:'delete',identifier:reply_identifier,openid:current_openid};
                     Base.ajax({
                         type: 'post',
                         url: Base.url('reply_upvote'),
@@ -185,7 +188,7 @@ var Reply = {
                         }
                     });
                 }else{
-                    var datas = {type:'delete',identifier:identifier};
+                    var datas = {type:'delete',identifier:identifier,openid:current_openid};
                     Base.ajax({
                         type: 'post',
                         url: Base.url('upvote'),
@@ -244,10 +247,13 @@ var Reply = {
                 replyIndex = layedit.build('reply_message_from',{height: 60,tool: ['face']});
 
                 var parents = $(this).parents('dl.list'),
-                    name = $(this).parent().parent().find('span.name').text(),
-                    user = $(this).parent().parent().find('span.user').text(),
+                    master = $(this).parent().parent().find('span.name a').text(),
+                    master_openid = $(this).parent().parent().find('span[type="openid"]').text(),
+                    master_identifier = $(this).parents('.identifier').attr('data-id'),
+                    user = $(this).parent().parent().find('span.user a').text(),
+                    user_openid = $(this).parent().parent().find('span[type="openid"]').text(),
                     div = parents.find('dd.children'),
-                    $num = $(this).find('em');
+                    $num = $(this).parents('dl.identifier').find('em:eq(1)');
 
                 $(this).find('span').text('收起');
 
@@ -258,9 +264,9 @@ var Reply = {
                         addtime = new Date().getTime();
 
                     if(user){
-                        datas = {reply_commenter:name, reply_master:user, content:content, identifier:rand_str, addtime:Math.floor(addtime/1000)};
+                        datas = {reply_commenter:name, reply_master:user, master_identifier: master_identifier, openid:openid, master_openid:user_openid, content:content, identifier:rand_str, addtime:Math.floor(addtime/1000)};
                     }else{
-                        datas = {reply_commenter:name, reply_master:name, content:content, identifier:rand_str, addtime:Math.floor(addtime/1000)};
+                        datas = {reply_commenter:name, reply_master:master, master_identifier: master_identifier, openid:openid, master_openid:master_openid, content:content, identifier:rand_str, addtime:Math.floor(addtime/1000)};
                     }
 
                     Base.ajax({
@@ -269,18 +275,19 @@ var Reply = {
                         data: {data : datas},
                         success: function (res) {
                             if (res.status == 'ok') {
-                                //获取每条留言的innerHTML结构，每次只替换textarea的输入内容和 当前发送时间
+                                //获取每条留言
                                 var html = '<dl class="list reply_identifier" data-id="'+rand_str+'">';
                                     html += '<img class="comment-avatar" src="'+img+'" alt=""/>';
                                     html += '<div class="comment-body">';
-                                    html += '<div class="comment-header"><span class="user">'+name+'</span> 回复 <span class="commenter">'+(user!= false?user:name)+'</span><span class="date">'+Base.format_datetime(addtime/1000)+'</span></div>';
-                                    html += '<div class="comment-content">'+Base.html_decode(content)+'</div>';
-                                    html += '<div class="comment-footer"><a></a></div>';
+                                    html += '<div class="comment-header"><span class="user">'+((openid == '2D1DFA0DEA2990CF49AB2EDE8C371D16') ? '<a>'+name+'</a><span class="commenter_role">博主</span>' : name)+'</span> 回复 <span class="commenter">';
+                                    html += (user!= false?((user_openid == '2D1DFA0DEA2990CF49AB2EDE8C371D16') ? '<a>'+user +'</a><span class="commenter_role">博主</span>' : '<a>'+user+'</a>') : ((master_openid == '2D1DFA0DEA2990CF49AB2EDE8C371D16') ? '<a>'+name+'</a><span class="commenter_role">博主</span>' : '<a>'+name+'</a>'))+'</span><span class="date">'+Base.format_datetime(addtime/1000)+'</span></div>';
+                                    html += '<div class="comment-content">'+content+'</div>';
+                                    html += '<div class="comment-footer"><a class=""><i class="iconfont" style="font-size: 19px;">&#xe6ce;</i> (<em>0</em>)</a><a class=""><span>回复</span></a></div>';
                                     html += '</div>';
                                     html += '</dl>';
 
                                 //把新留言插入到留言列表
-                                div.append(html);
+                                (user == false)?div.prepend(html):div.append(html);
                                 $('.hf textarea[name="content"]').val('');
                                 replyIndex = layedit.build('reply_message_from',{height: 60,tool: ['face']});
                                 var num = parseInt($num.text());

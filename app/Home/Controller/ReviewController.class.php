@@ -32,16 +32,36 @@ class ReviewController extends BaseController {
             $id = I('post.id/d');
 
             $Review = M('review');
-            $reply_review = M('reply_review');
-
+            $reply_review = new \Admin\Model\ReplyReviewModel();
+            $review = new \Admin\Model\ReviewModel();
+            
             //加载分页
             $total_page = $Review->where("article_id= '%s' and auditing=1",$id)->count();
-            $data['comment'] = $Review->page($current_page.','.$num)->where("article_id= '%s'",$id)->order('addtime desc')->select();
-            $data['reply_review'] = $reply_review->where("auditing = 1 and article_id= '%s'",$id)->select();
+            $data['comment'] = $review->pages($current_page, $num, $id);
+            $data['reply_review'] = $reply_review->pages($id);
             $data['total_page'] = ceil($total_page/$num);
 
             $this->successAjax($data);
         }
         return $this->error404Page();
+    }
+
+    //点赞或取消点赞
+    public function upvoteAction()
+    {
+        if(IS_POST){
+
+            $data = I('post.data', '');
+
+            $error = '';
+            $Review = new \Admin\Model\ReviewModel();
+            $success = $Review->upvote($data, $error);
+
+            if ($success) {
+                $this->successAjax('点赞成功');
+            } else {
+                $this->errorAjax($error);
+            }    
+        }
     }
 }

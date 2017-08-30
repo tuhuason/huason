@@ -12,7 +12,9 @@ var Index = {
             var remarkIndex = layedit.build('remarkEditor',{height: 150,tool: ['face']}),
                 openid = $('#header .login').find('span[type="openid"]').text(),
                 img = $('#header .login').find('img').attr('src'),
-                name = $('#header .login').find('a[type="nickname"]').text();
+                name = $('#header .login').find('a[type="nickname"]').text(),
+                master_id = $('#header .login').find('a[type="master_id"]').text();
+                
             form.render();
             form.verify({
                 content: function(value){
@@ -25,14 +27,13 @@ var Index = {
             });
             
             form.on('submit(remark)', function(data){
-                var openid = $('#header .login').find('span[type="openid"]').text(),
-                    img = $('#header .login').find('img').attr('src'),
+                var img = $('#header .login').find('img').attr('src'),
                     content = data.field['content'],
                     articleId = $('.blog-detail').attr('data-id'),
                     masterID = $('.blog-detail').attr('data-mid'),
                     addtime = new Date().getTime(),
                     rand_str = Base.genNonDuplicateID(),
-                    datas = {reviewer:name,openid:openid,content:content,article_id:articleId,identifier:rand_str,addtime:Math.floor(addtime/1000)},
+                    datas = {reviewer:name,openid:openid,content:content,article_id:articleId,master_id:master_id,identifier:rand_str,addtime:Math.floor(addtime/1000)},
                     comment = $('#comment');
 
                 Base.ajax({
@@ -44,9 +45,9 @@ var Index = {
                             var html = '<dl class="list identifier" data-id="'+rand_str+'">';
                                 html += '<img class="comment-avatar" src="'+img+'" alt=""/>';
                                 html += '<div class="comment-body">';
-                                html += '<div class="comment-header"><span class="name">'+name+'</a></span><span class="date">'+Base.format_datetime(addtime/1000)+'</span></div>';
-                                html += '<div class="comment-content">'+Base.html_decode(content)+'</div>';
-                                html += '<div class="comment-footer"><a></a><a></a></div>';
+                                html += '<div class="comment-header"><span class="name">'+((openid == '2D1DFA0DEA2990CF49AB2EDE8C371D16') ? '<a>'+name+'</a><span class="commenter_role">博主</span>' : '<a>'+name+'</a>')+'</a></span><span type="openid" class="layui-hide">'+openid+'</span><span class="date">'+Base.format_datetime(addtime/1000)+'</span></div>';
+                                html += '<div class="comment-content">'+content+'</div>';
+                                html += '<div class="comment-footer"><a class=""><i class="iconfont" style="font-size: 19px;">&#xe6ce;</i> (<em>0</em>)</a><a class=""><span>回复</span> (<em>0</em>)</a></div>';
                                 html += '</div>';
                                 html += '<dd class="children">';
                                 html += '</dd>';
@@ -78,23 +79,23 @@ var Index = {
                     Base.ajax({
                         type: 'post',
                         url: Base.url('article_page'),
-                        data: {page: page, num: 4},
+                        data: {page: page, num: 5},
                         success: function (res) {
                             if (res.status == 'ok') {
                                 $.each(res.results.data, function(index, art){
                                     var html = '<div class="blog-box shadow">';
-                                    html += '<div class="l-img"><img src="'+Base.paths.image+'/small/'+(index+1)+'.png"></div>';
+                                    html += '<div class="l-img"><img src="http://q.qlogo.cn/qqapp/101399999/2D1DFA0DEA2990CF49AB2EDE8C371D16/100"></div>';
                                     html += '<div class="l-box">';
                                     html += '<div class="tab">'+Base.tags(art.tag)+'</div><div class="l-title"><a href="/article/'+art.id+'">'+art.title+'</a></div>';
-                                    html += '<div class="l-content">'+Base.html_decode(art.content)+'</div>';
+                                    html += '<div class="l-content">'+art.content+'</div>';
                                     html += '</div>';
                                     html += '<div class="clear"></div>';
                                     html += '<div class="l-footer">';
-                                    html += '<span title="时间"><i class="layui-icon">&#xe60e;</i>'+Base.format_datetime(art.addtime)+'</span>';
+                                    html += '<span title="时间"><i class="iconfont" style="font-size: 17px;">&#xe665;</i>'+Base.format_datetime(art.addtime)+'</span>';
                                     html += '<span title="作者"><i class="layui-icon">&#xe612;</i>'+username+'</span>';
-                                    html += '<span title="标签"><i class="layui-icon">&#xe600;</i>'+art.name+'</span>';
-                                    html += '<span class="info" title="查看次数"><i class="layui-icon">&#xe645;</i>'+art.hit+'</span>';
-                                    html += '<span class="info" title="评论数"><a href="/article/'+art.id+'/#comments" class="comment"><i class="layui-icon">&#xe611;</i>'+art.comment+'</a></span>';
+                                    html += '<span title="标签"><a href="/article/'+art.description+'" class="comment"><i class="iconfont" style="font-size: 17px;">&#xe690;</i>'+art.name+'</a></span>';
+                                    html += '<span class="info" title="浏览次数"><i class="iconfont" style="font-size: 21px;">&#xe71a;</i>'+art.hit+'</span>';
+                                    html += '<span class="info" title="评论数"><a href="/article/'+art.id+'/#comment" class="comment"><i class="iconfont" style="font-size: 17px;">&#xe6ad;</i>'+art.comment+'</a></span>';
                                     html += '</div>';
                                     html += '</div>';
                                     lis.push(html);
@@ -142,20 +143,20 @@ var Index = {
                                         var html = '<dl class="list identifier" data-id="'+comment.identifier+'">';
                                             html += '<img class="comment-avatar" src="'+comment.avatar+'" alt=""/>';
                                             html += '<div class="comment-body">';
-                                            html += '<div class="comment-header"><span class="name">'+comment.reviewer+'</a></span><span class="date">'+Base.format_datetime(comment.addtime)+'</span></div>';
-                                            html += '<div class="comment-content">'+Base.html_decode(comment.content)+'</div>';
-                                            // html += comment.reviewer == name ? '<div class="comment-footer"><a></a></div>' :'<div class="comment-footer"><a class="comment-upvote"><i class="iconfont" style="font-size: 19px;">&#xe6ce;</i> (<em>'+comment.upvote+'</em>)</a><a class="comment-reply"><span>回复</span> (<em>'+comment.count+'</em>)</a></div>';
-                                            html += '<div class="comment-footer"><a class="comment-upvote"><i class="iconfont" style="font-size: 19px;">&#xe6ce;</i> (<em>'+comment.upvote+'</em>)</a><a class="comment-reply"><span>回复</span> (<em>'+comment.count+'</em>)</a></div>';
+                                            html += '<div class="comment-header"><span class="name">'+((comment.openid == '2D1DFA0DEA2990CF49AB2EDE8C371D16') ? '<a>'+comment.reviewer+'</a><span class="commenter_role">博主</span>' : '<a>'+comment.reviewer+'</a>')+'</span><span type="openid" class="layui-hide">'+comment.openid+'</span><span class="date">'+Base.format_datetime(comment.addtime)+'</span></div>';
+                                            html += '<div class="comment-content">'+comment.content+'</div>';
+                                            html += comment.reviewer == name ? '<div class="comment-footer"><a class=""><i class="iconfont" style="font-size: 19px;">&#xe6ce;</i> (<em>'+comment.upvote+'</em>)</a><a class=""><span>回复</span> (<em>'+comment.count+'</em>)</a></div>' :'<div class="comment-footer"><a class="comment-upvote"><i class="iconfont" style="font-size: 19px;">&#xe6ce;</i> (<em>'+comment.upvote+'</em>)</a><a class="comment-reply"><span>回复</span> (<em>'+comment.count+'</em>)</a></div>';
                                             html += '</div>';
                                             html += '<dd class="children">';
                                             $.each(res.results.reply_review, function(index, reply){
-                                                if(comment.reviewer == reply.reply_master){
+                                                if(comment.identifier == reply.master_identifier){
                                                     html += '<dl class="list reply_identifier" data-id="'+reply.identifier+'">';
                                                     html += '<img class="comment-avatar" src="'+reply.avatar+'" alt=""/>';
                                                     html += '<div class="comment-body">';
-                                                    html += '<div class="comment-header"><span class="user">'+reply.reply_reviewer+'</span> 回复 <span class="commenter">'+reply.reply_master+'</span><span class="date">'+Base.format_datetime(reply.addtime)+'</span></div>';
-                                                    html += '<div class="comment-content">'+Base.html_decode(reply.content)+'</div>';
-                                                    html += reply.reply_reviewer == name ? '<div class="comment-footer"><a></a></div>' :'<div class="comment-footer"><a class="comment-upvote"><i class="iconfont" style="font-size: 19px;">&#xe6ce;</i> (<em>'+reply.upvote+'</em>)</a><a class="comment-reply"><span>回复</span></a></div>';
+                                                    html += '<div class="comment-header"><span class="user">'+((reply.openid == '2D1DFA0DEA2990CF49AB2EDE8C371D16') ? '<a>'+reply.reply_reviewer+'</a><span class="commenter_role">博主</span>' : '<a>'+reply.reply_reviewer+'</a>')+'</span><span type="openid" class="layui-hide">'+reply.openid+'</span> 回复 <span class="commenter">';
+                                                    html += ( (reply.master_openid == '2D1DFA0DEA2990CF49AB2EDE8C371D16')? '<a>'+reply.reply_master+'</a><span class="commenter_role">博主</span>' : '<a>'+reply.reply_master+'</a>')+'</span><span type="openid" class="layui-hide">'+reply.master_openid+'</span><span class="date">'+Base.format_datetime(reply.addtime)+'</span></div>';
+                                                    html += '<div class="comment-content">'+reply.content+'</div>';
+                                                    html += reply.reply_reviewer == name ? '<div class="comment-footer"><a class=""><i class="iconfont" style="font-size: 19px;">&#xe6ce;</i> (<em>'+reply.upvote+'</em>)</a><a class=""><span>回复</span></a></div>' :'<div class="comment-footer"><a class="comment-upvote"><i class="iconfont" style="font-size: 19px;">&#xe6ce;</i> (<em>'+reply.upvote+'</em>)</a><a class="comment-reply"><span>回复</span></a></div>';
                                                     html += '</div>';
                                                     html += '</dl>';
                                                 }
@@ -186,10 +187,11 @@ var Index = {
                     upvote = parseInt($this.find('em').text()),
                     identifier = $(this).parents('.identifier').attr('data-id'),
                     reply_identifier = $(this).parents('.reply_identifier').attr('data-id'),
+                    current_openid = $this.parent().parent().find('span[type="openid"]:eq(0)').text(),
                     children = $(this).parents('.children');
 
                 if(children.length == 1){
-                    var datas = {type:'add',identifier:reply_identifier};
+                    var datas = {type:'add',identifier:reply_identifier,openid:current_openid};
                     Base.ajax({
                         type: 'post',
                         url: Base.url('upvote_reply'),
@@ -206,7 +208,7 @@ var Index = {
                         }
                     });
                 }else{
-                    var datas = {type:'add',identifier:identifier};
+                    var datas = {type:'add',identifier:identifier,openid:current_openid};
                     Base.ajax({
                         type: 'post',
                         url: Base.url('upvote'),
@@ -231,10 +233,11 @@ var Index = {
                     upvote = parseInt($this.find('em').text()),
                     identifier = $(this).parents('.identifier').attr('data-id'),
                     reply_identifier = $(this).parents('.reply_identifier').attr('data-id'),
+                    current_openid = $this.parent().parent().find('span[type="openid"]:eq(0)').text(),
                     children = $(this).parents('.children');
 
                 if(children.length == 1){
-                    var datas = {type:'delete',identifier:reply_identifier};
+                    var datas = {type:'delete',identifier:reply_identifier,openid:current_openid};
                     Base.ajax({
                         type: 'post',
                         url: Base.url('upvote_reply'),
@@ -251,7 +254,7 @@ var Index = {
                         }
                     });
                 }else{
-                    var datas = {type:'delete',identifier:identifier};
+                    var datas = {type:'delete',identifier:identifier,openid:current_openid};
                     Base.ajax({
                         type: 'post',
                         url: Base.url('upvote'),
@@ -302,8 +305,12 @@ var Index = {
                 $(this).find('span').text('收起');
 
                 var parents = $(this).parents('dl.list'),
-                    name = $(this).parent().parent().find('span.name').text(),
-                    user = $(this).parent().parent().find('span.user').text(),
+                    master = $(this).parent().parent().find('span.name a').text(),
+                    master_openid = $(this).parent().parent().find('span[type="openid"]').text(),
+                    master_identifier = $(this).parents('.identifier').attr('data-id'),
+                    user = $(this).parent().parent().find('span.user a').text(),
+                    user_openid = $(this).parent().parent().find('span[type="openid"]').text(),
+                    $num = $(this).parents('dl.identifier').find('em:eq(1)'),
                     div = parents.find('dd.children');
 
                 //取消回复
@@ -320,9 +327,9 @@ var Index = {
                         addtime = new Date().getTime();
 
                     if(user){
-                        datas = {reply_reviewer:'我', reply_master:user, article_id: art_id, content:content, identifier:rand_str, addtime:Math.floor(addtime/1000)};
+                        datas = {reply_reviewer:name, reply_master:user, master_identifier: master_identifier, openid:openid, master_openid:user_openid, article_id: art_id, content:content, identifier:rand_str, addtime:Math.floor(addtime/1000)};
                     }else{
-                        datas = {reply_reviewer:'我', reply_master:name, article_id: art_id, content:content, identifier:rand_str, addtime:Math.floor(addtime/1000)};
+                        datas = {reply_reviewer:name, reply_master:master, master_identifier: master_identifier, openid:openid, master_openid:master_openid, article_id: art_id, content:content, identifier:rand_str, addtime:Math.floor(addtime/1000)};
                     }
 
                     Base.ajax({
@@ -332,17 +339,20 @@ var Index = {
                         success: function (res) {
                             if (res.status == 'ok') {
                                 var html = '<dl class="list reply_identifier" data-id="'+rand_str+'">';
-                                    html += '<img class="comment-avatar" src="'+Base.paths.image+'/lufei.jpg" alt=""/>';
+                                    html += '<img class="comment-avatar" src="'+img+'"/>';
                                     html += '<div class="comment-body">';
-                                    html += '<div class="comment-header"><span class="user">我</span> 回复 <span class="commenter">'+(user!= false?user:name)+'</span><span class="date">'+Base.format_datetime(addtime/1000)+'</span></div>';
-                                    html += '<div class="comment-content">'+Base.html_decode(content)+'</div>';
-                                    html += '<div class="comment-footer"><a></a></div>';
+                                    html += '<div class="comment-header"><span class="user">'+((openid == '2D1DFA0DEA2990CF49AB2EDE8C371D16') ? '<a>'+name+'</a><span class="commenter_role">博主</span>' : '<a>'+name+'</a>')+'</span> 回复 <span class="commenter">';
+                                    html += (user!= false?((user_openid == '2D1DFA0DEA2990CF49AB2EDE8C371D16') ? '<a>'+user+'</a><span class="commenter_role">博主</span>' : '<a>'+user+'</a>'):((master_openid == '2D1DFA0DEA2990CF49AB2EDE8C371D16') ? '<a>'+master+'</a><span class="commenter_role">博主</span>' : '<a>'+master+'</a>'))+'</span><span class="date">'+Base.format_datetime(addtime/1000)+'</span></div>';
+                                    html += '<div class="comment-content">'+content+'</div>';
+                                    html += '<div class="comment-footer"><a class=""><i class="iconfont" style="font-size: 19px;">&#xe6ce;</i> (<em>0</em>)</a><a class=""><span>回复</span></a></div>';
                                     html += '</div>';
                                     html += '</dl>';
 
-                                div.append(html);
+                                (user == false)?div.prepend(html):div.append(html);
                                 $('.hf textarea[name="content"]').val('');
                                 replyIndex = layedit.build('reply_review_from',{height: 60,tool: ['face']});
+                                var num = parseInt($num.text());
+                                $num.text(num+1);
                                 form.render();
                                 layer.msg('回复成功',{time:1500});
                             } else {

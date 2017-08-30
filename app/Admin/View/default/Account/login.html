@@ -39,7 +39,7 @@
                         <input type="text" name="code" lay-verify="code" placeholder="请输入验证码" autocomplete="off" class="layui-input">
                     </div>
                     <div class="layui-form-mid layui-word-aux">
-                        <img id="verify_img" alt="点击更换" title="点击更换" src="{:U('Admin/Account/verify',array())}" class="verify">
+                        <img id="verify_img" alt="点击更换" title="点击更换" src="{:U('Admin/Account/verify',array())}" class="verify" onclick="this.src='{:U('Admin/Account/verify',rand())}'+'?'+Math.random()">
                     </div>
                 </div>
                 <div class="layui-form-item">
@@ -57,7 +57,7 @@
     <script type="text/javascript">
     $(function(){
         Base.initialize();
-        Base.urls = {login:"{:U('admin/Account/login')}",index:"{:U('admin/Index/index')}",verify:"{:U('admin/Account/verify',array())}"};
+        Base.urls = {login:"{:U('admin/Account/login')}",index:"{:U('admin/Index/index')}"};
         layui.use(['layer','form'], function(){
             var form = layui.form()
             ,layer = layui.layer;

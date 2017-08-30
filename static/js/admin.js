@@ -21,7 +21,7 @@ var Admin={
                         "sNext" : '下一页',
                         "sLast" : '末页'
                     }
-                },
+                }
             });
             form.on('checkbox(user)', function(data){
                 //是否被选中，true或者false
@@ -54,9 +54,6 @@ var Admin={
                     closeBtn:2,
                     content : $('#add_user_container').html(),
                     success : function(layero, index){
-                    	$("#verify").on('click',function() {
-				            $("#verify").attr({"src" : Base.url('verify')});
-				        });
                         form.render();
                         form.verify({
                         	username:[/(.+){5,12}$/, '用户名必须5到12位'],
@@ -182,9 +179,7 @@ var Admin={
                         layer.msg('更改成功',{offset:'120px',time:1000});
                         layer.closeAll('loading');
                     } else {
-                        layer.msg(data.errdesc,{offset:'120px',time:1500},function(){
-                            
-                        });
+                        layer.msg(data.errdesc,{offset:'120px',time:1500});
                         layer.closeAll('loading');
                         return false;
                     }
@@ -201,10 +196,7 @@ var Admin={
                         layer.msg('更改成功',{offset:'120px',time:1000});
                         layer.closeAll('loading');
                     } else {
-                        layer.msg(data.errdesc,{offset:'120px',time:1500},function(){
-                            
-                        });
-
+                        layer.msg(data.errdesc,{offset:'120px',time:1500});
                         layer.closeAll('loading');
                         return false;
                     }

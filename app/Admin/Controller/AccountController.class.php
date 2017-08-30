@@ -16,27 +16,25 @@ class AccountController extends Controller
         parent::__construct();
 
         // 默认登录到首页
-        $this->defaultPage = U('Account/Index/index');
+        $this->defaultPage = 'admin/Index/index';
     }
 
     // 首页指向用户登录页面
     public function indexAction()
     {
-        $referer = session('referer');
-        $referer = empty($referer) ? $this->defaultPage : $referer;
-
-        if (D('Admin')->isLogined()) {
-            // 已登录, 跳转指定页面
-            redirect($referer);
-            return;
-        }
-
-        $this->display('login');
+        
+        $this->loginAction();
     }
 
     // 用户登录页
     public function loginAction()
     {
+        if (D('Admin')->isLogined()) {
+            // 已登录, 跳转指定页面
+            $this->redirect($this->defaultPage);
+            exit;
+    
+        }
 
         if(IS_POST){
             // 提交登录
@@ -66,16 +64,14 @@ class AccountController extends Controller
                 $this->ajaxReturn($data,'json');
             }    
         }
-
-        $this->indexAction();
+        $this->display('login');
     }
 
     // 用户注销
     public function logoutAction()
     {
         D('Admin')->logout();
-        session('referer', $this->defaultPage);
-        $this->redirect('Admin/Admin/index');
+        $this->redirect('Admin/account/index');
         return;
     }
 

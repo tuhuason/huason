@@ -4,7 +4,6 @@ namespace Home\Controller;
 class IndexController extends BaseController {
     public function __construct(){
         $this->setWebTitle('首页')
-            ->setIdentifier('index')
             ->addCrumb('首页', '/');
 
         parent::__construct();
@@ -13,7 +12,8 @@ class IndexController extends BaseController {
     // 首页
     public function indexAction(){
         // 设置面包屑
-        // $this->setCrumbs();
+        $this->setIdentifier('index');
+
         $data = M('Article')->join('category ON article.catid = category.catid')->where("admin_id=1")->order('tag desc,uptime desc')->limit(10)->select();
         
         $this->assign('data', $data);
@@ -45,43 +45,14 @@ class IndexController extends BaseController {
         $qq_login = D('Qq');
         $data = $qq_login->login($token);
         //设置cookie有效期
-        setcookie('openid', $token['openid'], time()+86400);
+        session('openid', $token['openid']);
         redirect(session('referer'));
         return;
     }
 
     public function qqLogoutAction(){
-        setcookie ("openid", "", time() - 3600);
+        session('openid',null);
         redirect(session('referer'));
         return;
-    }
-    public function photoAction(){
-        $this->display('photo');
-    }
-
-    public function DiaryAction(){
-        $data = D('Index')->findAllDiary();
-
-        $this->assign('data', $data);
-        $this->display('diary');
-    }
-
-    public function aboutAction(){
-        $this->addCrumb('关于')->setCrumbs();
-        $this->display('about');
-    }
-
-    public function messageAction(){
-        $this->addCrumb('留言')->setCrumbs();
-
-        $meassage = M('Message')->select();
-        $reply = M('reply_message')->where('auditing = 1')->select();
-        $this->assign(
-            array(
-                'message' => $meassage,
-                'reply' => $reply
-            )
-        );
-        $this->display('message');
     }
 }

@@ -3,7 +3,7 @@
 namespace Admin\Model;
 
 use Think\Storage;
-
+use Common\XssHtml;
 class DiaryModel extends BaseModel
 {
     protected $trueTableName  = 'diary'; 
@@ -27,6 +27,7 @@ class DiaryModel extends BaseModel
         $res = $Diary->where("id='%d'",$id)->find();
 
         if($res){
+            $res['content'] = htmlspecialchars_decode($res['content']);
             return $res;
         }
         $error = '失败！';
@@ -44,6 +45,10 @@ class DiaryModel extends BaseModel
             'uptime' => time()
         );
 
+        if($this->authority($error) === false){
+            return false;
+        }
+
         $res = $Diary->add($data);
         if($res){
             return true;
@@ -52,10 +57,38 @@ class DiaryModel extends BaseModel
         return false;
     }
     
+    public function update($data, &$error='')
+    {
+        if($this->authority($error) === false){
+            return false;
+        }
+
+        $Diary = M('Diary');
+        $admin_id = session('admin_id');
+
+        $filter = new XssHtml(htmlspecialchars_decode($data['content']));
+        $data['content'] = htmlspecialchars($filter->getHtml());
+        $data['uptime'] = time();
+        $data['admin_id'] = $admin_id;
+        $data['del'] = 0;
+
+        $res = $Diary->where("id='%s'",$data['id'])->save($data);
+        if($res){
+            return true;
+        }
+        $error = '更新日记失败！';
+        return false;
+    }
+    
     public function delete($id, &$error='')
     {
 
         $Diary = M('Diary');
+
+        if($this->authority($error) === false){
+            return false;
+        }
+        
         $res = $Diary->where("id='%d'",$id)->delete();
 
         if($res){

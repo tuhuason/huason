@@ -20,19 +20,40 @@ class ReplyMessageModel extends BaseModel
         return false;
     }
 
+    public function pages()
+    {
+        $ReplyMessage = M('reply_message');
+        $res = $ReplyMessage->join('qq_login ON reply_message.reply_commenter = qq_login.nickname')->where("auditing=1")->select();
+
+        $data = [];
+        if($res){
+            foreach ($res as $reply_message) {
+                $reply_message['content'] = htmlspecialchars_decode($reply_message['content']);
+                $data[] = $reply_message;
+            }
+            return $data;
+        }
+        return false;
+    }
+    
     public function add($data, &$error='')
     {
         $ReplyMessage = M('reply_message');
         
-        if(!isset($_COOKIE['openid'])){
+        if(!session('openid')){
             $error = '请登录后回复！';
             return false;
         }
 
+        if($data['reply_commenter'] == $data['reply_master']){
+            $error = '亲，不能对自己回复！';
+            return false;
+        }
+        
         //开启事务
         M()->startTrans();
         $res = $ReplyMessage->add($data);
-        $num = M('message')->where("commenter = '%s'", $data['reply_master'])->setInc('count');
+        $num = M('message')->where("identifier = '%s'", $data['master_identifier'])->setInc('count');
         if($res && $num){
             //提交事务
             M()->commit();
@@ -46,6 +67,10 @@ class ReplyMessageModel extends BaseModel
     
     public function delete($data, &$error='')
     {
+        if($this->authority($error) === false){
+            return false;
+        }
+
         $ReplyMessage = M('reply_message');
 
         //开启事务
@@ -65,9 +90,13 @@ class ReplyMessageModel extends BaseModel
 
     public function update($data, &$error='')
     {
-        $ReplyMessage = M('reply_message');
+        if($this->authority($error) === false){
+            return false;
+        }
 
+        $ReplyMessage = M('reply_message');
         $res = $ReplyMessage->save($data);
+        
         if($res){
             return true;
         }
@@ -79,10 +108,17 @@ class ReplyMessageModel extends BaseModel
     {
         $ReplyMessage = M('reply_message');
 
-        if(!isset($_COOKIE['openid'])){
-            $error = '请登录后回复！';
+        if(!session('openid')){
+            $error = '请登录后点赞！';
             return false;
         }
+        
+        if( strtolower($data['openid']) == strtolower(session('openid')) ){
+            $error = '亲，不能对自己点赞';
+            return false;
+        }
+        
+        unset($data['openid']);
         
         if($data['type'] == 'add'){
             $res = $ReplyMessage->where("identifier = '%s'", $data['identifier'])->setInc('upvote');
