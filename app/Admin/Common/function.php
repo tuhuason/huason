@@ -16,19 +16,11 @@ if (!function_exists('get_area_from_ip')) {
 	    if(empty($ip)){  
 	        $ip = get_client_ip();  
 	    }  
-	    $res = @file_get_contents('http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js&ip=' . $ip);  
-	    if(empty($res)){ return false; }  
-	    $jsonMatches = array();  
-	    preg_match('#\{.+?\}#', $res, $jsonMatches);  
-	    if(!isset($jsonMatches[0])){ return false; }  
-	    $json = json_decode($jsonMatches[0], true);  
-	    if(isset($json['ret']) && $json['ret'] == 1){  
-	        $json['ip'] = $ip;  
-	        unset($json['ret']);  
-	    }else{  
-	        return false;  
-	    }  
-	    return $json['province'].' '.$json['city'];  
+	    $res = @file_get_contents('http://ip.taobao.com/service/getIpInfo.php?ip=' . $ip);
+	    if(empty($res)){ return false; }
+	    $json = json_decode($res, true);
+	    $data = $json['data'];
+	    return $data['region'].'-'.$data['city'];
 	}
 } 
 if (!function_exists('SafeFilter')) {
